@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scenes/Buttons/CardPack/CardSlotButton.tscn" type="PackedScene" id=1]
+
+
+[node name="NormalGoldPack" instance=ExtResource( 1 )]
+card_draw_limit = 100
+card_rarity = "1* to 5*"
+card_name = "Gold Pack"
+cost_type = "Gold"
+card_cost = "450 Gold"
+five_element_legend_rate = 0.05
+five_element_epic_rate = 0.45
+rare_rate = 29.5
+uncommon_rate = 30.0
+common_rate = 40.0
+card_pack_path = "NormalGoldPack.json"

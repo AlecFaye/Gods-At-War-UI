@@ -1,0 +1,16 @@
+[
+  ["Bellona", "Legend", "Roman", "Metal", "res://Sprites/CardSprites/Legend/FiveElement/Bellona.png"],
+  ["Juno", "Legend", "Roman", "Earth", "res://Sprites/CardSprites/Legend/FiveElement/Juno.png"],
+  ["Mars", "Legend", "Roman", "Metal", "res://Sprites/CardSprites/Legend/FiveElement/Mars.png"],
+
+  ["Ceres", "Epic", "Roman", "Wood", "res://Sprites/CardSprites/Epic/FiveElements/Ceres.png"],
+  ["Mercury", "Epic", "Roman", "Earth", "res://Sprites/CardSprites/Epic/FiveElements/Mercury.png"],
+	["Minerva", "Epic", "Roman", "Water", "res://Sprites/CardSprites/Epic/FiveElements/Minerva.png"],
+  ["Venus", "Epic", "Roman", "Water", "res://Sprites/CardSprites/Epic/FiveElements/Venus.png"],
+	["Vulcan", "Epic", "Roman", "Fire", "res://Sprites/CardSprites/Epic/FiveElements/Vulcan.png"],
+
+  ["Carmenta", "Rare", "Roman", "Earth", "res://Sprites/CardSprites/Rare/Carmenta.png"],
+  ["Pomona", "Rare", "Roman", "Wood", "res://Sprites/CardSprites/Rare/Pomona.png"],
+
+  ["RomanGladiator", "Common", "Roman", "Fire", "res://Sprites/CardSprites/Common/RomanGladiator.png"]
+]

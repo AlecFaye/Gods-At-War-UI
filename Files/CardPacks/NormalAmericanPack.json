@@ -1,0 +1,17 @@
+[
+  ["Huitzilopochtll", "Legend", "American", "Fire", "res://Sprites/CardSprites/Legend/FiveElement/Huitzilopochtli.png"],
+	["Inti", "Legend", "American", "Fire", "res://Sprites/CardSprites/Legend/FiveElement/Inti.png"],
+  ["Nerrivik", "Legend", "American", "Water", "res://Sprites/CardSprites/Legend/FiveElement/Nerrivik.png"],
+
+  ["Coatlicue", "Epic", "American", "Earth", "res://Sprites/CardSprites/Epic/FiveElements/Coatlicue.png"],
+  ["Mixcoatl", "Epic", "American", "Metal", "res://Sprites/CardSprites/Epic/FiveElements/Mixcoatl.png"],
+  ["Quetzalcoatl", "Epic", "American", "Metal", "res://Sprites/CardSprites/Epic/FiveElements/Quetzalcoatl.png"],
+  ["Tlaloc", "Epic", "American", "Water", "res://Sprites/CardSprites/Epic/FiveElements/Tlaloc.png"],
+
+  ["Tonatiuh", "Rare", "American", "Fire", "res://Sprites/CardSprites/Rare/Tonatiuh.png"],
+  ["Xochiquetzal", "Rare", "American", "Earth", "res://Sprites/CardSprites/Rare/Xochiquetzal.png"],
+
+  ["Mictlandtecuhtli", "Uncommon", "American", "Earth", "res://Sprites/CardSprites/Uncommon/Mictlandtecuhtli.png"],
+
+  ["AztecWarrior", "Common", "American", "Wood", "res://Sprites/CardSprites/Common/AztecWarrior.png"]
+]

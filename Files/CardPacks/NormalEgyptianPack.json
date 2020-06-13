@@ -1,0 +1,18 @@
+[
+  ["Amon", "Legend", "Egyptian", "Fire", "res://Sprites/CardSprites/Legend/FiveElement/Amon.png"],
+  ["Horus", "Legend", "Egyptian", "Fire", "res://Sprites/CardSprites/Legend/FiveElement/Horus.png"],
+  ["Ra", "Legend", "Egyptian", "Fire", "res://Sprites/CardSprites/Legend/FiveElement/Ra.png"],
+
+  ["Ammit", "Epic", "Egyptian", "Earth", "res://Sprites/CardSprites/Epic/FiveElements/Ammit.png"],
+	["Anuket", "Epic", "Egyptian", "Wood", "res://Sprites/CardSprites/Epic/FiveElements/Anuket.png"],
+	["Bast", "Epic", "Egyptian", "Fire", "res://Sprites/CardSprites/Epic/FiveElements/Bast.png"],
+	["Bes:", "Epic", "Egyptian", "Earth", "res://Sprites/CardSprites/Epic/FiveElements/Bes.png"],
+  ["Tefnut", "Epic", "Egyptian", "Water", "res://Sprites/CardSprites/Epic/FiveElements/Tefnut.png"],
+
+  ["Imhotep", "Rare", "Egyptian", "Wood", "res://Sprites/CardSprites/Rare/Imhotep.png"],
+	["Imset", "Rare", "Egyptian", "Fire", "res://Sprites/CardSprites/Rare/Imset.png"],
+
+  ["Apis", "Uncommon", "Egyptian", "Earth", "res://Sprites/CardSprites/Uncommon/Apis.png"],
+
+  ["Mummy", "Common", "Egyptian", "Earth", "res://Sprites/CardSprites/Common/Mummy.png"]
+]

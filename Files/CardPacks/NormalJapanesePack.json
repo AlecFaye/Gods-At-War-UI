@@ -1,0 +1,15 @@
+[
+  ["Susanoo", "Legend", "Japanese", "Water", "res://Sprites/CardSprites/Legend/FiveElement/Susanoo.png"],
+
+  ["Kojin", "Epic", "Japanese", "Fire", "res://Sprites/CardSprites/Epic/FiveElements/Kojin.png"],
+  ["Ryujin", "Epic", "Japanese", "Water", "res://Sprites/CardSprites/Epic/FiveElements/Ryujin.png"],
+  ["Suijin", "Epic", "Japanese", "Water", "res://Sprites/CardSprites/Epic/FiveElements/Suijin.png"],
+  ["Takemikazuchi", "Epic", "Japanese", "Metal", "res://Sprites/CardSprites/Epic/FiveElements/Takemikazuchi.png"],
+
+  ["PrinceShotoku", "Rare", "Japanese", "Wood", "res://Sprites/CardSprites/Rare/PrinceShotoku.png"],
+  ["TotoyomiHideyo", "Rare", "Japanese", "Metal", "res://Sprites/CardSprites/Rare/TotoyomiHideyo.png"],
+
+  ["PrinceOama", "Uncommon", "Japanese", "Fire", "res://Sprites/CardSprites/Uncommon/PrinceOama.png"],
+
+  ["Samurai", "Common", "Japanese", "Metal", "res://Sprites/CardSprites/Common/Samurai.png"]
+]

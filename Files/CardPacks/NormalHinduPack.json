@@ -1,0 +1,20 @@
+[
+  ["Ganesha", "Legend", "Hindu", "Wood", "res://Sprites/CardSprites/Legend/FiveElement/Ganesha.png"],
+  ["Lakshmi", "Legend", "Hindu", "Water", "res://Sprites/CardSprites/Legend/FiveElement/Lakshmi.png"],
+  ["Parvati", "Legend", "Hindu", "Fire", "res://Sprites/CardSprites/Legend/FiveElement/Parvati.png"],
+  ["Shiva", "Legend", "Hindu", "Fire", "res://Sprites/CardSprites/Legend/FiveElement/Shiva.png"],
+  ["Vishnu", "Legend", "Hindu", "Earth", "res://Sprites/CardSprites/Legend/FiveElement/Vishnu.png"],
+
+  ["Brahma", "Epic", "Hindu", "Water", "res://Sprites/CardSprites/Epic/FiveElements/Brahma.png"],
+  ["Draupadi", "Epic", "Hindu", "Fire", "res://Sprites/CardSprites/Epic/FiveElements/Draupadi.png"],
+  ["Krishna", "Epic", "Hindu", "Metal", "res://Sprites/CardSprites/Epic/FiveElements/Krishna.png"],
+  ["Ravana", "Epic", "Hindu", "Earth", "res://Sprites/CardSprites/Epic/FiveElements/Ravana.png"],
+  ["Saraswati", "Epic", "Hindu", "Water", "res://Sprites/CardSprites/Epic/FiveElements/Saraswati.png"],
+
+  ["Arjuna", "Rare", "Hindu", "Earth", "res://Sprites/CardSprites/Rare/Arjuna.png"],
+  ["Duryodhana", "Rare", "Hindu", "Wood", "res://Sprites/CardSprites/Rare/Duryodhana.png"],
+
+  ["Ganga", "Uncommon", "Hindu", "Water", "res://Sprites/CardSprites/Uncommon/Ganga.png"],
+  
+  ["Kshatriya", "Common", "Hindu", "Wood", "res://Sprites/CardSprites/Common/Kshatriya.png"]
+]

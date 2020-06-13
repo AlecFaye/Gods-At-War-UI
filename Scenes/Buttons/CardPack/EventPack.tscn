@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scenes/Buttons/CardPack/CardSlotButton.tscn" type="PackedScene" id=1]
+
+
+[node name="EventPack" instance=ExtResource( 1 )]
+card_draw_limit = 20
+card_rarity = "3* to 5*"
+card_name = "EventName"
+cost_type = "Gems"
+card_cost = "400 Gems"
+death_legend_rate = 0.1
+life_legend_rate = 0.1
+five_element_legend_rate = 0.1
+death_epic_rate = 0.1
+life_epic_rate = 0.1
+five_element_epic_rate = 0.1
+rare_rate = 0.1
+uncommon_rate = 0.1
+common_rate = 0.1

@@ -1,0 +1,100 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Sprites/MainMenuSprites/gameopening.jpg" type="Texture" id=1]
+[ext_resource path="res://Sprites/MainMenuSprites/gawlogo.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/MainMenuSprites/gawlogin.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/MainMenuSprites/settingsbutton.png" type="Texture" id=4]
+[ext_resource path="res://Scripts/UI/MainMenu/MainMenu.gd" type="Script" id=5]
+[ext_resource path="res://Scenes/FadeIn.tscn" type="PackedScene" id=6]
+
+
+[node name="MainMenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 2476.0
+margin_bottom = 1369.0
+rect_scale = Vector2( 0.293, 0.305 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Logo" type="TextureRect" parent="."]
+anchor_top = 0.175
+anchor_right = 0.872
+anchor_bottom = 0.64
+margin_left = 148.683
+margin_top = -0.194908
+margin_right = -0.245361
+margin_bottom = -0.194916
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LoginButton" type="Button" parent="."]
+self_modulate = Color( 1, 1, 1, 0 )
+anchor_left = 0.324
+anchor_top = 0.613
+anchor_right = 0.68
+anchor_bottom = 0.742
+margin_left = -0.673645
+margin_top = -0.481171
+margin_right = -1.21747
+margin_bottom = -0.881165
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LoginSprite" type="TextureRect" parent="LoginButton"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 0.0857239
+margin_top = -42.2247
+margin_right = 380.086
+margin_bottom = 159.775
+rect_scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SettingsButton" type="Button" parent="."]
+self_modulate = Color( 1, 1, 1, 0 )
+anchor_left = 0.343
+anchor_top = 0.765
+anchor_right = 0.66
+anchor_bottom = 0.878
+margin_left = -1.1297
+margin_top = -0.681183
+margin_right = -0.737549
+margin_bottom = -0.48114
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SettingsSprite" type="TextureRect" parent="SettingsButton"]
+anchor_right = 1.027
+anchor_bottom = 1.0
+margin_left = -0.889191
+margin_top = -38.1425
+margin_right = 409.336
+margin_bottom = 172.858
+rect_scale = Vector2( 0.45, 0.45 )
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FadeIn" parent="." instance=ExtResource( 6 )]
+visible = false
+[connection signal="pressed" from="LoginButton" to="." method="_on_LoginButton_pressed"]
+[connection signal="fade_finished" from="FadeIn" to="." method="_on_FadeIn_fade_finished"]

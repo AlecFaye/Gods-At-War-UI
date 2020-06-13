@@ -1,0 +1,16 @@
+[
+  ["SunWukong", "Legend", "Chinese", "Earth", "res://Sprites/CardSprites/Legend/FiveElement/SunWukong.png"],
+  ["WangmuNiangniang", "Legend", "Chinese", "Wood", "res://Sprites/CardSprites/Legend/FiveElement/WangmuNiangniang.png"],
+
+  ["Change", "Epic", "Chinese", "Water", "res://Sprites/CardSprites/Epic/FiveElements/Change.png"],
+  ["HouYi", "Epic", "Chinese", "Fire", "res://Sprites/CardSprites/Epic/FiveElements/HouYi.png"],
+  ["LongWang", "Epic", "Chinese", "Water", "res://Sprites/CardSprites/Epic/FiveElements/LongWang.png"],
+  ["Nezha", "Epic", "Chinese", "Fire", "res://Sprites/CardSprites/Epic/FiveElements/Nezha.png"],
+  ["Nuwa", "Epic", "Chinese", "Fire", "res://Sprites/CardSprites/Epic/FiveElements/Nuwa.png"],
+
+  ["FangFeng", "Rare", "Chinese", "Water", "res://Sprites/CardSprites/Rare/FangFeng.png"],
+  ["JiuTianXuanNu", "Rare", "Chinese", "Fire", "res://Sprites/CardSprites/Rare/JiuTianXuanNu.png"],
+
+  ["ShenNong", "Uncommon", "Chinese", "Wood", "res://Sprites/CardSprites/Uncommon/ShenNong.png"],
+  ["XiaBing", "Common", "Chinese", "Metal", "res://Sprites/CardSprites/Common/XiaoBing.png"]
+]

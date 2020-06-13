@@ -1,0 +1,152 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Sprites/GameUISprites/Gems.png" type="Texture" id=1]
+[ext_resource path="res://Fonts/MorrisRomanBlack.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Fonts/Timeless-Bold.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Scripts/UI/Summon/CardSlotButton.gd" type="Script" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 18
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 24
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 20
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 20
+font_data = ExtResource( 2 )
+
+[node name="CardSlotButton" type="Button"]
+margin_right = 225.0
+margin_bottom = 400.0
+rect_min_size = Vector2( 225, 400 )
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PositionCardSlotPanel" type="Panel" parent="."]
+self_modulate = Color( 1, 1, 1, 0 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -112.5
+margin_top = -200.0
+margin_right = 112.5
+margin_bottom = 200.0
+rect_min_size = Vector2( 225, 400 )
+mouse_filter = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GairoPictureHolder" type="TextureRect" parent="PositionCardSlotPanel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -112.0
+margin_top = -200.0
+margin_right = 112.0
+margin_bottom = 200.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CardContainer" type="VBoxContainer" parent="PositionCardSlotPanel/GairoPictureHolder"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -100.0
+margin_top = -190.0
+margin_right = 100.0
+margin_bottom = 240.0
+rect_min_size = Vector2( 180, 300 )
+alignment = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RarityLabel" type="Label" parent="PositionCardSlotPanel/GairoPictureHolder/CardContainer"]
+margin_top = 268.0
+margin_right = 200.0
+margin_bottom = 298.0
+rect_min_size = Vector2( 180, 30 )
+custom_fonts/font = SubResource( 1 )
+text = "Rarity"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CardSummonNameLabel" type="Label" parent="PositionCardSlotPanel/GairoPictureHolder/CardContainer"]
+margin_top = 302.0
+margin_right = 200.0
+margin_bottom = 352.0
+rect_min_size = Vector2( 180, 50 )
+custom_fonts/font = SubResource( 2 )
+text = "Card Summon Name"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CostContainer" type="HBoxContainer" parent="PositionCardSlotPanel/GairoPictureHolder/CardContainer"]
+margin_top = 356.0
+margin_right = 200.0
+margin_bottom = 396.0
+alignment = 1
+
+[node name="SpriteHolder" type="Label" parent="PositionCardSlotPanel/GairoPictureHolder/CardContainer/CostContainer"]
+margin_left = 33.0
+margin_top = 7.0
+margin_right = 58.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 25, 25 )
+
+[node name="CostSprite" type="Sprite" parent="PositionCardSlotPanel/GairoPictureHolder/CardContainer/CostContainer/SpriteHolder"]
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 1 )
+offset = Vector2( 250, 100 )
+
+[node name="CostLabel" type="Label" parent="PositionCardSlotPanel/GairoPictureHolder/CardContainer/CostContainer"]
+margin_left = 62.0
+margin_right = 167.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 105, 40 )
+custom_fonts/font = SubResource( 3 )
+text = "Cost"
+
+[node name="CardList" type="Button" parent="PositionCardSlotPanel/GairoPictureHolder/CardContainer"]
+margin_top = 400.0
+margin_right = 200.0
+margin_bottom = 430.0
+rect_min_size = Vector2( 180, 30 )
+
+[node name="CardListLabel" type="Label" parent="PositionCardSlotPanel/GairoPictureHolder/CardContainer/CardList"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -100.0
+margin_top = -15.0
+margin_right = 100.0
+margin_bottom = 15.0
+rect_min_size = Vector2( 200, 30 )
+custom_fonts/font = SubResource( 4 )
+text = "Card List"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="PositionCardSlotPanel/GairoPictureHolder/CardContainer/CardList" to="." method="_on_CardList_pressed"]

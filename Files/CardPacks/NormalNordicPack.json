@@ -1,0 +1,16 @@
+[
+  ["Loki", "Legend", "Nordic", "Wood", "res://Sprites/CardSprites/Legend/FiveElement/Loki.png"],
+  ["Thor", "Legend", "Nordic", "Metal", "res://Sprites/CardSprites/Legend/FiveElement/Thor.png"],
+
+  ["Fenrir", "Epic", "Nordic", "Fire", "res://Sprites/CardSprites/Epic/FiveElements/Fenrir.png"],
+  ["Frigg", "Epic", "Nordic", "Earth", "res://Sprites/CardSprites/Epic/FiveElements/Frigg.png"],
+  ["Heimdall", "Epic", "Nordic", "Metal", "res://Sprites/CardSprites/Epic/FiveElements/Heimdall.png"],
+  ["Jormungandr", "Epic", "Nordic", "Fire", "res://Sprites/CardSprites/Epic/FiveElements/Jormungandr.png"],
+  ["Tyr", "Epic", "Nordic", "Fire", "res://Sprites/CardSprites/Epic/FiveElements/Tyr.png"],
+
+  ["Freyr", "Rare", "Nordic", "Earth", "res://Sprites/CardSprites/Rare/Freyr.png"],
+  ["Njord", "Rare", "Nordic", "Water", "res://Sprites/CardSprites/Rare/Njord.png"],
+
+  ["Skadi", "Uncommon", "Nordic", "Water", "res://Sprites/CardSprites/Uncommon/Skadi.png"],
+  ["Einhejar", "Common", "Nordic", "Wood", "res://Sprites/CardSprites/Common/Einhejar.png"]
+]
