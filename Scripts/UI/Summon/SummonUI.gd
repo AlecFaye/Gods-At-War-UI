@@ -85,8 +85,9 @@ func _get_drawn_cards_children():
 	var textures = []
 	var sprites = []
 	
-	for texture in CardsDrawnContainer.get_children():
-		textures.append(texture)
+	for node in CardsDrawnContainer.get_children():
+		if node is TextureRect:
+			textures.append(node)
 	
 	for node in textures:
 		var particle = node.get_node("Particles2D")
@@ -304,8 +305,10 @@ func _display_drawn_cards(drawn_cards):
 		var card_type = drawn_cards[0][card_attribute["type"]]
 		var particle = particle_systems[floor(len(card_container) / 2.0)]
 		
-		if card_rarity == "Legend" or card_rarity == "Epic":
-			_set_particle_system(card_rarity, card_type, particle)
+		if card_rarity == "Legend":
+			_set_particle_system(card_type, particle)
+		else:
+			reveal_buttons[floor(len(card_container) / 2.0)].hide()
 	# Else fills all five card slots
 	else:
 		for index in range(len(card_container)):
@@ -318,33 +321,31 @@ func _display_drawn_cards(drawn_cards):
 			var card_type = drawn_cards[index][card_attribute["type"]]
 			var particle = particle_systems[index]
 			
-			if card_rarity == "Legend" or card_rarity == "Epic":
-				_set_particle_system(card_rarity, card_type, particle)
+			if card_rarity == "Legend":
+				_set_particle_system(card_type, particle)
+			else:
+				reveal_buttons[index].hide()
 
 
 # Emits particles for legends and epics
-func _set_particle_system(rarity, type, particle):
+func _set_particle_system(type, particle):
 	particle.show()
 	
-	match rarity:
-		"Legend":
-			match type:
-				"Death":
-					particle.process_material.color = Color.black
-				"Life":
-					particle.process_material.color = Color.white
-				"Wood":
-					particle.process_material.color = Color.darkgreen
-				"Fire":
-					particle.process_material.color = Color.crimson
-				"Earth":
-					particle.process_material.color = Color.brown
-				"Metal":
-					particle.process_material.color = Color.gray
-				"Water":
-					particle.process_material.color = Color.blue
-		"Epic":
+	match type:
+		"Death":
+			particle.process_material.color = Color.black
+		"Life":
+			particle.process_material.color = Color.white
+		"Wood":
+			particle.process_material.color = Color.darkgreen
+		"Fire":
+			particle.process_material.color = Color.red
+		"Earth":
+			particle.process_material.color = Color.chocolate
+		"Metal":
 			particle.process_material.color = Color.darkgray
+		"Water":
+			particle.process_material.color = Color.darkturquoise
 
 
 # Shows the SummonUI
@@ -399,3 +400,5 @@ func _on_DrawRates_toggled(button_pressed):
 		DrawRatesPanel.move(target_position)
 	else:
 		DrawRatesPanel.move(original_position)
+
+

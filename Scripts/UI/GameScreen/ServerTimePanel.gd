@@ -23,12 +23,19 @@ func _on_Timer_timeout():
 # Updates the server timer
 func _update_server_time():
 	var timeDict = OS.get_time(true);
-	var hour = timeDict.hour;
-	var minute = timeDict.minute;
-	var seconds = timeDict.second;
+	var hour = str(timeDict.hour);
+	var minute = str(timeDict.minute);
+	var seconds = str(timeDict.second);
 	var server_time_label = get_node("ServerTime")
 	
-	server_time_label.text = str(hour) + " : " + str(minute) + " : " + str(seconds)
+	if len(hour) == 1:
+		hour = str(0) + hour
+	if len(minute) == 1:
+		minute = str(0) + minute
+	if len(seconds) == 1:
+		seconds = str(0) + seconds
+	
+	server_time_label.text = hour + " : " + minute + " : " + seconds
 
 
 func move(target):

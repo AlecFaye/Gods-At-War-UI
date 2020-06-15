@@ -73,6 +73,7 @@ func _input(event):
 		if event is InputEventMouseButton:
 			if event.position.x > rect_size.x:
 				_move(original_position)
+				TextEditPanel.hide()
 
 
 # Opens the chat

@@ -1,0 +1,187 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Fonts/Timeless-Bold.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Sprites/GameUISprites/Gems.png" type="Texture" id=2]
+[ext_resource path="res://Scripts/UI/Events/Daily.gd" type="Script" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 20
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 1 )
+
+[node name="Daily1" type="Button"]
+margin_left = 11.0
+margin_right = 106.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 95, 100 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Day" type="Label" parent="."]
+margin_left = 10.0
+margin_top = 5.0
+margin_right = 40.0
+margin_bottom = 23.0
+custom_fonts/font = SubResource( 1 )
+text = "1"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 45, 50 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 2 )
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Description" type="Button" parent="Node2D"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -77.5
+margin_top = 10.0
+margin_right = 172.5
+margin_bottom = 90.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Type" type="HBoxContainer" parent="Node2D/Description"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -115.0
+margin_top = -35.0
+margin_right = 115.0
+margin_bottom = 45.0
+rect_min_size = Vector2( 230, 80 )
+custom_constants/separation = 15
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Resource1" type="VBoxContainer" parent="Node2D/Description/Type"]
+visible = false
+margin_left = 92.0
+margin_right = 137.0
+margin_bottom = 80.0
+rect_min_size = Vector2( 45, 80 )
+
+[node name="SpriteHolder" type="TextureRect" parent="Node2D/Description/Type/Resource1"]
+margin_right = 45.0
+margin_bottom = 45.0
+rect_min_size = Vector2( 45, 45 )
+
+[node name="Sprite" type="Sprite" parent="Node2D/Description/Type/Resource1/SpriteHolder"]
+scale = Vector2( 0.08, 0.08 )
+texture = ExtResource( 2 )
+centered = false
+offset = Vector2( 75, 75 )
+
+[node name="Count" type="Label" parent="Node2D/Description/Type/Resource1"]
+margin_top = 49.0
+margin_right = 45.0
+margin_bottom = 69.0
+rect_min_size = Vector2( 45, 15 )
+custom_fonts/font = SubResource( 2 )
+text = "99999"
+align = 1
+valign = 1
+
+[node name="Resource2" type="VBoxContainer" parent="Node2D/Description/Type"]
+visible = false
+margin_left = 32.0
+margin_right = 77.0
+margin_bottom = 80.0
+rect_min_size = Vector2( 45, 80 )
+
+[node name="SpriteHolder" type="TextureRect" parent="Node2D/Description/Type/Resource2"]
+margin_right = 45.0
+margin_bottom = 45.0
+rect_min_size = Vector2( 45, 45 )
+
+[node name="Sprite" type="Sprite" parent="Node2D/Description/Type/Resource2/SpriteHolder"]
+scale = Vector2( 0.08, 0.08 )
+texture = ExtResource( 2 )
+centered = false
+offset = Vector2( 75, 75 )
+
+[node name="Count" type="Label" parent="Node2D/Description/Type/Resource2"]
+margin_top = 49.0
+margin_right = 45.0
+margin_bottom = 69.0
+rect_min_size = Vector2( 45, 15 )
+custom_fonts/font = SubResource( 2 )
+text = "99999"
+align = 1
+valign = 1
+
+[node name="Resource3" type="VBoxContainer" parent="Node2D/Description/Type"]
+visible = false
+margin_left = 62.0
+margin_right = 107.0
+margin_bottom = 80.0
+rect_min_size = Vector2( 45, 80 )
+
+[node name="SpriteHolder" type="TextureRect" parent="Node2D/Description/Type/Resource3"]
+margin_right = 45.0
+margin_bottom = 45.0
+rect_min_size = Vector2( 45, 45 )
+
+[node name="Sprite" type="Sprite" parent="Node2D/Description/Type/Resource3/SpriteHolder"]
+scale = Vector2( 0.08, 0.08 )
+texture = ExtResource( 2 )
+centered = false
+offset = Vector2( 75, 75 )
+
+[node name="Count" type="Label" parent="Node2D/Description/Type/Resource3"]
+margin_top = 49.0
+margin_right = 45.0
+margin_bottom = 69.0
+rect_min_size = Vector2( 45, 15 )
+custom_fonts/font = SubResource( 2 )
+text = "99999"
+align = 1
+valign = 1
+
+[node name="Resource4" type="VBoxContainer" parent="Node2D/Description/Type"]
+visible = false
+margin_left = 92.0
+margin_right = 137.0
+margin_bottom = 80.0
+rect_min_size = Vector2( 45, 80 )
+
+[node name="SpriteHolder" type="TextureRect" parent="Node2D/Description/Type/Resource4"]
+margin_right = 45.0
+margin_bottom = 45.0
+rect_min_size = Vector2( 45, 45 )
+
+[node name="Sprite" type="Sprite" parent="Node2D/Description/Type/Resource4/SpriteHolder"]
+scale = Vector2( 0.08, 0.08 )
+texture = ExtResource( 2 )
+centered = false
+offset = Vector2( 75, 75 )
+
+[node name="Count" type="Label" parent="Node2D/Description/Type/Resource4"]
+margin_top = 49.0
+margin_right = 45.0
+margin_bottom = 69.0
+rect_min_size = Vector2( 45, 15 )
+custom_fonts/font = SubResource( 2 )
+text = "99999"
+align = 1
+valign = 1
+
+[node name="Timer" type="Timer" parent="Node2D/Description"]
+wait_time = 0.001
+one_shot = true
+[connection signal="timeout" from="Node2D/Description/Timer" to="." method="_on_Timer_timeout"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=152 format=2]
+[gd_scene load_steps=186 format=2]
 
 [ext_resource path="res://Sprites/GameUISprites/Gems.png" type="Texture" id=1]
 [ext_resource path="res://Sprites/GameUISprites/Gold.png" type="Texture" id=2]
@@ -22,12 +22,12 @@
 [ext_resource path="res://Scripts/UI/SettingsUI.gd" type="Script" id=20]
 [ext_resource path="res://Scripts/UI/StatsUI.gd" type="Script" id=21]
 [ext_resource path="res://Scripts/UI/RankingUI.gd" type="Script" id=22]
-[ext_resource path="res://Scripts/UI/EventsUI.gd" type="Script" id=23]
+[ext_resource path="res://Scripts/UI/Events/EventsUI.gd" type="Script" id=23]
 [ext_resource path="res://Scripts/UI/MailUI.gd" type="Script" id=24]
 [ext_resource path="res://Scripts/UI/Cards/CardsUI.gd" type="Script" id=25]
 [ext_resource path="res://Scripts/UI/SkillsUI.gd" type="Script" id=26]
 [ext_resource path="res://Scripts/UI/CityUI.gd" type="Script" id=27]
-[ext_resource path="res://Scripts/UI/AllianceUI.gd" type="Script" id=28]
+[ext_resource path="res://Scripts/UI/KingdomUI.gd" type="Script" id=28]
 [ext_resource path="res://Scripts/UI/GameScreen/CentreButtons.gd" type="Script" id=29]
 [ext_resource path="res://Fonts/Timeless-Bold.ttf" type="DynamicFontData" id=30]
 [ext_resource path="res://Scripts/UI/GameScreen/ResourcePanel.gd" type="Script" id=31]
@@ -57,13 +57,8 @@
 [ext_resource path="res://Scripts/UI/QuestUI.gd" type="Script" id=55]
 [ext_resource path="res://Scripts/UI/Summon/DrawRatesPanel.gd" type="Script" id=56]
 [ext_resource path="res://Sprites/CardSprites/Common/AztecWarrior.png" type="Texture" id=57]
-[ext_resource path="res://Scripts/TesterUI.gd" type="Script" id=58]
-
-[sub_resource type="DynamicFont" id=91]
-font_data = ExtResource( 13 )
-
-[sub_resource type="DynamicFont" id=89]
-font_data = ExtResource( 13 )
+[ext_resource path="res://Scripts/UI/CalendarPanel.gd" type="Script" id=59]
+[ext_resource path="res://Scenes/Buttons/Events/Daily.tscn" type="PackedScene" id=60]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.184314, 0.152941, 0.196078, 1 )
@@ -117,19 +112,19 @@ font_data = ExtResource( 4 )
 size = 20
 font_data = ExtResource( 4 )
 
-[sub_resource type="DynamicFont" id=65]
+[sub_resource type="DynamicFont" id=15]
 size = 40
 font_data = ExtResource( 4 )
 
-[sub_resource type="DynamicFont" id=66]
+[sub_resource type="DynamicFont" id=16]
 size = 24
 font_data = ExtResource( 4 )
 
-[sub_resource type="DynamicFont" id=67]
+[sub_resource type="DynamicFont" id=17]
 size = 20
 font_data = ExtResource( 30 )
 
-[sub_resource type="ParticlesMaterial" id=94]
+[sub_resource type="ParticlesMaterial" id=18]
 flag_disable_z = true
 spread = 180.0
 gravity = Vector3( 0, 0, 0 )
@@ -137,11 +132,11 @@ initial_velocity = 75.0
 initial_velocity_random = 0.5
 orbit_velocity = 0.0
 orbit_velocity_random = 0.0
-linear_accel = -20.0
+linear_accel = -15.0
 scale = 5.0
 scale_random = 1.0
 
-[sub_resource type="ParticlesMaterial" id=93]
+[sub_resource type="ParticlesMaterial" id=19]
 flag_disable_z = true
 spread = 180.0
 gravity = Vector3( 0, 0, 0 )
@@ -149,11 +144,11 @@ initial_velocity = 75.0
 initial_velocity_random = 0.5
 orbit_velocity = 0.0
 orbit_velocity_random = 0.0
-linear_accel = -20.0
+linear_accel = -15.0
 scale = 5.0
 scale_random = 1.0
 
-[sub_resource type="ParticlesMaterial" id=95]
+[sub_resource type="ParticlesMaterial" id=20]
 flag_disable_z = true
 spread = 180.0
 gravity = Vector3( 0, 0, 0 )
@@ -161,11 +156,11 @@ initial_velocity = 75.0
 initial_velocity_random = 0.5
 orbit_velocity = 0.0
 orbit_velocity_random = 0.0
-linear_accel = -20.0
+linear_accel = -15.0
 scale = 5.0
 scale_random = 1.0
 
-[sub_resource type="ParticlesMaterial" id=96]
+[sub_resource type="ParticlesMaterial" id=21]
 flag_disable_z = true
 spread = 180.0
 gravity = Vector3( 0, 0, 0 )
@@ -173,11 +168,11 @@ initial_velocity = 75.0
 initial_velocity_random = 0.5
 orbit_velocity = 0.0
 orbit_velocity_random = 0.0
-linear_accel = -20.0
+linear_accel = -15.0
 scale = 5.0
 scale_random = 1.0
 
-[sub_resource type="ParticlesMaterial" id=97]
+[sub_resource type="ParticlesMaterial" id=22]
 flag_disable_z = true
 spread = 180.0
 gravity = Vector3( 0, 0, 0 )
@@ -185,23 +180,23 @@ initial_velocity = 75.0
 initial_velocity_random = 0.5
 orbit_velocity = 0.0
 orbit_velocity_random = 0.0
-linear_accel = -20.0
+linear_accel = -15.0
 scale = 5.0
 scale_random = 1.0
 
-[sub_resource type="DynamicFont" id=68]
+[sub_resource type="DynamicFont" id=23]
 size = 20
 font_data = ExtResource( 13 )
 
-[sub_resource type="DynamicFont" id=69]
+[sub_resource type="DynamicFont" id=24]
 size = 40
 font_data = ExtResource( 4 )
 
-[sub_resource type="DynamicFont" id=70]
+[sub_resource type="DynamicFont" id=25]
 size = 20
 font_data = ExtResource( 4 )
 
-[sub_resource type="StyleBoxFlat" id=71]
+[sub_resource type="StyleBoxFlat" id=26]
 bg_color = Color( 0.117647, 0.121569, 0.215686, 0.882353 )
 border_width_left = 2
 border_width_top = 2
@@ -213,158 +208,58 @@ corner_radius_top_right = 5
 corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
 
-[sub_resource type="DynamicFont" id=72]
-size = 20
-font_data = ExtResource( 4 )
-
-[sub_resource type="DynamicFont" id=73]
-size = 18
-font_data = ExtResource( 30 )
-
-[sub_resource type="DynamicFont" id=74]
-size = 20
-font_data = ExtResource( 4 )
-
-[sub_resource type="DynamicFont" id=81]
-size = 40
-font_data = ExtResource( 4 )
-
-[sub_resource type="DynamicFont" id=82]
-size = 20
-font_data = ExtResource( 4 )
-
-[sub_resource type="DynamicFont" id=83]
-size = 20
-font_data = ExtResource( 4 )
-
-[sub_resource type="StyleBoxFlat" id=87]
-bg_color = Color( 0, 0, 0, 1 )
-
-[sub_resource type="StyleBoxFlat" id=88]
-bg_color = Color( 0.0705882, 0.505882, 0.498039, 1 )
-
-[sub_resource type="DynamicFont" id=75]
-font_data = ExtResource( 13 )
-
-[sub_resource type="DynamicFont" id=76]
-font_data = ExtResource( 13 )
-
-[sub_resource type="DynamicFont" id=77]
-font_data = ExtResource( 30 )
-
-[sub_resource type="DynamicFont" id=84]
-size = 20
-font_data = ExtResource( 13 )
-
-[sub_resource type="DynamicFont" id=78]
-font_data = ExtResource( 13 )
-
-[sub_resource type="DynamicFont" id=79]
-font_data = ExtResource( 30 )
-
-[sub_resource type="DynamicFont" id=80]
-size = 24
-font_data = ExtResource( 4 )
-
-[sub_resource type="DynamicFont" id=15]
-size = 40
-font_data = ExtResource( 4 )
-
-[sub_resource type="DynamicFont" id=16]
-size = 24
-font_data = ExtResource( 4 )
-
-[sub_resource type="DynamicFont" id=17]
-size = 40
-font_data = ExtResource( 4 )
-
-[sub_resource type="DynamicFont" id=18]
-size = 20
-font_data = ExtResource( 4 )
-
-[sub_resource type="DynamicFont" id=19]
-size = 40
-font_data = ExtResource( 4 )
-
-[sub_resource type="DynamicFont" id=20]
-size = 32
-font_data = ExtResource( 4 )
-
-[sub_resource type="DynamicFont" id=21]
-size = 40
-font_data = ExtResource( 4 )
-
-[sub_resource type="DynamicFont" id=22]
-size = 40
-font_data = ExtResource( 4 )
-
-[sub_resource type="DynamicFont" id=23]
-size = 40
-font_data = ExtResource( 4 )
-
-[sub_resource type="DynamicFont" id=24]
-size = 24
-font_data = ExtResource( 4 )
-
-[sub_resource type="DynamicFont" id=25]
-font_data = ExtResource( 30 )
-
-[sub_resource type="DynamicFont" id=26]
-size = 20
-font_data = ExtResource( 4 )
-
 [sub_resource type="DynamicFont" id=27]
-size = 40
+size = 20
 font_data = ExtResource( 4 )
 
 [sub_resource type="DynamicFont" id=28]
-size = 24
-font_data = ExtResource( 4 )
+size = 18
+font_data = ExtResource( 30 )
 
 [sub_resource type="DynamicFont" id=29]
-size = 24
+size = 20
 font_data = ExtResource( 4 )
 
 [sub_resource type="DynamicFont" id=30]
-font_data = ExtResource( 30 )
+size = 40
+font_data = ExtResource( 4 )
 
 [sub_resource type="DynamicFont" id=31]
-size = 18
+size = 20
 font_data = ExtResource( 4 )
 
 [sub_resource type="DynamicFont" id=32]
-size = 18
+size = 20
 font_data = ExtResource( 4 )
 
-[sub_resource type="DynamicFont" id=33]
-font_data = ExtResource( 30 )
+[sub_resource type="StyleBoxFlat" id=33]
+bg_color = Color( 0, 0, 0, 1 )
 
-[sub_resource type="DynamicFont" id=34]
-font_data = ExtResource( 30 )
+[sub_resource type="StyleBoxFlat" id=34]
+bg_color = Color( 0.0705882, 0.505882, 0.498039, 1 )
 
 [sub_resource type="DynamicFont" id=35]
-font_data = ExtResource( 30 )
+font_data = ExtResource( 13 )
 
 [sub_resource type="DynamicFont" id=36]
-font_data = ExtResource( 30 )
+font_data = ExtResource( 13 )
 
 [sub_resource type="DynamicFont" id=37]
-size = 18
-font_data = ExtResource( 4 )
+font_data = ExtResource( 30 )
 
 [sub_resource type="DynamicFont" id=38]
-size = 18
-font_data = ExtResource( 4 )
+size = 20
+font_data = ExtResource( 13 )
 
 [sub_resource type="DynamicFont" id=39]
-size = 18
-font_data = ExtResource( 4 )
+font_data = ExtResource( 13 )
 
 [sub_resource type="DynamicFont" id=40]
 font_data = ExtResource( 30 )
 
 [sub_resource type="DynamicFont" id=41]
-font_data = ExtResource( 30 )
+size = 24
+font_data = ExtResource( 4 )
 
 [sub_resource type="DynamicFont" id=42]
 size = 40
@@ -375,7 +270,7 @@ size = 24
 font_data = ExtResource( 4 )
 
 [sub_resource type="DynamicFont" id=44]
-size = 24
+size = 40
 font_data = ExtResource( 4 )
 
 [sub_resource type="DynamicFont" id=45]
@@ -383,28 +278,30 @@ size = 20
 font_data = ExtResource( 4 )
 
 [sub_resource type="DynamicFont" id=46]
-font_data = ExtResource( 13 )
-
-[sub_resource type="DynamicFont" id=47]
-font_data = ExtResource( 13 )
-
-[sub_resource type="DynamicFont" id=48]
-font_data = ExtResource( 30 )
-
-[sub_resource type="DynamicFont" id=49]
-size = 20
-font_data = ExtResource( 4 )
-
-[sub_resource type="DynamicFont" id=50]
 size = 40
 font_data = ExtResource( 4 )
 
+[sub_resource type="DynamicFont" id=47]
+size = 32
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=48]
+size = 40
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=49]
+size = 20
+font_data = ExtResource( 30 )
+
+[sub_resource type="DynamicFont" id=50]
+font_data = ExtResource( 30 )
+
 [sub_resource type="DynamicFont" id=51]
-size = 24
+size = 40
 font_data = ExtResource( 4 )
 
 [sub_resource type="DynamicFont" id=52]
-size = 20
+size = 40
 font_data = ExtResource( 4 )
 
 [sub_resource type="DynamicFont" id=53]
@@ -412,46 +309,269 @@ size = 40
 font_data = ExtResource( 4 )
 
 [sub_resource type="DynamicFont" id=54]
-size = 20
+size = 24
 font_data = ExtResource( 4 )
 
 [sub_resource type="DynamicFont" id=55]
+font_data = ExtResource( 30 )
+
+[sub_resource type="DynamicFont" id=56]
 size = 20
 font_data = ExtResource( 4 )
 
-[sub_resource type="DynamicFont" id=56]
-size = 30
-font_data = ExtResource( 4 )
-
-[sub_resource type="DynamicFont" id=57]
-size = 40
-font_data = ExtResource( 4 )
+[sub_resource type="StyleBoxFlat" id=57]
+bg_color = Color( 0, 0, 0, 1 )
 
 [sub_resource type="DynamicFont" id=58]
 size = 24
 font_data = ExtResource( 4 )
 
 [sub_resource type="DynamicFont" id=59]
-size = 20
+font_data = ExtResource( 30 )
+
+[sub_resource type="StyleBoxFlat" id=60]
+bg_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="StyleBoxFlat" id=61]
+bg_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="StyleBoxFlat" id=62]
+bg_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="StyleBoxFlat" id=63]
+bg_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="DynamicFont" id=64]
+size = 28
 font_data = ExtResource( 4 )
 
-[sub_resource type="DynamicFont" id=60]
+[sub_resource type="DynamicFont" id=65]
+font_data = ExtResource( 30 )
+
+[sub_resource type="DynamicFont" id=66]
+size = 28
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=67]
+font_data = ExtResource( 30 )
+
+[sub_resource type="DynamicFont" id=68]
+font_data = ExtResource( 30 )
+
+[sub_resource type="DynamicFont" id=69]
 size = 40
 font_data = ExtResource( 4 )
 
-[sub_resource type="DynamicFont" id=61]
+[sub_resource type="DynamicFont" id=70]
 size = 24
 font_data = ExtResource( 4 )
 
-[sub_resource type="DynamicFont" id=62]
-size = 20
+[sub_resource type="DynamicFont" id=71]
+size = 24
 font_data = ExtResource( 4 )
 
-[sub_resource type="DynamicFont" id=63]
+[sub_resource type="DynamicFont" id=72]
+font_data = ExtResource( 30 )
+
+[sub_resource type="DynamicFont" id=73]
+size = 18
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=74]
+size = 18
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=75]
+font_data = ExtResource( 30 )
+
+[sub_resource type="DynamicFont" id=76]
+font_data = ExtResource( 30 )
+
+[sub_resource type="DynamicFont" id=77]
+font_data = ExtResource( 30 )
+
+[sub_resource type="DynamicFont" id=78]
+font_data = ExtResource( 30 )
+
+[sub_resource type="DynamicFont" id=79]
+size = 18
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=80]
+size = 18
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=81]
+size = 18
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=82]
+font_data = ExtResource( 30 )
+
+[sub_resource type="DynamicFont" id=83]
+font_data = ExtResource( 30 )
+
+[sub_resource type="DynamicFont" id=84]
 size = 40
 font_data = ExtResource( 4 )
 
-[sub_resource type="DynamicFont" id=64]
+[sub_resource type="DynamicFont" id=85]
+size = 24
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=86]
+size = 24
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=87]
+size = 20
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=88]
+font_data = ExtResource( 13 )
+
+[sub_resource type="StyleBoxFlat" id=89]
+bg_color = Color( 0.0901961, 0.686275, 0.67451, 1 )
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="DynamicFont" id=90]
+font_data = ExtResource( 13 )
+
+[sub_resource type="DynamicFont" id=91]
+font_data = ExtResource( 30 )
+
+[sub_resource type="DynamicFont" id=92]
+size = 20
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=93]
+size = 20
+font_data = ExtResource( 13 )
+
+[sub_resource type="DynamicFont" id=94]
+size = 40
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=95]
+size = 24
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=96]
+size = 20
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=97]
+size = 40
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=98]
+size = 20
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=99]
+size = 20
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=100]
+size = 30
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=101]
+size = 40
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=102]
+size = 24
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=103]
+size = 20
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=104]
+size = 40
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=105]
+size = 24
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=106]
+size = 28
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=107]
+size = 28
+font_data = ExtResource( 4 )
+
+[sub_resource type="StyleBoxFlat" id=108]
+bg_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="StyleBoxFlat" id=109]
+bg_color = Color( 0.294118, 0.239216, 0.239216, 1 )
+
+[sub_resource type="DynamicFont" id=110]
+size = 28
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=111]
+size = 20
+font_data = ExtResource( 4 )
+
+[sub_resource type="StyleBoxFlat" id=112]
+bg_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="DynamicFont" id=113]
+font_data = ExtResource( 30 )
+
+[sub_resource type="StyleBoxFlat" id=114]
+
+[sub_resource type="StyleBoxFlat" id=115]
+bg_color = Color( 0.231373, 0.223529, 0.262745, 1 )
+
+[sub_resource type="StyleBoxFlat" id=116]
+bg_color = Color( 0.243137, 0.188235, 0.188235, 1 )
+
+[sub_resource type="DynamicFont" id=117]
+font_data = ExtResource( 30 )
+
+[sub_resource type="StyleBoxFlat" id=118]
+bg_color = Color( 0.14902, 0.133333, 0.25098, 1 )
+
+[sub_resource type="DynamicFont" id=119]
+size = 20
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=120]
+size = 40
+font_data = ExtResource( 4 )
+
+[sub_resource type="StyleBoxFlat" id=121]
+bg_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="DynamicFont" id=122]
+size = 28
+font_data = ExtResource( 30 )
+
+[sub_resource type="StyleBoxFlat" id=123]
+bg_color = Color( 0.109804, 0.603922, 0.592157, 1 )
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="DynamicFont" id=124]
+size = 24
+font_data = ExtResource( 30 )
+
+[sub_resource type="DynamicFont" id=125]
+size = 40
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=126]
 size = 20
 font_data = ExtResource( 4 )
 
@@ -466,61 +586,6 @@ hint_tooltip = "
 "
 __meta__ = {
 "_edit_lock_": true,
-"_edit_use_anchors_": false
-}
-
-[node name="TesterUI" type="Control" parent="."]
-visible = false
-anchor_right = 1.0
-anchor_bottom = 1.0
-script = ExtResource( 58 )
-__meta__ = {
-"_edit_lock_": true,
-"_edit_use_anchors_": false
-}
-
-[node name="Card" type="TextureRect" parent="TesterUI"]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -89.9999
-margin_top = -132.5
-margin_right = 90.0
-margin_bottom = 132.5
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Sprite" type="Sprite" parent="TesterUI/Card"]
-position = Vector2( 0, 10 )
-scale = Vector2( 0.2, 0.25 )
-texture = ExtResource( 57 )
-centered = false
-offset = Vector2( 75, 0 )
-
-[node name="Reveal" type="Button" parent="TesterUI/Card/Sprite"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 75.0
-margin_right = 75.0
-custom_fonts/font = SubResource( 91 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Animate" type="Button" parent="TesterUI"]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = 127.386
-margin_top = -118.254
-margin_right = 195.386
-margin_bottom = -93.2544
-custom_fonts/font = SubResource( 89 )
-text = "Animate"
-__meta__ = {
 "_edit_use_anchors_": false
 }
 
@@ -806,7 +871,7 @@ anchor_right = 1.0
 anchor_bottom = 0.967
 margin_bottom = 0.990007
 custom_fonts/font = SubResource( 5 )
-text = "9999/9999"
+text = "999/999"
 align = 1
 valign = 1
 __meta__ = {
@@ -1311,7 +1376,7 @@ margin_left = 25.0
 margin_top = 25.0
 margin_right = 161.0
 margin_bottom = 60.0
-custom_fonts/font = SubResource( 65 )
+custom_fonts/font = SubResource( 15 )
 text = "Summon"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -1435,7 +1500,7 @@ __meta__ = {
 }
 
 [node name="CardContainer" type="HBoxContainer" parent="SummonUI/SummonPanel/CardScrollContainer"]
-margin_right = 2065.0
+margin_right = 455.0
 margin_bottom = 400.0
 custom_constants/separation = 5
 
@@ -1448,36 +1513,43 @@ margin_right = 455.0
 card_pack_path = "res://Files/CardPacks/NormalGoldPack.json"
 
 [node name="NormalHinduPack" parent="SummonUI/SummonPanel/CardScrollContainer/CardContainer" instance=ExtResource( 42 )]
+visible = false
 margin_left = 460.0
 margin_right = 685.0
 card_pack_path = "res://Files/CardPacks/NormalHinduPack.json"
 
 [node name="NormalJapanesePack" parent="SummonUI/SummonPanel/CardScrollContainer/CardContainer" instance=ExtResource( 43 )]
+visible = false
 margin_left = 690.0
 margin_right = 915.0
 card_pack_path = "res://Files/CardPacks/NormalJapanesePack.json"
 
 [node name="NormalChinesePack" parent="SummonUI/SummonPanel/CardScrollContainer/CardContainer" instance=ExtResource( 44 )]
+visible = false
 margin_left = 920.0
 margin_right = 1145.0
 card_pack_path = "res://Files/CardPacks/NormalChinesePack.json"
 
 [node name="NormalRomanPack" parent="SummonUI/SummonPanel/CardScrollContainer/CardContainer" instance=ExtResource( 45 )]
+visible = false
 margin_left = 1150.0
 margin_right = 1375.0
 card_pack_path = "res://Files/CardPacks/NormalRomanPack.json"
 
 [node name="NormalNordicPack" parent="SummonUI/SummonPanel/CardScrollContainer/CardContainer" instance=ExtResource( 46 )]
+visible = false
 margin_left = 1380.0
 margin_right = 1605.0
 card_pack_path = "res://Files/CardPacks/NormalNordicPack.json"
 
 [node name="NormalEgyptianPack" parent="SummonUI/SummonPanel/CardScrollContainer/CardContainer" instance=ExtResource( 47 )]
+visible = false
 margin_left = 1610.0
 margin_right = 1835.0
 card_pack_path = "res://Files/CardPacks/NormalEgyptianPack.json"
 
 [node name="NormalAmericanPack" parent="SummonUI/SummonPanel/CardScrollContainer/CardContainer" instance=ExtResource( 48 )]
+visible = false
 margin_left = 1840.0
 margin_right = 2065.0
 card_pack_path = "res://Files/CardPacks/NormalAmericanPack.json"
@@ -1561,7 +1633,7 @@ __meta__ = {
 margin_top = 26.0
 margin_right = 455.0
 margin_bottom = 47.0
-custom_fonts/font = SubResource( 66 )
+custom_fonts/font = SubResource( 16 )
 text = "1x Summon"
 align = 1
 valign = 1
@@ -1573,7 +1645,7 @@ __meta__ = {
 margin_top = 51.0
 margin_right = 455.0
 margin_bottom = 74.0
-custom_fonts/font = SubResource( 67 )
+custom_fonts/font = SubResource( 17 )
 text = "Cost"
 align = 1
 valign = 1
@@ -1633,7 +1705,7 @@ __meta__ = {
 margin_top = 26.0
 margin_right = 455.0
 margin_bottom = 47.0
-custom_fonts/font = SubResource( 66 )
+custom_fonts/font = SubResource( 16 )
 text = "5x Summon"
 align = 1
 valign = 1
@@ -1645,7 +1717,7 @@ __meta__ = {
 margin_top = 51.0
 margin_right = 455.0
 margin_bottom = 74.0
-custom_fonts/font = SubResource( 67 )
+custom_fonts/font = SubResource( 17 )
 text = "Cost"
 align = 1
 valign = 1
@@ -1654,7 +1726,6 @@ __meta__ = {
 }
 
 [node name="DrawnCardsDisplay" type="Panel" parent="SummonUI/SummonPanel"]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 __meta__ = {
@@ -1678,10 +1749,11 @@ rect_min_size = Vector2( 185, 0 )
 [node name="Particles2D" type="Particles2D" parent="SummonUI/SummonPanel/DrawnCardsDisplay/CardsDrawnContainer/CardSpriteHolder1"]
 position = Vector2( 95, 325 )
 scale = Vector2( 1, 1.45 )
-amount = 400
+amount = 500
 lifetime = 2.5
+preprocess = 10.0
 explosiveness = 0.1
-process_material = SubResource( 94 )
+process_material = SubResource( 18 )
 
 [node name="CardSprite" type="Sprite" parent="SummonUI/SummonPanel/DrawnCardsDisplay/CardsDrawnContainer/CardSpriteHolder1"]
 position = Vector2( 0, 180 )
@@ -1710,10 +1782,11 @@ rect_min_size = Vector2( 185, 0 )
 [node name="Particles2D" type="Particles2D" parent="SummonUI/SummonPanel/DrawnCardsDisplay/CardsDrawnContainer/CardSpriteHolder2"]
 position = Vector2( 95, 230 )
 scale = Vector2( 1, 1.45 )
-amount = 400
+amount = 500
 lifetime = 2.5
+preprocess = 10.0
 explosiveness = 0.1
-process_material = SubResource( 93 )
+process_material = SubResource( 19 )
 
 [node name="CardSprite" type="Sprite" parent="SummonUI/SummonPanel/DrawnCardsDisplay/CardsDrawnContainer/CardSpriteHolder2"]
 position = Vector2( 0, 90 )
@@ -1742,9 +1815,10 @@ rect_min_size = Vector2( 185, 0 )
 [node name="Particles2D" type="Particles2D" parent="SummonUI/SummonPanel/DrawnCardsDisplay/CardsDrawnContainer/CardSpriteHolder3"]
 position = Vector2( 95, 165 )
 scale = Vector2( 1, 1.45 )
-amount = 400
+amount = 500
 lifetime = 2.5
-process_material = SubResource( 95 )
+preprocess = 10.0
+process_material = SubResource( 20 )
 
 [node name="CardSprite" type="Sprite" parent="SummonUI/SummonPanel/DrawnCardsDisplay/CardsDrawnContainer/CardSpriteHolder3"]
 position = Vector2( 0, 20 )
@@ -1773,10 +1847,11 @@ rect_min_size = Vector2( 185, 0 )
 [node name="Particles2D" type="Particles2D" parent="SummonUI/SummonPanel/DrawnCardsDisplay/CardsDrawnContainer/CardSpriteHolder4"]
 position = Vector2( 95, 230 )
 scale = Vector2( 1, 1.45 )
-amount = 400
+amount = 500
 lifetime = 2.5
+preprocess = 10.0
 explosiveness = 0.1
-process_material = SubResource( 96 )
+process_material = SubResource( 21 )
 
 [node name="CardSprite" type="Sprite" parent="SummonUI/SummonPanel/DrawnCardsDisplay/CardsDrawnContainer/CardSpriteHolder4"]
 position = Vector2( 0, 90 )
@@ -1805,10 +1880,11 @@ rect_min_size = Vector2( 185, 0 )
 [node name="Particles2D" type="Particles2D" parent="SummonUI/SummonPanel/DrawnCardsDisplay/CardsDrawnContainer/CardSpriteHolder5"]
 position = Vector2( 95, 325 )
 scale = Vector2( 1, 1.45 )
-amount = 400
+amount = 500
 lifetime = 2.5
+preprocess = 10.0
 explosiveness = 0.1
-process_material = SubResource( 97 )
+process_material = SubResource( 22 )
 
 [node name="CardSprite" type="Sprite" parent="SummonUI/SummonPanel/DrawnCardsDisplay/CardsDrawnContainer/CardSpriteHolder5"]
 position = Vector2( 0, 180 )
@@ -1851,7 +1927,7 @@ margin_left = -150.0
 margin_top = -20.0
 margin_right = 150.0
 margin_bottom = 20.0
-custom_fonts/font = SubResource( 68 )
+custom_fonts/font = SubResource( 23 )
 text = "Cards FULL"
 align = 1
 valign = 1
@@ -1885,7 +1961,7 @@ margin_left = 25.0
 margin_top = 25.0
 margin_right = 100.0
 margin_bottom = 50.0
-custom_fonts/font = SubResource( 69 )
+custom_fonts/font = SubResource( 24 )
 text = "Card Pack Name"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -3704,7 +3780,7 @@ margin_left = 25.0
 margin_top = -40.0
 margin_right = 150.0
 margin_bottom = -10.0
-custom_fonts/font = SubResource( 70 )
+custom_fonts/font = SubResource( 25 )
 toggle_mode = true
 text = "Draw Rates"
 __meta__ = {
@@ -3718,7 +3794,7 @@ margin_left = 25.0
 margin_top = -0.000244141
 margin_right = 300.0
 margin_bottom = 300.0
-custom_styles/panel = SubResource( 71 )
+custom_styles/panel = SubResource( 26 )
 script = ExtResource( 56 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -3742,7 +3818,7 @@ margin_bottom = 22.0
 margin_top = 2.0
 margin_right = 145.0
 margin_bottom = 20.0
-custom_fonts/font = SubResource( 72 )
+custom_fonts/font = SubResource( 27 )
 text = "Death Legend Rate:"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -3752,7 +3828,7 @@ __meta__ = {
 margin_left = 149.0
 margin_right = 191.0
 margin_bottom = 22.0
-custom_fonts/font = SubResource( 73 )
+custom_fonts/font = SubResource( 28 )
 text = "100%"
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="SummonUI/CardListPanel/DrawRatesPanel/RateLabelContainer"]
@@ -3764,7 +3840,7 @@ margin_bottom = 54.0
 margin_top = 2.0
 margin_right = 130.0
 margin_bottom = 20.0
-custom_fonts/font = SubResource( 72 )
+custom_fonts/font = SubResource( 27 )
 text = "Life Legend Rate:"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -3774,7 +3850,7 @@ __meta__ = {
 margin_left = 134.0
 margin_right = 176.0
 margin_bottom = 22.0
-custom_fonts/font = SubResource( 73 )
+custom_fonts/font = SubResource( 28 )
 text = "100%"
 
 [node name="HBoxContainer3" type="HBoxContainer" parent="SummonUI/CardListPanel/DrawRatesPanel/RateLabelContainer"]
@@ -3786,7 +3862,7 @@ margin_bottom = 86.0
 margin_top = 2.0
 margin_right = 196.0
 margin_bottom = 20.0
-custom_fonts/font = SubResource( 72 )
+custom_fonts/font = SubResource( 27 )
 text = "Five Element Legend Rate:"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -3796,7 +3872,7 @@ __meta__ = {
 margin_left = 200.0
 margin_right = 242.0
 margin_bottom = 22.0
-custom_fonts/font = SubResource( 73 )
+custom_fonts/font = SubResource( 28 )
 text = "100%"
 
 [node name="HBoxContainer4" type="HBoxContainer" parent="SummonUI/CardListPanel/DrawRatesPanel/RateLabelContainer"]
@@ -3808,7 +3884,7 @@ margin_bottom = 118.0
 margin_top = 2.0
 margin_right = 129.0
 margin_bottom = 20.0
-custom_fonts/font = SubResource( 72 )
+custom_fonts/font = SubResource( 27 )
 text = "Death Epic Rate:"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -3818,7 +3894,7 @@ __meta__ = {
 margin_left = 133.0
 margin_right = 175.0
 margin_bottom = 22.0
-custom_fonts/font = SubResource( 73 )
+custom_fonts/font = SubResource( 28 )
 text = "100%"
 
 [node name="HBoxContainer5" type="HBoxContainer" parent="SummonUI/CardListPanel/DrawRatesPanel/RateLabelContainer"]
@@ -3830,7 +3906,7 @@ margin_bottom = 150.0
 margin_top = 2.0
 margin_right = 114.0
 margin_bottom = 20.0
-custom_fonts/font = SubResource( 72 )
+custom_fonts/font = SubResource( 27 )
 text = "Life Epic Rate:"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -3840,7 +3916,7 @@ __meta__ = {
 margin_left = 118.0
 margin_right = 160.0
 margin_bottom = 22.0
-custom_fonts/font = SubResource( 73 )
+custom_fonts/font = SubResource( 28 )
 text = "100%"
 
 [node name="HBoxContainer6" type="HBoxContainer" parent="SummonUI/CardListPanel/DrawRatesPanel/RateLabelContainer"]
@@ -3852,7 +3928,7 @@ margin_bottom = 182.0
 margin_top = 2.0
 margin_right = 180.0
 margin_bottom = 20.0
-custom_fonts/font = SubResource( 72 )
+custom_fonts/font = SubResource( 27 )
 text = "Five Element Epic Rate:"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -3862,7 +3938,7 @@ __meta__ = {
 margin_left = 184.0
 margin_right = 226.0
 margin_bottom = 22.0
-custom_fonts/font = SubResource( 73 )
+custom_fonts/font = SubResource( 28 )
 text = "100%"
 
 [node name="HBoxContainer7" type="HBoxContainer" parent="SummonUI/CardListPanel/DrawRatesPanel/RateLabelContainer"]
@@ -3874,7 +3950,7 @@ margin_bottom = 214.0
 margin_top = 2.0
 margin_right = 83.0
 margin_bottom = 20.0
-custom_fonts/font = SubResource( 72 )
+custom_fonts/font = SubResource( 27 )
 text = "Rare Rate:"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -3884,7 +3960,7 @@ __meta__ = {
 margin_left = 87.0
 margin_right = 129.0
 margin_bottom = 22.0
-custom_fonts/font = SubResource( 73 )
+custom_fonts/font = SubResource( 28 )
 text = "100%"
 
 [node name="HBoxContainer8" type="HBoxContainer" parent="SummonUI/CardListPanel/DrawRatesPanel/RateLabelContainer"]
@@ -3896,7 +3972,7 @@ margin_bottom = 246.0
 margin_top = 2.0
 margin_right = 128.0
 margin_bottom = 20.0
-custom_fonts/font = SubResource( 72 )
+custom_fonts/font = SubResource( 27 )
 text = "Uncommon Rate:"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -3906,7 +3982,7 @@ __meta__ = {
 margin_left = 132.0
 margin_right = 174.0
 margin_bottom = 22.0
-custom_fonts/font = SubResource( 73 )
+custom_fonts/font = SubResource( 28 )
 text = "100%"
 
 [node name="HBoxContainer9" type="HBoxContainer" parent="SummonUI/CardListPanel/DrawRatesPanel/RateLabelContainer"]
@@ -3918,7 +3994,7 @@ margin_bottom = 278.0
 margin_top = 2.0
 margin_right = 112.0
 margin_bottom = 20.0
-custom_fonts/font = SubResource( 72 )
+custom_fonts/font = SubResource( 27 )
 text = "Common Rate:"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -3928,7 +4004,7 @@ __meta__ = {
 margin_left = 116.0
 margin_right = 158.0
 margin_bottom = 22.0
-custom_fonts/font = SubResource( 73 )
+custom_fonts/font = SubResource( 28 )
 text = "100%"
 
 [node name="DrawRatesTween" type="Tween" parent="SummonUI/CardListPanel/DrawRatesPanel"]
@@ -3940,7 +4016,7 @@ margin_left = -55.0
 margin_top = 15.0
 margin_right = -20.0
 margin_bottom = 50.0
-custom_fonts/font = SubResource( 74 )
+custom_fonts/font = SubResource( 29 )
 text = "X"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -3969,7 +4045,7 @@ margin_left = 25.0
 margin_top = 25.0
 margin_right = 40.0
 margin_bottom = 14.0
-custom_fonts/font = SubResource( 81 )
+custom_fonts/font = SubResource( 30 )
 text = "Quests"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -4005,7 +4081,7 @@ margin_bottom = 536.0
 margin_right = 128.0
 margin_bottom = 50.0
 rect_min_size = Vector2( 128, 50 )
-custom_fonts/font = SubResource( 82 )
+custom_fonts/font = SubResource( 31 )
 text = "Quest 1"
 
 [node name="Quest2" type="Button" parent="QuestUI/Panel/ScrollContainer/QuestOptions"]
@@ -4013,7 +4089,7 @@ margin_top = 54.0
 margin_right = 128.0
 margin_bottom = 104.0
 rect_min_size = Vector2( 128, 50 )
-custom_fonts/font = SubResource( 82 )
+custom_fonts/font = SubResource( 31 )
 text = "Quest 1"
 
 [node name="Quest3" type="Button" parent="QuestUI/Panel/ScrollContainer/QuestOptions"]
@@ -4021,7 +4097,7 @@ margin_top = 108.0
 margin_right = 128.0
 margin_bottom = 158.0
 rect_min_size = Vector2( 128, 50 )
-custom_fonts/font = SubResource( 82 )
+custom_fonts/font = SubResource( 31 )
 text = "Quest 1"
 
 [node name="Quest4" type="Button" parent="QuestUI/Panel/ScrollContainer/QuestOptions"]
@@ -4029,7 +4105,7 @@ margin_top = 162.0
 margin_right = 128.0
 margin_bottom = 212.0
 rect_min_size = Vector2( 128, 50 )
-custom_fonts/font = SubResource( 82 )
+custom_fonts/font = SubResource( 31 )
 text = "Quest 1"
 
 [node name="Quest5" type="Button" parent="QuestUI/Panel/ScrollContainer/QuestOptions"]
@@ -4037,7 +4113,7 @@ margin_top = 216.0
 margin_right = 128.0
 margin_bottom = 266.0
 rect_min_size = Vector2( 128, 50 )
-custom_fonts/font = SubResource( 82 )
+custom_fonts/font = SubResource( 31 )
 text = "Quest 1"
 
 [node name="Quest6" type="Button" parent="QuestUI/Panel/ScrollContainer/QuestOptions"]
@@ -4045,7 +4121,7 @@ margin_top = 270.0
 margin_right = 128.0
 margin_bottom = 320.0
 rect_min_size = Vector2( 128, 50 )
-custom_fonts/font = SubResource( 82 )
+custom_fonts/font = SubResource( 31 )
 text = "Quest 1"
 
 [node name="Quest7" type="Button" parent="QuestUI/Panel/ScrollContainer/QuestOptions"]
@@ -4053,7 +4129,7 @@ margin_top = 324.0
 margin_right = 128.0
 margin_bottom = 374.0
 rect_min_size = Vector2( 128, 50 )
-custom_fonts/font = SubResource( 82 )
+custom_fonts/font = SubResource( 31 )
 text = "Quest 1"
 
 [node name="Quest8" type="Button" parent="QuestUI/Panel/ScrollContainer/QuestOptions"]
@@ -4061,7 +4137,7 @@ margin_top = 378.0
 margin_right = 128.0
 margin_bottom = 428.0
 rect_min_size = Vector2( 128, 50 )
-custom_fonts/font = SubResource( 82 )
+custom_fonts/font = SubResource( 31 )
 text = "Quest 1"
 
 [node name="Quest9" type="Button" parent="QuestUI/Panel/ScrollContainer/QuestOptions"]
@@ -4069,7 +4145,7 @@ margin_top = 432.0
 margin_right = 128.0
 margin_bottom = 482.0
 rect_min_size = Vector2( 128, 50 )
-custom_fonts/font = SubResource( 82 )
+custom_fonts/font = SubResource( 31 )
 text = "Quest 1"
 
 [node name="Quest10" type="Button" parent="QuestUI/Panel/ScrollContainer/QuestOptions"]
@@ -4077,7 +4153,7 @@ margin_top = 486.0
 margin_right = 128.0
 margin_bottom = 536.0
 rect_min_size = Vector2( 128, 50 )
-custom_fonts/font = SubResource( 82 )
+custom_fonts/font = SubResource( 31 )
 text = "Quest 1"
 
 [node name="QuestionInformationPanel" type="Panel" parent="QuestUI"]
@@ -4100,7 +4176,7 @@ margin_left = -55.0
 margin_top = 15.0
 margin_right = -20.0
 margin_bottom = 50.0
-custom_fonts/font = SubResource( 83 )
+custom_fonts/font = SubResource( 32 )
 text = "X"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -4149,7 +4225,7 @@ __meta__ = {
 margin_right = 313.0
 margin_bottom = 450.0
 rect_min_size = Vector2( 310, 450 )
-custom_styles/panel = SubResource( 87 )
+custom_styles/panel = SubResource( 33 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -4162,7 +4238,7 @@ anchor_bottom = 0.5
 margin_left = -151.5
 margin_top = -220.0
 margin_right = 155.0
-margin_bottom = 225.0
+margin_bottom = 220.0
 scroll_horizontal_enabled = false
 __meta__ = {
 "_edit_use_anchors_": false
@@ -4178,8 +4254,8 @@ alignment = 2
 margin_right = 295.0
 margin_bottom = 20.0
 rect_min_size = Vector2( 295, 20 )
-custom_styles/normal = SubResource( 88 )
-custom_fonts/font = SubResource( 75 )
+custom_styles/normal = SubResource( 34 )
+custom_fonts/font = SubResource( 35 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 autowrap = true
 
@@ -4188,8 +4264,8 @@ margin_top = 25.0
 margin_right = 295.0
 margin_bottom = 45.0
 rect_min_size = Vector2( 295, 20 )
-custom_styles/normal = SubResource( 88 )
-custom_fonts/font = SubResource( 75 )
+custom_styles/normal = SubResource( 34 )
+custom_fonts/font = SubResource( 35 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 autowrap = true
 
@@ -4198,8 +4274,8 @@ margin_top = 50.0
 margin_right = 295.0
 margin_bottom = 70.0
 rect_min_size = Vector2( 295, 20 )
-custom_styles/normal = SubResource( 88 )
-custom_fonts/font = SubResource( 75 )
+custom_styles/normal = SubResource( 34 )
+custom_fonts/font = SubResource( 35 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 autowrap = true
 
@@ -4208,8 +4284,8 @@ margin_top = 75.0
 margin_right = 295.0
 margin_bottom = 95.0
 rect_min_size = Vector2( 295, 20 )
-custom_styles/normal = SubResource( 88 )
-custom_fonts/font = SubResource( 75 )
+custom_styles/normal = SubResource( 34 )
+custom_fonts/font = SubResource( 35 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 autowrap = true
 
@@ -4218,8 +4294,8 @@ margin_top = 100.0
 margin_right = 295.0
 margin_bottom = 120.0
 rect_min_size = Vector2( 295, 20 )
-custom_styles/normal = SubResource( 88 )
-custom_fonts/font = SubResource( 75 )
+custom_styles/normal = SubResource( 34 )
+custom_fonts/font = SubResource( 35 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 autowrap = true
 
@@ -4228,8 +4304,8 @@ margin_top = 125.0
 margin_right = 295.0
 margin_bottom = 145.0
 rect_min_size = Vector2( 295, 20 )
-custom_styles/normal = SubResource( 88 )
-custom_fonts/font = SubResource( 75 )
+custom_styles/normal = SubResource( 34 )
+custom_fonts/font = SubResource( 35 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 autowrap = true
 
@@ -4238,8 +4314,8 @@ margin_top = 150.0
 margin_right = 295.0
 margin_bottom = 170.0
 rect_min_size = Vector2( 295, 20 )
-custom_styles/normal = SubResource( 88 )
-custom_fonts/font = SubResource( 75 )
+custom_styles/normal = SubResource( 34 )
+custom_fonts/font = SubResource( 35 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 autowrap = true
 
@@ -4248,8 +4324,8 @@ margin_top = 175.0
 margin_right = 295.0
 margin_bottom = 195.0
 rect_min_size = Vector2( 295, 20 )
-custom_styles/normal = SubResource( 88 )
-custom_fonts/font = SubResource( 75 )
+custom_styles/normal = SubResource( 34 )
+custom_fonts/font = SubResource( 35 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 autowrap = true
 
@@ -4258,8 +4334,8 @@ margin_top = 200.0
 margin_right = 295.0
 margin_bottom = 220.0
 rect_min_size = Vector2( 295, 20 )
-custom_styles/normal = SubResource( 88 )
-custom_fonts/font = SubResource( 75 )
+custom_styles/normal = SubResource( 34 )
+custom_fonts/font = SubResource( 35 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 autowrap = true
 
@@ -4268,8 +4344,8 @@ margin_top = 225.0
 margin_right = 295.0
 margin_bottom = 245.0
 rect_min_size = Vector2( 295, 20 )
-custom_styles/normal = SubResource( 88 )
-custom_fonts/font = SubResource( 75 )
+custom_styles/normal = SubResource( 34 )
+custom_fonts/font = SubResource( 35 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 autowrap = true
 
@@ -4278,8 +4354,8 @@ margin_top = 250.0
 margin_right = 295.0
 margin_bottom = 270.0
 rect_min_size = Vector2( 295, 20 )
-custom_styles/normal = SubResource( 88 )
-custom_fonts/font = SubResource( 75 )
+custom_styles/normal = SubResource( 34 )
+custom_fonts/font = SubResource( 35 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 autowrap = true
 
@@ -4288,8 +4364,8 @@ margin_top = 275.0
 margin_right = 295.0
 margin_bottom = 295.0
 rect_min_size = Vector2( 295, 20 )
-custom_styles/normal = SubResource( 88 )
-custom_fonts/font = SubResource( 75 )
+custom_styles/normal = SubResource( 34 )
+custom_fonts/font = SubResource( 35 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 autowrap = true
 
@@ -4298,8 +4374,8 @@ margin_top = 300.0
 margin_right = 295.0
 margin_bottom = 320.0
 rect_min_size = Vector2( 295, 20 )
-custom_styles/normal = SubResource( 88 )
-custom_fonts/font = SubResource( 75 )
+custom_styles/normal = SubResource( 34 )
+custom_fonts/font = SubResource( 35 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 autowrap = true
 
@@ -4308,8 +4384,8 @@ margin_top = 325.0
 margin_right = 295.0
 margin_bottom = 345.0
 rect_min_size = Vector2( 295, 20 )
-custom_styles/normal = SubResource( 88 )
-custom_fonts/font = SubResource( 75 )
+custom_styles/normal = SubResource( 34 )
+custom_fonts/font = SubResource( 35 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 autowrap = true
 
@@ -4318,8 +4394,8 @@ margin_top = 350.0
 margin_right = 295.0
 margin_bottom = 370.0
 rect_min_size = Vector2( 295, 20 )
-custom_styles/normal = SubResource( 88 )
-custom_fonts/font = SubResource( 75 )
+custom_styles/normal = SubResource( 34 )
+custom_fonts/font = SubResource( 35 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 autowrap = true
 
@@ -4328,8 +4404,8 @@ margin_top = 375.0
 margin_right = 295.0
 margin_bottom = 395.0
 rect_min_size = Vector2( 295, 20 )
-custom_styles/normal = SubResource( 88 )
-custom_fonts/font = SubResource( 75 )
+custom_styles/normal = SubResource( 34 )
+custom_fonts/font = SubResource( 35 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 autowrap = true
 
@@ -4338,8 +4414,8 @@ margin_top = 400.0
 margin_right = 295.0
 margin_bottom = 420.0
 rect_min_size = Vector2( 295, 20 )
-custom_styles/normal = SubResource( 88 )
-custom_fonts/font = SubResource( 75 )
+custom_styles/normal = SubResource( 34 )
+custom_fonts/font = SubResource( 35 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 autowrap = true
 
@@ -4348,8 +4424,8 @@ margin_top = 425.0
 margin_right = 295.0
 margin_bottom = 445.0
 rect_min_size = Vector2( 295, 20 )
-custom_styles/normal = SubResource( 88 )
-custom_fonts/font = SubResource( 75 )
+custom_styles/normal = SubResource( 34 )
+custom_fonts/font = SubResource( 35 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 autowrap = true
 
@@ -4358,8 +4434,8 @@ margin_top = 450.0
 margin_right = 295.0
 margin_bottom = 470.0
 rect_min_size = Vector2( 295, 20 )
-custom_styles/normal = SubResource( 88 )
-custom_fonts/font = SubResource( 75 )
+custom_styles/normal = SubResource( 34 )
+custom_fonts/font = SubResource( 35 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 autowrap = true
 
@@ -4368,8 +4444,8 @@ margin_top = 475.0
 margin_right = 295.0
 margin_bottom = 495.0
 rect_min_size = Vector2( 295, 20 )
-custom_styles/normal = SubResource( 88 )
-custom_fonts/font = SubResource( 75 )
+custom_styles/normal = SubResource( 34 )
+custom_fonts/font = SubResource( 35 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 autowrap = true
 
@@ -4378,8 +4454,8 @@ margin_top = 500.0
 margin_right = 295.0
 margin_bottom = 520.0
 rect_min_size = Vector2( 295, 20 )
-custom_styles/normal = SubResource( 88 )
-custom_fonts/font = SubResource( 75 )
+custom_styles/normal = SubResource( 34 )
+custom_fonts/font = SubResource( 35 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 autowrap = true
 
@@ -4388,8 +4464,8 @@ margin_top = 525.0
 margin_right = 295.0
 margin_bottom = 545.0
 rect_min_size = Vector2( 295, 20 )
-custom_styles/normal = SubResource( 88 )
-custom_fonts/font = SubResource( 75 )
+custom_styles/normal = SubResource( 34 )
+custom_fonts/font = SubResource( 35 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 autowrap = true
 
@@ -4398,8 +4474,8 @@ margin_top = 550.0
 margin_right = 295.0
 margin_bottom = 570.0
 rect_min_size = Vector2( 295, 20 )
-custom_styles/normal = SubResource( 88 )
-custom_fonts/font = SubResource( 75 )
+custom_styles/normal = SubResource( 34 )
+custom_fonts/font = SubResource( 35 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 autowrap = true
 
@@ -4408,8 +4484,8 @@ margin_top = 575.0
 margin_right = 295.0
 margin_bottom = 595.0
 rect_min_size = Vector2( 295, 20 )
-custom_styles/normal = SubResource( 88 )
-custom_fonts/font = SubResource( 75 )
+custom_styles/normal = SubResource( 34 )
+custom_fonts/font = SubResource( 35 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 autowrap = true
 
@@ -4418,8 +4494,8 @@ margin_top = 600.0
 margin_right = 295.0
 margin_bottom = 620.0
 rect_min_size = Vector2( 295, 20 )
-custom_styles/normal = SubResource( 88 )
-custom_fonts/font = SubResource( 75 )
+custom_styles/normal = SubResource( 34 )
+custom_fonts/font = SubResource( 35 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 autowrap = true
 
@@ -4463,7 +4539,7 @@ __meta__ = {
 margin_right = 260.0
 margin_bottom = 30.0
 rect_min_size = Vector2( 260, 30 )
-custom_fonts/font = SubResource( 76 )
+custom_fonts/font = SubResource( 36 )
 max_length = 200
 context_menu_enabled = false
 clear_button_enabled = true
@@ -4474,7 +4550,7 @@ placeholder_text = "Type here..."
 margin_left = 264.0
 margin_right = 313.0
 margin_bottom = 30.0
-custom_fonts/font = SubResource( 77 )
+custom_fonts/font = SubResource( 37 )
 text = "Send"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -4499,7 +4575,7 @@ margin_left = 5.0
 margin_top = 5.0
 margin_right = -5.0
 margin_bottom = -5.0
-custom_fonts/font = SubResource( 84 )
+custom_fonts/font = SubResource( 38 )
 readonly = true
 selecting_enabled = false
 wrap_enabled = true
@@ -4535,7 +4611,7 @@ __meta__ = {
 margin_right = 200.0
 margin_bottom = 29.0
 rect_min_size = Vector2( 200, 25 )
-custom_fonts/font = SubResource( 78 )
+custom_fonts/font = SubResource( 39 )
 max_length = 6
 placeholder_text = "Type Chat Name Here..."
 __meta__ = {
@@ -4593,7 +4669,7 @@ margin_top = 237.0
 margin_right = 200.0
 margin_bottom = 282.0
 rect_min_size = Vector2( 200, 45 )
-custom_fonts/font = SubResource( 79 )
+custom_fonts/font = SubResource( 40 )
 text = "Create Chat"
 
 [node name="CloseChat" type="Button" parent="ChatUI"]
@@ -4605,7 +4681,7 @@ margin_left = 0.471191
 margin_top = -20.0
 margin_right = 30.0
 margin_bottom = 20.0
-custom_fonts/font = SubResource( 80 )
+custom_fonts/font = SubResource( 41 )
 text = "<"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -4634,7 +4710,7 @@ margin_left = 25.0
 margin_top = 25.0
 margin_right = 163.0
 margin_bottom = 60.0
-custom_fonts/font = SubResource( 15 )
+custom_fonts/font = SubResource( 42 )
 text = "Conquest"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -4699,7 +4775,7 @@ margin_top = -105.0
 margin_right = 87.5
 margin_bottom = 105.0
 rect_min_size = Vector2( 175, 200 )
-custom_fonts/font = SubResource( 16 )
+custom_fonts/font = SubResource( 43 )
 text = "HINDU
 
 Mahabharatam"
@@ -4726,7 +4802,7 @@ margin_top = -105.0
 margin_right = 87.5
 margin_bottom = 105.0
 rect_min_size = Vector2( 175, 200 )
-custom_fonts/font = SubResource( 16 )
+custom_fonts/font = SubResource( 43 )
 text = "CHINESE
 
 Journey to the West"
@@ -4753,7 +4829,7 @@ margin_top = -105.0
 margin_right = 87.5
 margin_bottom = 105.0
 rect_min_size = Vector2( 175, 200 )
-custom_fonts/font = SubResource( 16 )
+custom_fonts/font = SubResource( 43 )
 text = "NORDIC
 
 Alpha Chi Omega"
@@ -4780,7 +4856,7 @@ margin_top = -105.0
 margin_right = 87.5
 margin_bottom = 105.0
 rect_min_size = Vector2( 175, 200 )
-custom_fonts/font = SubResource( 16 )
+custom_fonts/font = SubResource( 43 )
 text = "EGYPTIAN
 
 The Primordial Darkness"
@@ -4814,7 +4890,7 @@ margin_top = -105.0
 margin_right = 87.5
 margin_bottom = 105.0
 rect_min_size = Vector2( 175, 200 )
-custom_fonts/font = SubResource( 16 )
+custom_fonts/font = SubResource( 43 )
 text = "ROMAN
 
 The Ides of March"
@@ -4841,7 +4917,7 @@ margin_top = -105.0
 margin_right = 87.5
 margin_bottom = 105.0
 rect_min_size = Vector2( 175, 200 )
-custom_fonts/font = SubResource( 16 )
+custom_fonts/font = SubResource( 43 )
 text = "JAPANESE
 
 Land of the Rising Sun"
@@ -4868,7 +4944,7 @@ margin_top = -105.0
 margin_right = 87.5
 margin_bottom = 105.0
 rect_min_size = Vector2( 175, 200 )
-custom_fonts/font = SubResource( 16 )
+custom_fonts/font = SubResource( 43 )
 text = "AMERICAN
 
 Cities of Gold"
@@ -4910,7 +4986,7 @@ __meta__ = {
 [node name="ConquestName" type="Label" parent="ConquestUI/ConquestPanel/NamePanel"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-custom_fonts/font = SubResource( 17 )
+custom_fonts/font = SubResource( 44 )
 text = "Conquest Name"
 align = 1
 valign = 1
@@ -4938,7 +5014,7 @@ margin_left = -55.0
 margin_top = 15.0
 margin_right = -20.0
 margin_bottom = 50.0
-custom_fonts/font = SubResource( 18 )
+custom_fonts/font = SubResource( 45 )
 text = "X"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -4968,7 +5044,7 @@ __meta__ = {
 margin_left = 25.0
 margin_top = 25.0
 margin_right = -0.071991
-custom_fonts/font = SubResource( 19 )
+custom_fonts/font = SubResource( 46 )
 text = "Market"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -4989,34 +5065,554 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="BlackMarketPanel" type="Panel" parent="MarketUI/OptionsContainer"]
+[node name="BlackMarket" type="Button" parent="MarketUI/OptionsContainer"]
 margin_left = 40.0
 margin_right = 440.0
 margin_bottom = 450.0
 rect_min_size = Vector2( 400, 450 )
-
-[node name="BlackMarket" type="Button" parent="MarketUI/OptionsContainer/BlackMarketPanel"]
-margin_right = 12.0
-margin_bottom = 20.0
-rect_min_size = Vector2( 400, 450 )
-custom_fonts/font = SubResource( 20 )
+custom_fonts/font = SubResource( 47 )
 text = "Black Market"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="StorePanel" type="Panel" parent="MarketUI/OptionsContainer"]
+[node name="Store" type="Button" parent="MarketUI/OptionsContainer"]
 margin_left = 460.0
 margin_right = 860.0
 margin_bottom = 450.0
 rect_min_size = Vector2( 400, 450 )
-
-[node name="Store" type="Button" parent="MarketUI/OptionsContainer/StorePanel"]
-margin_right = 12.0
-margin_bottom = 20.0
-rect_min_size = Vector2( 400, 450 )
-custom_fonts/font = SubResource( 20 )
+custom_fonts/font = SubResource( 47 )
 text = "Store"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BlackMarketPanel" type="Panel" parent="MarketUI"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -450.0
+margin_top = -200.0
+margin_right = 450.0
+margin_bottom = 250.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StatusPanel" type="Panel" parent="MarketUI/BlackMarketPanel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StatusLabel" type="Label" parent="MarketUI/BlackMarketPanel/StatusPanel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 48 )
+text = "The Black Market is not open yet."
+align = 1
+valign = 1
+
+[node name="StorePanel" type="Panel" parent="MarketUI"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -450.0
+margin_top = -200.0
+margin_right = 450.0
+margin_bottom = 250.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ShopOptionsContainer" type="VBoxContainer" parent="MarketUI/StorePanel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 15.0
+margin_top = 15.0
+margin_right = -15.0
+margin_bottom = -15.0
+custom_constants/separation = 18
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Row1" type="HBoxContainer" parent="MarketUI/StorePanel/ShopOptionsContainer"]
+margin_right = 870.0
+margin_bottom = 200.0
+custom_constants/separation = 20
+alignment = 1
+
+[node name="ShopOption1" type="Button" parent="MarketUI/StorePanel/ShopOptionsContainer/Row1"]
+margin_left = 55.0
+margin_right = 230.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 175, 200 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarketUI/StorePanel/ShopOptionsContainer/Row1/ShopOption1"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 5.0
+margin_top = 5.0
+margin_right = -5.0
+margin_bottom = -5.0
+custom_constants/separation = 10
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Name" type="Label" parent="MarketUI/StorePanel/ShopOptionsContainer/Row1/ShopOption1/VBoxContainer"]
+margin_right = 165.0
+margin_bottom = 55.0
+rect_min_size = Vector2( 165, 55 )
+custom_fonts/font = SubResource( 49 )
+text = "Monthly Pack"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Description" type="Label" parent="MarketUI/StorePanel/ShopOptionsContainer/Row1/ShopOption1/VBoxContainer"]
+margin_top = 65.0
+margin_right = 165.0
+margin_bottom = 120.0
+rect_min_size = Vector2( 165, 55 )
+custom_fonts/font = SubResource( 50 )
+text = "200 Gems Each Day for 30 Days"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cost" type="Label" parent="MarketUI/StorePanel/ShopOptionsContainer/Row1/ShopOption1/VBoxContainer"]
+margin_top = 130.0
+margin_right = 165.0
+margin_bottom = 185.0
+rect_min_size = Vector2( 165, 55 )
+custom_fonts/font = SubResource( 50 )
+text = "$9.99 USD"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ShopOption2" type="Button" parent="MarketUI/StorePanel/ShopOptionsContainer/Row1"]
+margin_left = 250.0
+margin_right = 425.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 175, 200 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarketUI/StorePanel/ShopOptionsContainer/Row1/ShopOption2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 5.0
+margin_top = 5.0
+margin_right = -5.0
+margin_bottom = -5.0
+custom_constants/separation = 10
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Name" type="Label" parent="MarketUI/StorePanel/ShopOptionsContainer/Row1/ShopOption2/VBoxContainer"]
+margin_right = 165.0
+margin_bottom = 55.0
+rect_min_size = Vector2( 165, 55 )
+custom_fonts/font = SubResource( 49 )
+text = "100 Gems"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Description" type="Label" parent="MarketUI/StorePanel/ShopOptionsContainer/Row1/ShopOption2/VBoxContainer"]
+margin_top = 65.0
+margin_right = 165.0
+margin_bottom = 120.0
+rect_min_size = Vector2( 165, 55 )
+custom_fonts/font = SubResource( 50 )
+text = "First Purchase 1.5x
+250 Gems"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cost" type="Label" parent="MarketUI/StorePanel/ShopOptionsContainer/Row1/ShopOption2/VBoxContainer"]
+margin_top = 130.0
+margin_right = 165.0
+margin_bottom = 185.0
+rect_min_size = Vector2( 165, 55 )
+custom_fonts/font = SubResource( 50 )
+text = "$1.99 USD"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ShopOption3" type="Button" parent="MarketUI/StorePanel/ShopOptionsContainer/Row1"]
+margin_left = 445.0
+margin_right = 620.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 175, 200 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarketUI/StorePanel/ShopOptionsContainer/Row1/ShopOption3"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 5.0
+margin_top = 5.0
+margin_right = -5.0
+margin_bottom = -5.0
+custom_constants/separation = 10
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Name" type="Label" parent="MarketUI/StorePanel/ShopOptionsContainer/Row1/ShopOption3/VBoxContainer"]
+margin_right = 165.0
+margin_bottom = 55.0
+rect_min_size = Vector2( 165, 55 )
+custom_fonts/font = SubResource( 49 )
+text = "250 Gems"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Description" type="Label" parent="MarketUI/StorePanel/ShopOptionsContainer/Row1/ShopOption3/VBoxContainer"]
+margin_top = 65.0
+margin_right = 165.0
+margin_bottom = 120.0
+rect_min_size = Vector2( 165, 55 )
+custom_fonts/font = SubResource( 50 )
+text = "First Purchase 1.5x
+375 Gems"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cost" type="Label" parent="MarketUI/StorePanel/ShopOptionsContainer/Row1/ShopOption3/VBoxContainer"]
+margin_top = 130.0
+margin_right = 165.0
+margin_bottom = 185.0
+rect_min_size = Vector2( 165, 55 )
+custom_fonts/font = SubResource( 50 )
+text = "$4.99 USD"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ShopOption4" type="Button" parent="MarketUI/StorePanel/ShopOptionsContainer/Row1"]
+margin_left = 640.0
+margin_right = 815.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 175, 200 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarketUI/StorePanel/ShopOptionsContainer/Row1/ShopOption4"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 5.0
+margin_top = 5.0
+margin_right = -5.0
+margin_bottom = -5.0
+custom_constants/separation = 10
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Name" type="Label" parent="MarketUI/StorePanel/ShopOptionsContainer/Row1/ShopOption4/VBoxContainer"]
+margin_right = 165.0
+margin_bottom = 55.0
+rect_min_size = Vector2( 165, 55 )
+custom_fonts/font = SubResource( 49 )
+text = "500 Gems"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Description" type="Label" parent="MarketUI/StorePanel/ShopOptionsContainer/Row1/ShopOption4/VBoxContainer"]
+margin_top = 65.0
+margin_right = 165.0
+margin_bottom = 120.0
+rect_min_size = Vector2( 165, 55 )
+custom_fonts/font = SubResource( 50 )
+text = "First Purchase 1.5x
+750 Gems"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cost" type="Label" parent="MarketUI/StorePanel/ShopOptionsContainer/Row1/ShopOption4/VBoxContainer"]
+margin_top = 130.0
+margin_right = 165.0
+margin_bottom = 185.0
+rect_min_size = Vector2( 165, 55 )
+custom_fonts/font = SubResource( 50 )
+text = "$9.99 USD"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Row2" type="HBoxContainer" parent="MarketUI/StorePanel/ShopOptionsContainer"]
+margin_top = 218.0
+margin_right = 870.0
+margin_bottom = 418.0
+custom_constants/separation = 20
+alignment = 1
+
+[node name="ShopOption5" type="Button" parent="MarketUI/StorePanel/ShopOptionsContainer/Row2"]
+margin_left = 55.0
+margin_right = 230.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 175, 200 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarketUI/StorePanel/ShopOptionsContainer/Row2/ShopOption5"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 5.0
+margin_top = 5.0
+margin_right = -5.0
+margin_bottom = -5.0
+custom_constants/separation = 10
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Name" type="Label" parent="MarketUI/StorePanel/ShopOptionsContainer/Row2/ShopOption5/VBoxContainer"]
+margin_right = 165.0
+margin_bottom = 55.0
+rect_min_size = Vector2( 165, 55 )
+custom_fonts/font = SubResource( 49 )
+text = "Special Pack"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Description" type="Label" parent="MarketUI/StorePanel/ShopOptionsContainer/Row2/ShopOption5/VBoxContainer"]
+margin_top = 65.0
+margin_right = 165.0
+margin_bottom = 131.0
+rect_min_size = Vector2( 165, 55 )
+custom_fonts/font = SubResource( 50 )
+text = "15% Legend Chance Ticket Different Realm Every Week"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cost" type="Label" parent="MarketUI/StorePanel/ShopOptionsContainer/Row2/ShopOption5/VBoxContainer"]
+margin_top = 141.0
+margin_right = 165.0
+margin_bottom = 196.0
+rect_min_size = Vector2( 165, 55 )
+custom_fonts/font = SubResource( 50 )
+text = "$4.99 USD"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ShopOption6" type="Button" parent="MarketUI/StorePanel/ShopOptionsContainer/Row2"]
+margin_left = 250.0
+margin_right = 425.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 175, 200 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarketUI/StorePanel/ShopOptionsContainer/Row2/ShopOption6"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 5.0
+margin_top = 5.0
+margin_right = -5.0
+margin_bottom = -5.0
+custom_constants/separation = 10
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Name" type="Label" parent="MarketUI/StorePanel/ShopOptionsContainer/Row2/ShopOption6/VBoxContainer"]
+margin_right = 165.0
+margin_bottom = 55.0
+rect_min_size = Vector2( 165, 55 )
+custom_fonts/font = SubResource( 49 )
+text = "1500 Gems"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Description" type="Label" parent="MarketUI/StorePanel/ShopOptionsContainer/Row2/ShopOption6/VBoxContainer"]
+margin_top = 65.0
+margin_right = 165.0
+margin_bottom = 120.0
+rect_min_size = Vector2( 165, 55 )
+custom_fonts/font = SubResource( 50 )
+text = "First Purchase 1.5x
+2250 Gems"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cost" type="Label" parent="MarketUI/StorePanel/ShopOptionsContainer/Row2/ShopOption6/VBoxContainer"]
+margin_top = 130.0
+margin_right = 165.0
+margin_bottom = 185.0
+rect_min_size = Vector2( 165, 55 )
+custom_fonts/font = SubResource( 50 )
+text = "$25.99 USD"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ShopOption7" type="Button" parent="MarketUI/StorePanel/ShopOptionsContainer/Row2"]
+margin_left = 445.0
+margin_right = 620.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 175, 200 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarketUI/StorePanel/ShopOptionsContainer/Row2/ShopOption7"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 5.0
+margin_top = 5.0
+margin_right = -5.0
+margin_bottom = -5.0
+custom_constants/separation = 10
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Name" type="Label" parent="MarketUI/StorePanel/ShopOptionsContainer/Row2/ShopOption7/VBoxContainer"]
+margin_right = 165.0
+margin_bottom = 55.0
+rect_min_size = Vector2( 165, 55 )
+custom_fonts/font = SubResource( 49 )
+text = "3000 Gems"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Description" type="Label" parent="MarketUI/StorePanel/ShopOptionsContainer/Row2/ShopOption7/VBoxContainer"]
+margin_top = 65.0
+margin_right = 165.0
+margin_bottom = 120.0
+rect_min_size = Vector2( 165, 55 )
+custom_fonts/font = SubResource( 50 )
+text = "First Purchase 1.5x
+4500 Gems"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cost" type="Label" parent="MarketUI/StorePanel/ShopOptionsContainer/Row2/ShopOption7/VBoxContainer"]
+margin_top = 130.0
+margin_right = 165.0
+margin_bottom = 185.0
+rect_min_size = Vector2( 165, 55 )
+custom_fonts/font = SubResource( 50 )
+text = "$49.99 USD"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ShopOption8" type="Button" parent="MarketUI/StorePanel/ShopOptionsContainer/Row2"]
+margin_left = 640.0
+margin_right = 815.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 175, 200 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarketUI/StorePanel/ShopOptionsContainer/Row2/ShopOption8"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 5.0
+margin_top = 5.0
+margin_right = -5.0
+margin_bottom = -5.0
+custom_constants/separation = 10
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Name" type="Label" parent="MarketUI/StorePanel/ShopOptionsContainer/Row2/ShopOption8/VBoxContainer"]
+margin_right = 165.0
+margin_bottom = 55.0
+rect_min_size = Vector2( 165, 55 )
+custom_fonts/font = SubResource( 49 )
+text = "6000 Gems"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Description" type="Label" parent="MarketUI/StorePanel/ShopOptionsContainer/Row2/ShopOption8/VBoxContainer"]
+margin_top = 65.0
+margin_right = 165.0
+margin_bottom = 120.0
+rect_min_size = Vector2( 165, 55 )
+custom_fonts/font = SubResource( 50 )
+text = "First Purchase 1.5x
+9000 Gems"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cost" type="Label" parent="MarketUI/StorePanel/ShopOptionsContainer/Row2/ShopOption8/VBoxContainer"]
+margin_top = 130.0
+margin_right = 165.0
+margin_bottom = 185.0
+rect_min_size = Vector2( 165, 55 )
+custom_fonts/font = SubResource( 50 )
+text = "$99.99 USD"
+align = 1
+valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -5028,7 +5624,7 @@ margin_left = -55.0
 margin_top = 15.0
 margin_right = -20.0
 margin_bottom = 50.0
-custom_fonts/font = SubResource( 18 )
+custom_fonts/font = SubResource( 45 )
 text = "X"
 __meta__ = {
 "_edit_use_anchors_": false,
@@ -5060,7 +5656,7 @@ margin_left = 25.0
 margin_top = 25.0
 margin_right = 131.0
 margin_bottom = 60.0
-custom_fonts/font = SubResource( 21 )
+custom_fonts/font = SubResource( 51 )
 text = "Help"
 __meta__ = {
 "_edit_use_anchors_": false,
@@ -5074,7 +5670,7 @@ margin_left = -55.0
 margin_top = 15.0
 margin_right = -20.0
 margin_bottom = 50.0
-custom_fonts/font = SubResource( 18 )
+custom_fonts/font = SubResource( 45 )
 text = "X"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -5103,7 +5699,7 @@ margin_left = 25.0
 margin_top = 25.0
 margin_right = 131.0
 margin_bottom = 60.0
-custom_fonts/font = SubResource( 22 )
+custom_fonts/font = SubResource( 52 )
 text = "Settings"
 __meta__ = {
 "_editor_description_": ""
@@ -5116,7 +5712,7 @@ margin_left = -55.0
 margin_top = 15.0
 margin_right = -20.0
 margin_bottom = 50.0
-custom_fonts/font = SubResource( 18 )
+custom_fonts/font = SubResource( 45 )
 text = "X"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -5145,7 +5741,7 @@ margin_left = 25.0
 margin_top = 25.0
 margin_right = 131.0
 margin_bottom = 60.0
-custom_fonts/font = SubResource( 23 )
+custom_fonts/font = SubResource( 53 )
 text = "Stats"
 __meta__ = {
 "_edit_use_anchors_": false,
@@ -5159,7 +5755,7 @@ margin_left = -55.0
 margin_top = 15.0
 margin_right = -20.0
 margin_bottom = 50.0
-custom_fonts/font = SubResource( 18 )
+custom_fonts/font = SubResource( 45 )
 text = "X"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -5184,7 +5780,7 @@ rect_min_size = Vector2( 100, 40 )
 margin_right = 40.0
 margin_bottom = 14.0
 rect_min_size = Vector2( 100, 40 )
-custom_fonts/font = SubResource( 24 )
+custom_fonts/font = SubResource( 54 )
 text = "Basic"
 align = 1
 valign = 1
@@ -5202,7 +5798,7 @@ rect_min_size = Vector2( 100, 40 )
 margin_right = 40.0
 margin_bottom = 14.0
 rect_min_size = Vector2( 100, 40 )
-custom_fonts/font = SubResource( 24 )
+custom_fonts/font = SubResource( 54 )
 text = "Territory"
 align = 1
 valign = 1
@@ -5210,7 +5806,8 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="BasicPanel" type="Control" parent="StatsUI"]
+[node name="BasicPanel" type="Panel" parent="StatsUI"]
+self_modulate = Color( 1, 1, 1, 0 )
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -5268,7 +5865,7 @@ __meta__ = {
 margin_right = 200.0
 margin_bottom = 20.0
 rect_min_size = Vector2( 0, 25 )
-custom_fonts/font = SubResource( 25 )
+custom_fonts/font = SubResource( 55 )
 text = "Player Name Placeholder"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -5287,7 +5884,7 @@ __meta__ = {
 margin_right = 200.0
 margin_bottom = 20.0
 rect_min_size = Vector2( 0, 25 )
-custom_fonts/font = SubResource( 25 )
+custom_fonts/font = SubResource( 55 )
 text = "Player ID Placeholder"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -5306,10 +5903,12 @@ margin_bottom = 350.0
 rect_min_size = Vector2( 120, 350 )
 
 [node name="PlayerOptions" type="VBoxContainer" parent="StatsUI/BasicPanel/BasicInfoContainer/BottomPanelContainer/ChoicePanel"]
+anchor_top = 0.5
+anchor_bottom = 0.5
 margin_left = 10.0
-margin_top = 10.0
+margin_top = -165.0
 margin_right = 110.0
-margin_bottom = 350.0
+margin_bottom = 175.0
 rect_min_size = Vector2( 100, 340 )
 custom_constants/separation = 5
 __meta__ = {
@@ -5325,7 +5924,7 @@ rect_min_size = Vector2( 100, 40 )
 margin_right = 100.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 100, 40 )
-custom_fonts/font = SubResource( 26 )
+custom_fonts/font = SubResource( 56 )
 text = "Resource"
 align = 1
 valign = 1
@@ -5343,7 +5942,7 @@ rect_min_size = Vector2( 100, 40 )
 margin_right = 100.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 100, 40 )
-custom_fonts/font = SubResource( 26 )
+custom_fonts/font = SubResource( 56 )
 text = "Buildings"
 align = 1
 valign = 1
@@ -5361,7 +5960,7 @@ rect_min_size = Vector2( 100, 40 )
 margin_right = 100.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 100, 40 )
-custom_fonts/font = SubResource( 26 )
+custom_fonts/font = SubResource( 56 )
 text = "Gairo"
 align = 1
 valign = 1
@@ -5369,17 +5968,292 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="2ndPanelInfo" type="Panel" parent="StatsUI/BasicPanel/BasicInfoContainer/BottomPanelContainer"]
+[node name="InfoPanel" type="Panel" parent="StatsUI/BasicPanel/BasicInfoContainer/BottomPanelContainer"]
 margin_left = 125.0
 margin_right = 425.0
 margin_bottom = 350.0
 rect_min_size = Vector2( 300, 350 )
 
-[node name="2ndPanelInfoContainer" type="VBoxContainer" parent="StatsUI/BasicPanel/BasicInfoContainer/BottomPanelContainer/2ndPanelInfo"]
-margin_left = 4.0
-margin_right = 304.0
-margin_bottom = 350.0
-rect_min_size = Vector2( 300, 350 )
+[node name="ResourcePanel" type="Panel" parent="StatsUI/BasicPanel/BasicInfoContainer/BottomPanelContainer/InfoPanel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -150.0
+margin_top = -175.0
+margin_right = 150.0
+margin_bottom = 175.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ResourceContainer" type="VBoxContainer" parent="StatsUI/BasicPanel/BasicInfoContainer/BottomPanelContainer/InfoPanel/ResourcePanel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -140.0
+margin_top = -165.0
+margin_right = 140.0
+margin_bottom = 165.0
+custom_constants/separation = 8
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TaxPanel" type="Panel" parent="StatsUI/BasicPanel/BasicInfoContainer/BottomPanelContainer/InfoPanel/ResourcePanel/ResourceContainer"]
+margin_right = 280.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 280, 60 )
+custom_styles/panel = SubResource( 57 )
+
+[node name="TaxContainer" type="HBoxContainer" parent="StatsUI/BasicPanel/BasicInfoContainer/BottomPanelContainer/InfoPanel/ResourcePanel/ResourceContainer/TaxPanel"]
+margin_right = 280.0
+margin_bottom = 60.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Gold" type="TextureRect" parent="StatsUI/BasicPanel/BasicInfoContainer/BottomPanelContainer/InfoPanel/ResourcePanel/ResourceContainer/TaxPanel/TaxContainer"]
+margin_right = 50.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 50, 60 )
+
+[node name="Sprite" type="Sprite" parent="StatsUI/BasicPanel/BasicInfoContainer/BottomPanelContainer/InfoPanel/ResourcePanel/ResourceContainer/TaxPanel/TaxContainer/Gold"]
+scale = Vector2( 0.08, 0.08 )
+texture = ExtResource( 2 )
+centered = false
+offset = Vector2( 150, 175 )
+
+[node name="Tax" type="Label" parent="StatsUI/BasicPanel/BasicInfoContainer/BottomPanelContainer/InfoPanel/ResourcePanel/ResourceContainer/TaxPanel/TaxContainer"]
+margin_left = 54.0
+margin_top = -1.0
+margin_right = 144.0
+margin_bottom = 59.0
+rect_min_size = Vector2( 90, 60 )
+custom_fonts/font = SubResource( 58 )
+text = "Tax"
+valign = 1
+
+[node name="TaxRate" type="Label" parent="StatsUI/BasicPanel/BasicInfoContainer/BottomPanelContainer/InfoPanel/ResourcePanel/ResourceContainer/TaxPanel/TaxContainer"]
+margin_left = 148.0
+margin_top = -1.0
+margin_right = 273.0
+margin_bottom = 59.0
+rect_min_size = Vector2( 125, 60 )
+custom_fonts/font = SubResource( 59 )
+text = "99999/time"
+align = 2
+valign = 1
+
+[node name="WoodPanel" type="Panel" parent="StatsUI/BasicPanel/BasicInfoContainer/BottomPanelContainer/InfoPanel/ResourcePanel/ResourceContainer"]
+margin_top = 68.0
+margin_right = 280.0
+margin_bottom = 128.0
+rect_min_size = Vector2( 280, 60 )
+custom_styles/panel = SubResource( 60 )
+
+[node name="WoodContainer" type="HBoxContainer" parent="StatsUI/BasicPanel/BasicInfoContainer/BottomPanelContainer/InfoPanel/ResourcePanel/ResourceContainer/WoodPanel"]
+margin_right = 280.0
+margin_bottom = 60.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Wood" type="TextureRect" parent="StatsUI/BasicPanel/BasicInfoContainer/BottomPanelContainer/InfoPanel/ResourcePanel/ResourceContainer/WoodPanel/WoodContainer"]
+margin_right = 50.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 50, 60 )
+
+[node name="Sprite" type="Sprite" parent="StatsUI/BasicPanel/BasicInfoContainer/BottomPanelContainer/InfoPanel/ResourcePanel/ResourceContainer/WoodPanel/WoodContainer/Wood"]
+scale = Vector2( 0.08, 0.08 )
+texture = ExtResource( 5 )
+centered = false
+offset = Vector2( 50, 125 )
+
+[node name="Wood2" type="Label" parent="StatsUI/BasicPanel/BasicInfoContainer/BottomPanelContainer/InfoPanel/ResourcePanel/ResourceContainer/WoodPanel/WoodContainer"]
+margin_left = 54.0
+margin_top = -1.0
+margin_right = 144.0
+margin_bottom = 59.0
+rect_min_size = Vector2( 90, 60 )
+custom_fonts/font = SubResource( 58 )
+text = "Wood"
+valign = 1
+
+[node name="WoodRate" type="Label" parent="StatsUI/BasicPanel/BasicInfoContainer/BottomPanelContainer/InfoPanel/ResourcePanel/ResourceContainer/WoodPanel/WoodContainer"]
+margin_left = 148.0
+margin_top = -1.0
+margin_right = 273.0
+margin_bottom = 59.0
+rect_min_size = Vector2( 125, 60 )
+custom_fonts/font = SubResource( 59 )
+text = "99999/hour"
+align = 2
+valign = 1
+
+[node name="StonePanel" type="Panel" parent="StatsUI/BasicPanel/BasicInfoContainer/BottomPanelContainer/InfoPanel/ResourcePanel/ResourceContainer"]
+margin_top = 136.0
+margin_right = 280.0
+margin_bottom = 196.0
+rect_min_size = Vector2( 280, 60 )
+custom_styles/panel = SubResource( 61 )
+
+[node name="StoneContainer" type="HBoxContainer" parent="StatsUI/BasicPanel/BasicInfoContainer/BottomPanelContainer/InfoPanel/ResourcePanel/ResourceContainer/StonePanel"]
+margin_right = 280.0
+margin_bottom = 60.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Stone" type="TextureRect" parent="StatsUI/BasicPanel/BasicInfoContainer/BottomPanelContainer/InfoPanel/ResourcePanel/ResourceContainer/StonePanel/StoneContainer"]
+margin_right = 50.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 50, 60 )
+
+[node name="Sprite" type="Sprite" parent="StatsUI/BasicPanel/BasicInfoContainer/BottomPanelContainer/InfoPanel/ResourcePanel/ResourceContainer/StonePanel/StoneContainer/Stone"]
+scale = Vector2( 0.08, 0.08 )
+texture = ExtResource( 11 )
+centered = false
+offset = Vector2( 100, 125 )
+
+[node name="Stone2" type="Label" parent="StatsUI/BasicPanel/BasicInfoContainer/BottomPanelContainer/InfoPanel/ResourcePanel/ResourceContainer/StonePanel/StoneContainer"]
+margin_left = 54.0
+margin_top = -1.0
+margin_right = 144.0
+margin_bottom = 59.0
+rect_min_size = Vector2( 90, 60 )
+custom_fonts/font = SubResource( 58 )
+text = "Stone"
+valign = 1
+
+[node name="StoneRate" type="Label" parent="StatsUI/BasicPanel/BasicInfoContainer/BottomPanelContainer/InfoPanel/ResourcePanel/ResourceContainer/StonePanel/StoneContainer"]
+margin_left = 148.0
+margin_top = -1.0
+margin_right = 273.0
+margin_bottom = 59.0
+rect_min_size = Vector2( 125, 60 )
+custom_fonts/font = SubResource( 59 )
+text = "99999/hour"
+align = 2
+valign = 1
+
+[node name="FoodPanel" type="Panel" parent="StatsUI/BasicPanel/BasicInfoContainer/BottomPanelContainer/InfoPanel/ResourcePanel/ResourceContainer"]
+margin_top = 204.0
+margin_right = 280.0
+margin_bottom = 264.0
+rect_min_size = Vector2( 280, 60 )
+custom_styles/panel = SubResource( 62 )
+
+[node name="FoodContainer" type="HBoxContainer" parent="StatsUI/BasicPanel/BasicInfoContainer/BottomPanelContainer/InfoPanel/ResourcePanel/ResourceContainer/FoodPanel"]
+margin_right = 280.0
+margin_bottom = 60.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Food" type="TextureRect" parent="StatsUI/BasicPanel/BasicInfoContainer/BottomPanelContainer/InfoPanel/ResourcePanel/ResourceContainer/FoodPanel/FoodContainer"]
+margin_right = 50.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 50, 60 )
+
+[node name="Sprite" type="Sprite" parent="StatsUI/BasicPanel/BasicInfoContainer/BottomPanelContainer/InfoPanel/ResourcePanel/ResourceContainer/FoodPanel/FoodContainer/Food"]
+scale = Vector2( 0.08, 0.08 )
+texture = ExtResource( 8 )
+centered = false
+offset = Vector2( 100, 175 )
+
+[node name="Food2" type="Label" parent="StatsUI/BasicPanel/BasicInfoContainer/BottomPanelContainer/InfoPanel/ResourcePanel/ResourceContainer/FoodPanel/FoodContainer"]
+margin_left = 54.0
+margin_top = -1.0
+margin_right = 144.0
+margin_bottom = 59.0
+rect_min_size = Vector2( 90, 60 )
+custom_fonts/font = SubResource( 58 )
+text = "Food"
+valign = 1
+
+[node name="FoodRate" type="Label" parent="StatsUI/BasicPanel/BasicInfoContainer/BottomPanelContainer/InfoPanel/ResourcePanel/ResourceContainer/FoodPanel/FoodContainer"]
+margin_left = 148.0
+margin_top = -1.0
+margin_right = 273.0
+margin_bottom = 59.0
+rect_min_size = Vector2( 125, 60 )
+custom_fonts/font = SubResource( 59 )
+text = "99999/hour"
+align = 2
+valign = 1
+
+[node name="DecreePanel" type="Panel" parent="StatsUI/BasicPanel/BasicInfoContainer/BottomPanelContainer/InfoPanel/ResourcePanel/ResourceContainer"]
+margin_top = 272.0
+margin_right = 280.0
+margin_bottom = 332.0
+rect_min_size = Vector2( 280, 60 )
+custom_styles/panel = SubResource( 63 )
+
+[node name="DecreeContainer" type="HBoxContainer" parent="StatsUI/BasicPanel/BasicInfoContainer/BottomPanelContainer/InfoPanel/ResourcePanel/ResourceContainer/DecreePanel"]
+margin_right = 280.0
+margin_bottom = 60.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Decree" type="TextureRect" parent="StatsUI/BasicPanel/BasicInfoContainer/BottomPanelContainer/InfoPanel/ResourcePanel/ResourceContainer/DecreePanel/DecreeContainer"]
+margin_right = 50.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 50, 60 )
+
+[node name="Sprite" type="Sprite" parent="StatsUI/BasicPanel/BasicInfoContainer/BottomPanelContainer/InfoPanel/ResourcePanel/ResourceContainer/DecreePanel/DecreeContainer/Decree"]
+scale = Vector2( 0.07, 0.08 )
+texture = ExtResource( 18 )
+centered = false
+offset = Vector2( 50, 125 )
+
+[node name="Decree2" type="Label" parent="StatsUI/BasicPanel/BasicInfoContainer/BottomPanelContainer/InfoPanel/ResourcePanel/ResourceContainer/DecreePanel/DecreeContainer"]
+margin_left = 54.0
+margin_top = -1.0
+margin_right = 144.0
+margin_bottom = 59.0
+rect_min_size = Vector2( 90, 60 )
+custom_fonts/font = SubResource( 58 )
+text = "Decree"
+valign = 1
+
+[node name="DecreeRate" type="Label" parent="StatsUI/BasicPanel/BasicInfoContainer/BottomPanelContainer/InfoPanel/ResourcePanel/ResourceContainer/DecreePanel/DecreeContainer"]
+margin_left = 148.0
+margin_top = -1.0
+margin_right = 273.0
+margin_bottom = 59.0
+rect_min_size = Vector2( 125, 60 )
+custom_fonts/font = SubResource( 59 )
+text = "99999/hour"
+align = 2
+valign = 1
+
+[node name="BuildingsPanel" type="Panel" parent="StatsUI/BasicPanel/BasicInfoContainer/BottomPanelContainer/InfoPanel"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -150.0
+margin_top = -175.0
+margin_right = 150.0
+margin_bottom = 175.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GairoPanel" type="Panel" parent="StatsUI/BasicPanel/BasicInfoContainer/BottomPanelContainer/InfoPanel"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -150.0
+margin_top = -175.0
+margin_right = 150.0
+margin_bottom = 175.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -5389,6 +6263,156 @@ margin_left = 430.0
 margin_right = 950.0
 margin_bottom = 350.0
 rect_min_size = Vector2( 520, 350 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="StatsUI/BasicPanel/BasicInfoContainer/BottomPanelContainer/GeneralInfo"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -250.0
+margin_top = -165.0
+margin_right = 250.0
+margin_bottom = 165.0
+rect_pivot_offset = Vector2( 171, 236 )
+custom_constants/separation = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FirstRow" type="Panel" parent="StatsUI/BasicPanel/BasicInfoContainer/BottomPanelContainer/GeneralInfo/VBoxContainer"]
+margin_right = 500.0
+margin_bottom = 115.0
+rect_min_size = Vector2( 500, 115 )
+
+[node name="WeeklyHonor" type="Label" parent="StatsUI/BasicPanel/BasicInfoContainer/BottomPanelContainer/GeneralInfo/VBoxContainer/FirstRow"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -72.5
+margin_top = -12.5
+margin_right = 72.5
+margin_bottom = 12.5
+rect_min_size = Vector2( 125, 25 )
+custom_fonts/font = SubResource( 64 )
+text = "Weekly Honor"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HonorCount" type="Label" parent="StatsUI/BasicPanel/BasicInfoContainer/BottomPanelContainer/GeneralInfo/VBoxContainer/FirstRow/WeeklyHonor"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -75.0
+margin_top = 12.5
+margin_right = 75.0
+margin_bottom = 52.5
+rect_min_size = Vector2( 150, 40 )
+custom_fonts/font = SubResource( 65 )
+text = "9999999999"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SecondRow" type="Panel" parent="StatsUI/BasicPanel/BasicInfoContainer/BottomPanelContainer/GeneralInfo/VBoxContainer"]
+margin_top = 120.0
+margin_right = 500.0
+margin_bottom = 235.0
+rect_min_size = Vector2( 500, 115 )
+
+[node name="Influence" type="Label" parent="StatsUI/BasicPanel/BasicInfoContainer/BottomPanelContainer/GeneralInfo/VBoxContainer/SecondRow"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 75.0
+margin_top = -12.5
+margin_right = 169.0
+margin_bottom = 12.5
+custom_fonts/font = SubResource( 66 )
+text = "Influence"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="InfluenceCount" type="Label" parent="StatsUI/BasicPanel/BasicInfoContainer/BottomPanelContainer/GeneralInfo/VBoxContainer/SecondRow/Influence"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -40.5
+margin_top = 24.5
+margin_right = 40.5
+margin_bottom = 44.5
+custom_fonts/font = SubResource( 67 )
+text = "9999999"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Ranking" type="Label" parent="StatsUI/BasicPanel/BasicInfoContainer/BottomPanelContainer/GeneralInfo/VBoxContainer/SecondRow"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -166.0
+margin_top = -12.5
+margin_right = -75.0
+margin_bottom = 12.5
+custom_fonts/font = SubResource( 66 )
+text = "Ranking"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RankingCount" type="Label" parent="StatsUI/BasicPanel/BasicInfoContainer/BottomPanelContainer/GeneralInfo/VBoxContainer/SecondRow/Ranking"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -20.0
+margin_top = 22.5
+margin_right = 20.0
+margin_bottom = 42.5
+custom_fonts/font = SubResource( 68 )
+text = "999"
+align = 1
+valign = 1
+
+[node name="ThirdRow" type="Panel" parent="StatsUI/BasicPanel/BasicInfoContainer/BottomPanelContainer/GeneralInfo/VBoxContainer"]
+visible = false
+margin_top = 240.0
+margin_right = 500.0
+margin_bottom = 340.0
+rect_min_size = Vector2( 500, 100 )
+
+[node name="LastSeason" type="Label" parent="StatsUI/BasicPanel/BasicInfoContainer/BottomPanelContainer/GeneralInfo/VBoxContainer/ThirdRow"]
+margin_right = 40.0
+margin_bottom = 14.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TerritoryPanel" type="Panel" parent="StatsUI"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -475.0
+margin_top = -175.0
+margin_right = 475.0
+margin_bottom = 250.0
 
 [node name="RankingUI" type="Control" parent="."]
 visible = false
@@ -5413,7 +6437,7 @@ margin_left = 25.0
 margin_top = 25.0
 margin_right = 131.0
 margin_bottom = 60.0
-custom_fonts/font = SubResource( 27 )
+custom_fonts/font = SubResource( 69 )
 text = "Ranking"
 __meta__ = {
 "_edit_use_anchors_": false,
@@ -5434,7 +6458,7 @@ __meta__ = {
 margin_right = 100.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 100, 40 )
-custom_fonts/font = SubResource( 28 )
+custom_fonts/font = SubResource( 70 )
 text = "Personal"
 
 [node name="Kingdom" type="Button" parent="RankingUI/OptionsContainer"]
@@ -5442,7 +6466,7 @@ margin_left = 110.0
 margin_right = 210.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 100, 40 )
-custom_fonts/font = SubResource( 28 )
+custom_fonts/font = SubResource( 70 )
 text = "Kingdom"
 
 [node name="InformationPanel" type="Panel" parent="RankingUI"]
@@ -5495,7 +6519,7 @@ rect_min_size = Vector2( 125, 40 )
 margin_right = 40.0
 margin_bottom = 14.0
 rect_min_size = Vector2( 125, 40 )
-custom_fonts/font = SubResource( 29 )
+custom_fonts/font = SubResource( 71 )
 text = "Ranking"
 align = 1
 valign = 1
@@ -5514,7 +6538,7 @@ rect_min_size = Vector2( 150, 40 )
 margin_right = 40.0
 margin_bottom = 14.0
 rect_min_size = Vector2( 150, 40 )
-custom_fonts/font = SubResource( 29 )
+custom_fonts/font = SubResource( 71 )
 text = "Player"
 align = 1
 valign = 1
@@ -5533,7 +6557,7 @@ rect_min_size = Vector2( 125, 40 )
 margin_right = 40.0
 margin_bottom = 14.0
 rect_min_size = Vector2( 125, 40 )
-custom_fonts/font = SubResource( 29 )
+custom_fonts/font = SubResource( 71 )
 text = "Region"
 align = 1
 valign = 1
@@ -5552,7 +6576,7 @@ rect_min_size = Vector2( 150, 40 )
 margin_right = 40.0
 margin_bottom = 14.0
 rect_min_size = Vector2( 150, 40 )
-custom_fonts/font = SubResource( 29 )
+custom_fonts/font = SubResource( 71 )
 text = "PvE Kills"
 align = 1
 valign = 1
@@ -5571,7 +6595,7 @@ rect_min_size = Vector2( 150, 40 )
 margin_right = 40.0
 margin_bottom = 14.0
 rect_min_size = Vector2( 150, 40 )
-custom_fonts/font = SubResource( 29 )
+custom_fonts/font = SubResource( 71 )
 text = "PvP Kills"
 align = 1
 valign = 1
@@ -5590,7 +6614,7 @@ rect_min_size = Vector2( 150, 40 )
 margin_right = 40.0
 margin_bottom = 14.0
 rect_min_size = Vector2( 150, 40 )
-custom_fonts/font = SubResource( 29 )
+custom_fonts/font = SubResource( 71 )
 text = "Total Kills"
 align = 1
 valign = 1
@@ -5634,7 +6658,7 @@ margin_top = 10.0
 margin_right = 137.0
 margin_bottom = 30.0
 rect_min_size = Vector2( 125, 20 )
-custom_fonts/font = SubResource( 30 )
+custom_fonts/font = SubResource( 72 )
 text = "999"
 align = 1
 valign = 1
@@ -5645,7 +6669,7 @@ margin_top = 10.0
 margin_right = 302.0
 margin_bottom = 30.0
 rect_min_size = Vector2( 150, 20 )
-custom_fonts/font = SubResource( 31 )
+custom_fonts/font = SubResource( 73 )
 text = "WWWWWWWWWW"
 align = 1
 valign = 1
@@ -5656,7 +6680,7 @@ margin_top = 10.0
 margin_right = 442.0
 margin_bottom = 30.0
 rect_min_size = Vector2( 125, 20 )
-custom_fonts/font = SubResource( 32 )
+custom_fonts/font = SubResource( 74 )
 text = "Macedonia"
 align = 1
 valign = 1
@@ -5667,7 +6691,7 @@ margin_top = 10.0
 margin_right = 607.0
 margin_bottom = 30.0
 rect_min_size = Vector2( 150, 20 )
-custom_fonts/font = SubResource( 33 )
+custom_fonts/font = SubResource( 75 )
 text = "9999999999"
 align = 1
 valign = 1
@@ -5678,7 +6702,7 @@ margin_top = 10.0
 margin_right = 772.0
 margin_bottom = 30.0
 rect_min_size = Vector2( 150, 20 )
-custom_fonts/font = SubResource( 34 )
+custom_fonts/font = SubResource( 76 )
 text = "9999999999"
 align = 1
 valign = 1
@@ -5689,7 +6713,7 @@ margin_top = 10.0
 margin_right = 937.0
 margin_bottom = 30.0
 rect_min_size = Vector2( 150, 20 )
-custom_fonts/font = SubResource( 35 )
+custom_fonts/font = SubResource( 77 )
 text = "9999999999"
 align = 1
 valign = 1
@@ -5732,7 +6756,7 @@ rect_min_size = Vector2( 125, 40 )
 margin_right = 40.0
 margin_bottom = 14.0
 rect_min_size = Vector2( 125, 40 )
-custom_fonts/font = SubResource( 29 )
+custom_fonts/font = SubResource( 71 )
 text = "Ranking"
 align = 1
 valign = 1
@@ -5751,7 +6775,7 @@ rect_min_size = Vector2( 150, 40 )
 margin_right = 40.0
 margin_bottom = 14.0
 rect_min_size = Vector2( 150, 40 )
-custom_fonts/font = SubResource( 29 )
+custom_fonts/font = SubResource( 71 )
 text = "Kingdom"
 align = 1
 valign = 1
@@ -5770,7 +6794,7 @@ rect_min_size = Vector2( 125, 40 )
 margin_right = 40.0
 margin_bottom = 14.0
 rect_min_size = Vector2( 125, 40 )
-custom_fonts/font = SubResource( 29 )
+custom_fonts/font = SubResource( 71 )
 text = "Level"
 align = 1
 valign = 1
@@ -5789,7 +6813,7 @@ rect_min_size = Vector2( 150, 40 )
 margin_right = 40.0
 margin_bottom = 14.0
 rect_min_size = Vector2( 150, 40 )
-custom_fonts/font = SubResource( 29 )
+custom_fonts/font = SubResource( 71 )
 text = "State"
 align = 1
 valign = 1
@@ -5808,7 +6832,7 @@ rect_min_size = Vector2( 150, 40 )
 margin_right = 40.0
 margin_bottom = 14.0
 rect_min_size = Vector2( 150, 40 )
-custom_fonts/font = SubResource( 29 )
+custom_fonts/font = SubResource( 71 )
 text = "Member"
 align = 1
 valign = 1
@@ -5827,7 +6851,7 @@ rect_min_size = Vector2( 150, 40 )
 margin_right = 40.0
 margin_bottom = 14.0
 rect_min_size = Vector2( 150, 40 )
-custom_fonts/font = SubResource( 29 )
+custom_fonts/font = SubResource( 71 )
 text = "City"
 align = 1
 valign = 1
@@ -5871,7 +6895,7 @@ margin_top = 10.0
 margin_right = 137.0
 margin_bottom = 30.0
 rect_min_size = Vector2( 125, 20 )
-custom_fonts/font = SubResource( 36 )
+custom_fonts/font = SubResource( 78 )
 text = "999"
 align = 1
 valign = 1
@@ -5882,7 +6906,7 @@ margin_top = 10.0
 margin_right = 302.0
 margin_bottom = 30.0
 rect_min_size = Vector2( 150, 20 )
-custom_fonts/font = SubResource( 37 )
+custom_fonts/font = SubResource( 79 )
 text = "WWWWWWWWWW"
 align = 1
 valign = 1
@@ -5893,7 +6917,7 @@ margin_top = 10.0
 margin_right = 442.0
 margin_bottom = 30.0
 rect_min_size = Vector2( 125, 20 )
-custom_fonts/font = SubResource( 38 )
+custom_fonts/font = SubResource( 80 )
 text = "Lv.99"
 align = 1
 valign = 1
@@ -5904,7 +6928,7 @@ margin_top = 10.0
 margin_right = 607.0
 margin_bottom = 30.0
 rect_min_size = Vector2( 150, 20 )
-custom_fonts/font = SubResource( 39 )
+custom_fonts/font = SubResource( 81 )
 text = "Macedonia"
 align = 1
 valign = 1
@@ -5915,7 +6939,7 @@ margin_top = 10.0
 margin_right = 772.0
 margin_bottom = 30.0
 rect_min_size = Vector2( 150, 20 )
-custom_fonts/font = SubResource( 40 )
+custom_fonts/font = SubResource( 82 )
 text = "9999999999"
 align = 1
 valign = 1
@@ -5926,7 +6950,7 @@ margin_top = 10.0
 margin_right = 937.0
 margin_bottom = 30.0
 rect_min_size = Vector2( 150, 20 )
-custom_fonts/font = SubResource( 41 )
+custom_fonts/font = SubResource( 83 )
 text = "9999999999"
 align = 1
 valign = 1
@@ -5938,7 +6962,7 @@ margin_left = -55.0
 margin_top = 15.0
 margin_right = -20.0
 margin_bottom = 50.0
-custom_fonts/font = SubResource( 18 )
+custom_fonts/font = SubResource( 45 )
 text = "X"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -5965,7 +6989,7 @@ __meta__ = {
 [node name="MailLabel" type="Label" parent="MailUI"]
 margin_left = 25.0
 margin_top = 25.0
-custom_fonts/font = SubResource( 42 )
+custom_fonts/font = SubResource( 84 )
 text = "Mail"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -5979,7 +7003,7 @@ margin_top = 75.0
 margin_right = -80.0
 margin_bottom = 125.0
 rect_min_size = Vector2( 120, 50 )
-custom_fonts/font = SubResource( 43 )
+custom_fonts/font = SubResource( 85 )
 text = "Compose"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -5999,7 +7023,7 @@ __meta__ = {
 margin_right = 120.0
 margin_bottom = 50.0
 rect_min_size = Vector2( 120, 50 )
-custom_fonts/font = SubResource( 44 )
+custom_fonts/font = SubResource( 86 )
 text = "Private"
 
 [node name="Kingdom" type="Button" parent="MailUI/Options"]
@@ -6007,7 +7031,7 @@ margin_left = 130.0
 margin_right = 250.0
 margin_bottom = 50.0
 rect_min_size = Vector2( 120, 50 )
-custom_fonts/font = SubResource( 44 )
+custom_fonts/font = SubResource( 86 )
 text = "Kingdom"
 
 [node name="System" type="Button" parent="MailUI/Options"]
@@ -6015,7 +7039,7 @@ margin_left = 260.0
 margin_right = 380.0
 margin_bottom = 50.0
 rect_min_size = Vector2( 120, 50 )
-custom_fonts/font = SubResource( 44 )
+custom_fonts/font = SubResource( 86 )
 text = "System"
 
 [node name="MailPanel" type="Panel" parent="MailUI"]
@@ -6065,7 +7089,7 @@ __meta__ = {
 margin_right = 165.0
 margin_bottom = 20.0
 rect_min_size = Vector2( 0, 20 )
-custom_fonts/font = SubResource( 45 )
+custom_fonts/font = SubResource( 87 )
 text = "Name"
 valign = 1
 __meta__ = {
@@ -6077,7 +7101,7 @@ margin_top = 22.0
 margin_right = 165.0
 margin_bottom = 42.0
 rect_min_size = Vector2( 165, 20 )
-custom_fonts/font = SubResource( 46 )
+custom_fonts/font = SubResource( 88 )
 text = "Placeholder Text"
 valign = 1
 __meta__ = {
@@ -6105,7 +7129,7 @@ __meta__ = {
 margin_right = 165.0
 margin_bottom = 20.0
 rect_min_size = Vector2( 0, 20 )
-custom_fonts/font = SubResource( 45 )
+custom_fonts/font = SubResource( 87 )
 text = "Name"
 valign = 1
 __meta__ = {
@@ -6117,7 +7141,7 @@ margin_top = 22.0
 margin_right = 165.0
 margin_bottom = 42.0
 rect_min_size = Vector2( 165, 20 )
-custom_fonts/font = SubResource( 46 )
+custom_fonts/font = SubResource( 88 )
 text = "Placeholder Text"
 valign = 1
 __meta__ = {
@@ -6145,7 +7169,7 @@ __meta__ = {
 margin_right = 165.0
 margin_bottom = 20.0
 rect_min_size = Vector2( 0, 20 )
-custom_fonts/font = SubResource( 45 )
+custom_fonts/font = SubResource( 87 )
 text = "Name"
 valign = 1
 __meta__ = {
@@ -6157,7 +7181,7 @@ margin_top = 22.0
 margin_right = 165.0
 margin_bottom = 42.0
 rect_min_size = Vector2( 165, 20 )
-custom_fonts/font = SubResource( 46 )
+custom_fonts/font = SubResource( 88 )
 text = "Placeholder Text"
 valign = 1
 __meta__ = {
@@ -6185,7 +7209,7 @@ __meta__ = {
 margin_right = 165.0
 margin_bottom = 20.0
 rect_min_size = Vector2( 0, 20 )
-custom_fonts/font = SubResource( 45 )
+custom_fonts/font = SubResource( 87 )
 text = "Name"
 valign = 1
 __meta__ = {
@@ -6197,7 +7221,7 @@ margin_top = 22.0
 margin_right = 165.0
 margin_bottom = 42.0
 rect_min_size = Vector2( 165, 20 )
-custom_fonts/font = SubResource( 46 )
+custom_fonts/font = SubResource( 88 )
 text = "Placeholder Text"
 valign = 1
 __meta__ = {
@@ -6225,7 +7249,7 @@ __meta__ = {
 margin_right = 165.0
 margin_bottom = 20.0
 rect_min_size = Vector2( 0, 20 )
-custom_fonts/font = SubResource( 45 )
+custom_fonts/font = SubResource( 87 )
 text = "Name"
 valign = 1
 __meta__ = {
@@ -6237,7 +7261,7 @@ margin_top = 22.0
 margin_right = 165.0
 margin_bottom = 42.0
 rect_min_size = Vector2( 165, 20 )
-custom_fonts/font = SubResource( 46 )
+custom_fonts/font = SubResource( 88 )
 text = "Placeholder Text"
 valign = 1
 __meta__ = {
@@ -6265,7 +7289,7 @@ __meta__ = {
 margin_right = 165.0
 margin_bottom = 20.0
 rect_min_size = Vector2( 0, 20 )
-custom_fonts/font = SubResource( 45 )
+custom_fonts/font = SubResource( 87 )
 text = "Name"
 valign = 1
 __meta__ = {
@@ -6277,7 +7301,7 @@ margin_top = 22.0
 margin_right = 165.0
 margin_bottom = 42.0
 rect_min_size = Vector2( 165, 20 )
-custom_fonts/font = SubResource( 46 )
+custom_fonts/font = SubResource( 88 )
 text = "Placeholder Text"
 valign = 1
 __meta__ = {
@@ -6305,7 +7329,7 @@ __meta__ = {
 margin_right = 165.0
 margin_bottom = 20.0
 rect_min_size = Vector2( 0, 20 )
-custom_fonts/font = SubResource( 45 )
+custom_fonts/font = SubResource( 87 )
 text = "Name"
 valign = 1
 __meta__ = {
@@ -6317,7 +7341,7 @@ margin_top = 22.0
 margin_right = 165.0
 margin_bottom = 42.0
 rect_min_size = Vector2( 165, 20 )
-custom_fonts/font = SubResource( 46 )
+custom_fonts/font = SubResource( 88 )
 text = "Placeholder Text"
 valign = 1
 __meta__ = {
@@ -6345,7 +7369,7 @@ __meta__ = {
 margin_right = 165.0
 margin_bottom = 20.0
 rect_min_size = Vector2( 0, 20 )
-custom_fonts/font = SubResource( 45 )
+custom_fonts/font = SubResource( 87 )
 text = "Name"
 valign = 1
 __meta__ = {
@@ -6357,7 +7381,7 @@ margin_top = 22.0
 margin_right = 165.0
 margin_bottom = 42.0
 rect_min_size = Vector2( 165, 20 )
-custom_fonts/font = SubResource( 46 )
+custom_fonts/font = SubResource( 88 )
 text = "Placeholder Text"
 valign = 1
 __meta__ = {
@@ -6385,7 +7409,7 @@ __meta__ = {
 margin_right = 165.0
 margin_bottom = 20.0
 rect_min_size = Vector2( 0, 20 )
-custom_fonts/font = SubResource( 45 )
+custom_fonts/font = SubResource( 87 )
 text = "Name"
 valign = 1
 __meta__ = {
@@ -6397,7 +7421,7 @@ margin_top = 22.0
 margin_right = 165.0
 margin_bottom = 42.0
 rect_min_size = Vector2( 165, 20 )
-custom_fonts/font = SubResource( 46 )
+custom_fonts/font = SubResource( 88 )
 text = "Placeholder Text"
 valign = 1
 __meta__ = {
@@ -6416,6 +7440,197 @@ margin_bottom = 275.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="MailMessages" type="ScrollContainer" parent="MailUI/MailTextDisplay"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -345.0
+margin_top = -205.0
+margin_right = 345.0
+margin_bottom = 155.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MessageContainer" type="VBoxContainer" parent="MailUI/MailTextDisplay/MailMessages"]
+margin_right = 675.0
+margin_bottom = 721.0
+
+[node name="Message1" type="Label" parent="MailUI/MailTextDisplay/MailMessages/MessageContainer"]
+margin_right = 675.0
+margin_bottom = 25.0
+rect_min_size = Vector2( 675, 25 )
+custom_styles/normal = SubResource( 89 )
+
+[node name="Message2" type="Label" parent="MailUI/MailTextDisplay/MailMessages/MessageContainer"]
+margin_top = 29.0
+margin_right = 675.0
+margin_bottom = 54.0
+rect_min_size = Vector2( 675, 25 )
+custom_styles/normal = SubResource( 89 )
+
+[node name="Message3" type="Label" parent="MailUI/MailTextDisplay/MailMessages/MessageContainer"]
+margin_top = 58.0
+margin_right = 675.0
+margin_bottom = 83.0
+rect_min_size = Vector2( 675, 25 )
+custom_styles/normal = SubResource( 89 )
+
+[node name="Message4" type="Label" parent="MailUI/MailTextDisplay/MailMessages/MessageContainer"]
+margin_top = 87.0
+margin_right = 675.0
+margin_bottom = 112.0
+rect_min_size = Vector2( 675, 25 )
+custom_styles/normal = SubResource( 89 )
+
+[node name="Message5" type="Label" parent="MailUI/MailTextDisplay/MailMessages/MessageContainer"]
+margin_top = 116.0
+margin_right = 675.0
+margin_bottom = 141.0
+rect_min_size = Vector2( 675, 25 )
+custom_styles/normal = SubResource( 89 )
+
+[node name="Message6" type="Label" parent="MailUI/MailTextDisplay/MailMessages/MessageContainer"]
+margin_top = 145.0
+margin_right = 675.0
+margin_bottom = 170.0
+rect_min_size = Vector2( 675, 25 )
+custom_styles/normal = SubResource( 89 )
+
+[node name="Message7" type="Label" parent="MailUI/MailTextDisplay/MailMessages/MessageContainer"]
+margin_top = 174.0
+margin_right = 675.0
+margin_bottom = 199.0
+rect_min_size = Vector2( 675, 25 )
+custom_styles/normal = SubResource( 89 )
+
+[node name="Message8" type="Label" parent="MailUI/MailTextDisplay/MailMessages/MessageContainer"]
+margin_top = 203.0
+margin_right = 675.0
+margin_bottom = 228.0
+rect_min_size = Vector2( 675, 25 )
+custom_styles/normal = SubResource( 89 )
+
+[node name="Message9" type="Label" parent="MailUI/MailTextDisplay/MailMessages/MessageContainer"]
+margin_top = 232.0
+margin_right = 675.0
+margin_bottom = 257.0
+rect_min_size = Vector2( 675, 25 )
+custom_styles/normal = SubResource( 89 )
+
+[node name="Message10" type="Label" parent="MailUI/MailTextDisplay/MailMessages/MessageContainer"]
+margin_top = 261.0
+margin_right = 675.0
+margin_bottom = 286.0
+rect_min_size = Vector2( 675, 25 )
+custom_styles/normal = SubResource( 89 )
+
+[node name="Message11" type="Label" parent="MailUI/MailTextDisplay/MailMessages/MessageContainer"]
+margin_top = 290.0
+margin_right = 675.0
+margin_bottom = 315.0
+rect_min_size = Vector2( 675, 25 )
+custom_styles/normal = SubResource( 89 )
+
+[node name="Message12" type="Label" parent="MailUI/MailTextDisplay/MailMessages/MessageContainer"]
+margin_top = 319.0
+margin_right = 675.0
+margin_bottom = 344.0
+rect_min_size = Vector2( 675, 25 )
+custom_styles/normal = SubResource( 89 )
+
+[node name="Message13" type="Label" parent="MailUI/MailTextDisplay/MailMessages/MessageContainer"]
+margin_top = 348.0
+margin_right = 675.0
+margin_bottom = 373.0
+rect_min_size = Vector2( 675, 25 )
+custom_styles/normal = SubResource( 89 )
+
+[node name="Message14" type="Label" parent="MailUI/MailTextDisplay/MailMessages/MessageContainer"]
+margin_top = 377.0
+margin_right = 675.0
+margin_bottom = 402.0
+rect_min_size = Vector2( 675, 25 )
+custom_styles/normal = SubResource( 89 )
+
+[node name="Message15" type="Label" parent="MailUI/MailTextDisplay/MailMessages/MessageContainer"]
+margin_top = 406.0
+margin_right = 675.0
+margin_bottom = 431.0
+rect_min_size = Vector2( 675, 25 )
+custom_styles/normal = SubResource( 89 )
+
+[node name="Message16" type="Label" parent="MailUI/MailTextDisplay/MailMessages/MessageContainer"]
+margin_top = 435.0
+margin_right = 675.0
+margin_bottom = 460.0
+rect_min_size = Vector2( 675, 25 )
+custom_styles/normal = SubResource( 89 )
+
+[node name="Message17" type="Label" parent="MailUI/MailTextDisplay/MailMessages/MessageContainer"]
+margin_top = 464.0
+margin_right = 675.0
+margin_bottom = 489.0
+rect_min_size = Vector2( 675, 25 )
+custom_styles/normal = SubResource( 89 )
+
+[node name="Message18" type="Label" parent="MailUI/MailTextDisplay/MailMessages/MessageContainer"]
+margin_top = 493.0
+margin_right = 675.0
+margin_bottom = 518.0
+rect_min_size = Vector2( 675, 25 )
+custom_styles/normal = SubResource( 89 )
+
+[node name="Message19" type="Label" parent="MailUI/MailTextDisplay/MailMessages/MessageContainer"]
+margin_top = 522.0
+margin_right = 675.0
+margin_bottom = 547.0
+rect_min_size = Vector2( 675, 25 )
+custom_styles/normal = SubResource( 89 )
+
+[node name="Message20" type="Label" parent="MailUI/MailTextDisplay/MailMessages/MessageContainer"]
+margin_top = 551.0
+margin_right = 675.0
+margin_bottom = 576.0
+rect_min_size = Vector2( 675, 25 )
+custom_styles/normal = SubResource( 89 )
+
+[node name="Message21" type="Label" parent="MailUI/MailTextDisplay/MailMessages/MessageContainer"]
+margin_top = 580.0
+margin_right = 675.0
+margin_bottom = 605.0
+rect_min_size = Vector2( 675, 25 )
+custom_styles/normal = SubResource( 89 )
+
+[node name="Message22" type="Label" parent="MailUI/MailTextDisplay/MailMessages/MessageContainer"]
+margin_top = 609.0
+margin_right = 675.0
+margin_bottom = 634.0
+rect_min_size = Vector2( 675, 25 )
+custom_styles/normal = SubResource( 89 )
+
+[node name="Message23" type="Label" parent="MailUI/MailTextDisplay/MailMessages/MessageContainer"]
+margin_top = 638.0
+margin_right = 675.0
+margin_bottom = 663.0
+rect_min_size = Vector2( 675, 25 )
+custom_styles/normal = SubResource( 89 )
+
+[node name="Message24" type="Label" parent="MailUI/MailTextDisplay/MailMessages/MessageContainer"]
+margin_top = 667.0
+margin_right = 675.0
+margin_bottom = 692.0
+rect_min_size = Vector2( 675, 25 )
+custom_styles/normal = SubResource( 89 )
+
+[node name="Message25" type="Label" parent="MailUI/MailTextDisplay/MailMessages/MessageContainer"]
+margin_top = 696.0
+margin_right = 675.0
+margin_bottom = 721.0
+rect_min_size = Vector2( 675, 25 )
+custom_styles/normal = SubResource( 89 )
 
 [node name="TextInsertContainer" type="HBoxContainer" parent="MailUI/MailTextDisplay"]
 anchor_left = 0.5
@@ -6436,8 +7651,10 @@ margin_left = 5.0
 margin_right = 635.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 630, 40 )
-custom_fonts/font = SubResource( 47 )
+custom_fonts/font = SubResource( 90 )
+max_length = 200
 context_menu_enabled = false
+clear_button_enabled = true
 shortcut_keys_enabled = false
 placeholder_text = "Type here..."
 __meta__ = {
@@ -6449,7 +7666,7 @@ margin_left = 639.0
 margin_right = 694.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 55, 40 )
-custom_fonts/font = SubResource( 48 )
+custom_fonts/font = SubResource( 91 )
 text = "Send"
 
 [node name="CloseMail" type="Button" parent="MailUI"]
@@ -6459,8 +7676,33 @@ margin_left = -55.0
 margin_top = 15.0
 margin_right = -20.0
 margin_bottom = 50.0
-custom_fonts/font = SubResource( 49 )
+custom_fonts/font = SubResource( 92 )
 text = "X"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="EditTextPanel" type="Panel" parent="MailUI"]
+visible = false
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -300.0
+margin_right = 300.0
+margin_bottom = 200.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextEdit" type="TextEdit" parent="MailUI/EditTextPanel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 5.0
+margin_top = 5.0
+margin_right = -5.0
+margin_bottom = -5.0
+custom_fonts/font = SubResource( 93 )
+selecting_enabled = false
+wrap_enabled = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -6488,21 +7730,8 @@ __meta__ = {
 [node name="EventsLabel" type="Label" parent="EventsUI"]
 margin_left = 25.0
 margin_top = 25.0
-custom_fonts/font = SubResource( 50 )
+custom_fonts/font = SubResource( 94 )
 text = "Events"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="InformationPanel" type="Panel" parent="EventsUI"]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -300.0
-margin_top = -200.0
-margin_right = 450.0
-margin_bottom = 250.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -6511,7 +7740,7 @@ __meta__ = {
 anchor_top = 0.5
 anchor_bottom = 0.5
 margin_left = 35.0
-margin_top = -200.0
+margin_top = -215.0
 margin_right = 185.0
 margin_bottom = 250.0
 custom_constants/separation = 10
@@ -6519,34 +7748,34 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="CalendarButton" type="Button" parent="EventsUI/OptionsContainer"]
+[node name="DailyLogin" type="Button" parent="EventsUI/OptionsContainer"]
 margin_right = 150.0
 margin_bottom = 60.0
 rect_min_size = Vector2( 115, 60 )
 
-[node name="CalendarLabel" type="Label" parent="EventsUI/OptionsContainer/CalendarButton"]
+[node name="DailyLabel" type="Label" parent="EventsUI/OptionsContainer/DailyLogin"]
 margin_right = 150.0
 margin_bottom = 50.0
 rect_min_size = Vector2( 0, 60 )
-custom_fonts/font = SubResource( 51 )
-text = "Calendar"
+custom_fonts/font = SubResource( 95 )
+text = "Daily Login"
 align = 1
 valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="EventsButton" type="Button" parent="EventsUI/OptionsContainer"]
+[node name="Events" type="Button" parent="EventsUI/OptionsContainer"]
 margin_top = 70.0
 margin_right = 150.0
 margin_bottom = 130.0
 rect_min_size = Vector2( 115, 60 )
 
-[node name="EventsLabel" type="Label" parent="EventsUI/OptionsContainer/EventsButton"]
+[node name="EventsLabel" type="Label" parent="EventsUI/OptionsContainer/Events"]
 margin_right = 150.0
 margin_bottom = 50.0
 rect_min_size = Vector2( 0, 60 )
-custom_fonts/font = SubResource( 51 )
+custom_fonts/font = SubResource( 95 )
 text = "Events"
 align = 1
 valign = 1
@@ -6554,18 +7783,18 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="SeasonDescriptionButton" type="Button" parent="EventsUI/OptionsContainer"]
+[node name="SeasonDescription" type="Button" parent="EventsUI/OptionsContainer"]
 margin_top = 140.0
 margin_right = 150.0
 margin_bottom = 200.0
 rect_min_size = Vector2( 115, 60 )
 clip_text = true
 
-[node name="SeasonDescriptionLabel" type="Label" parent="EventsUI/OptionsContainer/SeasonDescriptionButton"]
+[node name="SeasonDescriptionLabel" type="Label" parent="EventsUI/OptionsContainer/SeasonDescription"]
 margin_right = 150.0
 margin_bottom = 50.0
 rect_min_size = Vector2( 0, 60 )
-custom_fonts/font = SubResource( 51 )
+custom_fonts/font = SubResource( 95 )
 text = "Season
 Description"
 align = 1
@@ -6574,7 +7803,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="WorldAchievementsButton" type="Button" parent="EventsUI/OptionsContainer"]
+[node name="WorldAchievements" type="Button" parent="EventsUI/OptionsContainer"]
 margin_top = 210.0
 margin_right = 150.0
 margin_bottom = 270.0
@@ -6584,11 +7813,11 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="WorldAchievementsLabel" type="Label" parent="EventsUI/OptionsContainer/WorldAchievementsButton"]
+[node name="WorldAchievementsLabel" type="Label" parent="EventsUI/OptionsContainer/WorldAchievements"]
 margin_right = 150.0
 margin_bottom = 50.0
 rect_min_size = Vector2( 0, 60 )
-custom_fonts/font = SubResource( 51 )
+custom_fonts/font = SubResource( 95 )
 text = "World
 Achievements"
 align = 1
@@ -6597,7 +7826,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="StateAchievementsButton" type="Button" parent="EventsUI/OptionsContainer"]
+[node name="StateAchievements" type="Button" parent="EventsUI/OptionsContainer"]
 margin_top = 280.0
 margin_right = 150.0
 margin_bottom = 340.0
@@ -6607,15 +7836,353 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="StateAchievementsLabel" type="Label" parent="EventsUI/OptionsContainer/StateAchievementsButton"]
+[node name="StateAchievementsLabel" type="Label" parent="EventsUI/OptionsContainer/StateAchievements"]
 margin_right = 150.0
 margin_bottom = 50.0
 rect_min_size = Vector2( 0, 60 )
-custom_fonts/font = SubResource( 51 )
+custom_fonts/font = SubResource( 95 )
 text = "State
 Achievements"
 align = 1
 valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BackgroundPanel" type="Panel" parent="EventsUI"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -300.0
+margin_top = -215.0
+margin_right = 450.0
+margin_bottom = 235.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DailyLoginPanel" type="Panel" parent="EventsUI"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -290.0
+margin_top = -205.0
+margin_right = 440.0
+margin_bottom = 225.0
+rect_min_size = Vector2( 730, 430 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RowContainer" type="VBoxContainer" parent="EventsUI/DailyLoginPanel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/separation = 10
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Row1" type="HBoxContainer" parent="EventsUI/DailyLoginPanel/RowContainer"]
+margin_right = 730.0
+margin_bottom = 100.0
+custom_constants/separation = 7
+alignment = 1
+
+[node name="Daily1" parent="EventsUI/DailyLoginPanel/RowContainer/Row1" instance=ExtResource( 60 )]
+day = 1
+type = [ "Gold" ]
+amount = [ 10000 ]
+z_index = 7
+
+[node name="Daily2" parent="EventsUI/DailyLoginPanel/RowContainer/Row1" instance=ExtResource( 60 )]
+margin_left = 113.0
+margin_right = 208.0
+day = 2
+type = [ "Gems" ]
+amount = [ 200 ]
+z_index = 6
+
+[node name="Daily3" parent="EventsUI/DailyLoginPanel/RowContainer/Row1" instance=ExtResource( 60 )]
+margin_left = 215.0
+margin_right = 310.0
+day = 3
+type = [ "Wood", "Food" ]
+amount = [ 5000, 12000 ]
+z_index = 5
+
+[node name="Daily4" parent="EventsUI/DailyLoginPanel/RowContainer/Row1" instance=ExtResource( 60 )]
+margin_left = 317.0
+margin_right = 412.0
+day = 4
+type = [ "Decree" ]
+amount = [ 5 ]
+z_index = 4
+
+[node name="Daily5" parent="EventsUI/DailyLoginPanel/RowContainer/Row1" instance=ExtResource( 60 )]
+margin_left = 419.0
+margin_right = 514.0
+day = 5
+type = [ "Food", "Stone", "Wood", "Decree" ]
+amount = [ 20000, 15000, 10000, 20 ]
+z_index = 3
+
+[node name="Daily6" parent="EventsUI/DailyLoginPanel/RowContainer/Row1" instance=ExtResource( 60 )]
+margin_left = 521.0
+margin_right = 616.0
+day = 6
+type = [ "Gems", "Gold" ]
+amount = [ 100, 10000 ]
+z_index = 3
+
+[node name="Daily7" parent="EventsUI/DailyLoginPanel/RowContainer/Row1" instance=ExtResource( 60 )]
+margin_left = 623.0
+margin_right = 718.0
+day = 7
+type = [ "Stone" ]
+amount = [ 20000 ]
+z_index = 3
+
+[node name="Row2" type="HBoxContainer" parent="EventsUI/DailyLoginPanel/RowContainer"]
+margin_top = 110.0
+margin_right = 730.0
+margin_bottom = 210.0
+custom_constants/separation = 7
+alignment = 1
+
+[node name="Daily1" parent="EventsUI/DailyLoginPanel/RowContainer/Row2" instance=ExtResource( 60 )]
+day = 8
+type = [ "Gold" ]
+amount = [ 10000 ]
+z_index = 7
+
+[node name="Daily2" parent="EventsUI/DailyLoginPanel/RowContainer/Row2" instance=ExtResource( 60 )]
+margin_left = 113.0
+margin_right = 208.0
+day = 9
+type = [ "Gems" ]
+amount = [ 200 ]
+z_index = 6
+
+[node name="Daily3" parent="EventsUI/DailyLoginPanel/RowContainer/Row2" instance=ExtResource( 60 )]
+margin_left = 215.0
+margin_right = 310.0
+day = 10
+type = [ "Wood", "Food" ]
+amount = [ 5000, 12000 ]
+z_index = 5
+
+[node name="Daily4" parent="EventsUI/DailyLoginPanel/RowContainer/Row2" instance=ExtResource( 60 )]
+margin_left = 317.0
+margin_right = 412.0
+day = 11
+type = [ "Decree" ]
+amount = [ 5 ]
+z_index = 4
+
+[node name="Daily5" parent="EventsUI/DailyLoginPanel/RowContainer/Row2" instance=ExtResource( 60 )]
+margin_left = 419.0
+margin_right = 514.0
+day = 12
+type = [ "Food", "Stone", "Wood", "Decree" ]
+amount = [ 20000, 15000, 10000, 20 ]
+z_index = 3
+
+[node name="Daily6" parent="EventsUI/DailyLoginPanel/RowContainer/Row2" instance=ExtResource( 60 )]
+margin_left = 521.0
+margin_right = 616.0
+day = 13
+type = [ "Gems", "Gold" ]
+amount = [ 100, 10000 ]
+z_index = 3
+
+[node name="Daily7" parent="EventsUI/DailyLoginPanel/RowContainer/Row2" instance=ExtResource( 60 )]
+margin_left = 623.0
+margin_right = 718.0
+day = 14
+type = [ "Stone" ]
+amount = [ 20000 ]
+z_index = 3
+
+[node name="Row3" type="HBoxContainer" parent="EventsUI/DailyLoginPanel/RowContainer"]
+margin_top = 220.0
+margin_right = 730.0
+margin_bottom = 320.0
+custom_constants/separation = 7
+alignment = 1
+
+[node name="Daily1" parent="EventsUI/DailyLoginPanel/RowContainer/Row3" instance=ExtResource( 60 )]
+day = 15
+type = [ "Gold" ]
+amount = [ 10000 ]
+z_index = 7
+
+[node name="Daily2" parent="EventsUI/DailyLoginPanel/RowContainer/Row3" instance=ExtResource( 60 )]
+margin_left = 113.0
+margin_right = 208.0
+day = 16
+type = [ "Gems" ]
+amount = [ 200 ]
+z_index = 6
+
+[node name="Daily3" parent="EventsUI/DailyLoginPanel/RowContainer/Row3" instance=ExtResource( 60 )]
+margin_left = 215.0
+margin_right = 310.0
+day = 17
+type = [ "Wood", "Food" ]
+amount = [ 5000, 12000 ]
+z_index = 5
+
+[node name="Daily4" parent="EventsUI/DailyLoginPanel/RowContainer/Row3" instance=ExtResource( 60 )]
+margin_left = 317.0
+margin_right = 412.0
+day = 18
+type = [ "Decree" ]
+amount = [ 5 ]
+z_index = 4
+
+[node name="Daily5" parent="EventsUI/DailyLoginPanel/RowContainer/Row3" instance=ExtResource( 60 )]
+margin_left = 419.0
+margin_right = 514.0
+day = 19
+type = [ "Food", "Stone", "Wood", "Decree" ]
+amount = [ 20000, 15000, 10000, 20 ]
+z_index = 3
+
+[node name="Daily6" parent="EventsUI/DailyLoginPanel/RowContainer/Row3" instance=ExtResource( 60 )]
+margin_left = 521.0
+margin_right = 616.0
+day = 20
+type = [ "Gems", "Gold" ]
+amount = [ 100, 10000 ]
+z_index = 3
+
+[node name="Daily7" parent="EventsUI/DailyLoginPanel/RowContainer/Row3" instance=ExtResource( 60 )]
+margin_left = 623.0
+margin_right = 718.0
+day = 21
+type = [ "Stone" ]
+amount = [ 20000 ]
+z_index = 3
+
+[node name="Row4" type="HBoxContainer" parent="EventsUI/DailyLoginPanel/RowContainer"]
+margin_top = 330.0
+margin_right = 730.0
+margin_bottom = 430.0
+custom_constants/separation = 7
+alignment = 1
+
+[node name="Daily1" parent="EventsUI/DailyLoginPanel/RowContainer/Row4" instance=ExtResource( 60 )]
+day = 22
+type = [ "Gold" ]
+amount = [ 10000 ]
+z_index = 7
+
+[node name="Daily2" parent="EventsUI/DailyLoginPanel/RowContainer/Row4" instance=ExtResource( 60 )]
+margin_left = 113.0
+margin_right = 208.0
+day = 23
+type = [ "Gems" ]
+amount = [ 200 ]
+z_index = 6
+
+[node name="Daily3" parent="EventsUI/DailyLoginPanel/RowContainer/Row4" instance=ExtResource( 60 )]
+margin_left = 215.0
+margin_right = 310.0
+day = 24
+type = [ "Wood", "Food" ]
+amount = [ 5000, 12000 ]
+z_index = 5
+
+[node name="Daily4" parent="EventsUI/DailyLoginPanel/RowContainer/Row4" instance=ExtResource( 60 )]
+margin_left = 317.0
+margin_right = 412.0
+day = 25
+type = [ "Decree" ]
+amount = [ 5 ]
+z_index = 4
+
+[node name="Daily5" parent="EventsUI/DailyLoginPanel/RowContainer/Row4" instance=ExtResource( 60 )]
+margin_left = 419.0
+margin_right = 514.0
+day = 26
+type = [ "Food", "Stone", "Wood", "Decree" ]
+amount = [ 20000, 15000, 10000, 20 ]
+z_index = 3
+
+[node name="Daily6" parent="EventsUI/DailyLoginPanel/RowContainer/Row4" instance=ExtResource( 60 )]
+margin_left = 521.0
+margin_right = 616.0
+day = 27
+type = [ "Gems", "Gold" ]
+amount = [ 100, 10000 ]
+z_index = 3
+
+[node name="Daily7" parent="EventsUI/DailyLoginPanel/RowContainer/Row4" instance=ExtResource( 60 )]
+margin_left = 623.0
+margin_right = 718.0
+day = 28
+type = [ "Stone" ]
+amount = [ 20000 ]
+z_index = 3
+
+[node name="EventsPanel" type="Panel" parent="EventsUI"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -290.0
+margin_top = -205.0
+margin_right = 440.0
+margin_bottom = 225.0
+rect_min_size = Vector2( 730, 430 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SeasonPanel" type="Panel" parent="EventsUI"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -290.0
+margin_top = -205.0
+margin_right = 440.0
+margin_bottom = 225.0
+rect_min_size = Vector2( 730, 430 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="WorldPanel" type="Panel" parent="EventsUI"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -290.0
+margin_top = -205.0
+margin_right = 440.0
+margin_bottom = 225.0
+rect_min_size = Vector2( 730, 430 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StatePanel" type="Panel" parent="EventsUI"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -290.0
+margin_top = -205.0
+margin_right = 440.0
+margin_bottom = 225.0
+rect_min_size = Vector2( 730, 430 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -6627,7 +8194,7 @@ margin_left = -55.0
 margin_top = 15.0
 margin_right = -20.0
 margin_bottom = 50.0
-custom_fonts/font = SubResource( 52 )
+custom_fonts/font = SubResource( 96 )
 text = "X"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -6654,7 +8221,7 @@ __meta__ = {
 [node name="CardsLabel" type="Label" parent="CardsUI"]
 margin_left = 25.0
 margin_top = 25.0
-custom_fonts/font = SubResource( 53 )
+custom_fonts/font = SubResource( 97 )
 text = "Cards"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -6667,7 +8234,7 @@ margin_left = -55.0
 margin_top = 15.0
 margin_right = -20.0
 margin_bottom = 50.0
-custom_fonts/font = SubResource( 54 )
+custom_fonts/font = SubResource( 98 )
 text = "X"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -8830,7 +10397,7 @@ __meta__ = {
 margin_right = 100.0
 margin_bottom = 33.0
 rect_min_size = Vector2( 75, 33 )
-custom_fonts/font = SubResource( 55 )
+custom_fonts/font = SubResource( 99 )
 text = "Name"
 
 [node name="Rarity" type="Button" parent="CardsUI/SortPanel/ChoiceContainer"]
@@ -8838,7 +10405,7 @@ margin_top = 38.0
 margin_right = 100.0
 margin_bottom = 71.0
 rect_min_size = Vector2( 75, 33 )
-custom_fonts/font = SubResource( 55 )
+custom_fonts/font = SubResource( 99 )
 text = "Rarity"
 
 [node name="Region" type="Button" parent="CardsUI/SortPanel/ChoiceContainer"]
@@ -8846,7 +10413,7 @@ margin_top = 76.0
 margin_right = 100.0
 margin_bottom = 109.0
 rect_min_size = Vector2( 75, 33 )
-custom_fonts/font = SubResource( 55 )
+custom_fonts/font = SubResource( 99 )
 text = "Region"
 
 [node name="Type" type="Button" parent="CardsUI/SortPanel/ChoiceContainer"]
@@ -8854,7 +10421,7 @@ margin_top = 114.0
 margin_right = 100.0
 margin_bottom = 147.0
 rect_min_size = Vector2( 75, 33 )
-custom_fonts/font = SubResource( 55 )
+custom_fonts/font = SubResource( 99 )
 text = "Type"
 
 [node name="SortTween" type="Tween" parent="CardsUI/SortPanel"]
@@ -8865,7 +10432,7 @@ anchor_bottom = 0.5
 margin_top = -30.0
 margin_right = 30.0
 margin_bottom = 30.0
-custom_fonts/font = SubResource( 56 )
+custom_fonts/font = SubResource( 100 )
 toggle_mode = true
 text = ">"
 __meta__ = {
@@ -8890,7 +10457,7 @@ expand = true
 [node name="SkillsLabel" type="Label" parent="SkillsUI"]
 margin_left = 25.0
 margin_top = 25.0
-custom_fonts/font = SubResource( 57 )
+custom_fonts/font = SubResource( 101 )
 text = "Skills"
 
 [node name="SkillsContainerOptions" type="HBoxContainer" parent="SkillsUI"]
@@ -8912,7 +10479,7 @@ margin_left = 13.0
 margin_right = 133.0
 margin_bottom = 50.0
 rect_min_size = Vector2( 120, 0 )
-custom_fonts/font = SubResource( 58 )
+custom_fonts/font = SubResource( 102 )
 text = "Attack"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -8923,7 +10490,7 @@ margin_left = 143.0
 margin_right = 263.0
 margin_bottom = 50.0
 rect_min_size = Vector2( 120, 0 )
-custom_fonts/font = SubResource( 58 )
+custom_fonts/font = SubResource( 102 )
 text = "Special"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -8934,7 +10501,7 @@ margin_left = 273.0
 margin_right = 393.0
 margin_bottom = 50.0
 rect_min_size = Vector2( 120, 0 )
-custom_fonts/font = SubResource( 58 )
+custom_fonts/font = SubResource( 102 )
 text = "Control"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -8945,7 +10512,7 @@ margin_left = 403.0
 margin_right = 523.0
 margin_bottom = 50.0
 rect_min_size = Vector2( 120, 0 )
-custom_fonts/font = SubResource( 58 )
+custom_fonts/font = SubResource( 102 )
 text = "Defensive"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -8956,7 +10523,7 @@ margin_left = 533.0
 margin_right = 653.0
 margin_bottom = 50.0
 rect_min_size = Vector2( 120, 0 )
-custom_fonts/font = SubResource( 58 )
+custom_fonts/font = SubResource( 102 )
 text = "Heal"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -8967,7 +10534,7 @@ margin_left = 663.0
 margin_right = 783.0
 margin_bottom = 50.0
 rect_min_size = Vector2( 120, 0 )
-custom_fonts/font = SubResource( 58 )
+custom_fonts/font = SubResource( 102 )
 text = "Statistical"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -8978,7 +10545,7 @@ margin_left = 793.0
 margin_right = 913.0
 margin_bottom = 50.0
 rect_min_size = Vector2( 120, 0 )
-custom_fonts/font = SubResource( 58 )
+custom_fonts/font = SubResource( 102 )
 text = "Conquest"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -9018,7 +10585,7 @@ margin_left = -55.0
 margin_top = 15.0
 margin_right = -20.0
 margin_bottom = 50.0
-custom_fonts/font = SubResource( 59 )
+custom_fonts/font = SubResource( 103 )
 text = "X"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -9045,7 +10612,7 @@ __meta__ = {
 [node name="CityLabel" type="Label" parent="CityUI"]
 margin_left = 25.0
 margin_top = 25.0
-custom_fonts/font = SubResource( 60 )
+custom_fonts/font = SubResource( 104 )
 text = "City"
 
 [node name="OptionsContainer" type="HBoxContainer" parent="CityUI"]
@@ -9068,7 +10635,7 @@ margin_left = 235.0
 margin_right = 335.0
 margin_bottom = 50.0
 rect_min_size = Vector2( 100, 50 )
-custom_fonts/font = SubResource( 61 )
+custom_fonts/font = SubResource( 105 )
 text = "Trade"
 
 [node name="Tax" type="Button" parent="CityUI/OptionsContainer"]
@@ -9076,7 +10643,7 @@ margin_left = 345.0
 margin_right = 445.0
 margin_bottom = 50.0
 rect_min_size = Vector2( 100, 50 )
-custom_fonts/font = SubResource( 61 )
+custom_fonts/font = SubResource( 105 )
 text = "Tax"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -9087,7 +10654,7 @@ margin_left = 455.0
 margin_right = 555.0
 margin_bottom = 50.0
 rect_min_size = Vector2( 100, 50 )
-custom_fonts/font = SubResource( 61 )
+custom_fonts/font = SubResource( 105 )
 text = "Manage"
 
 [node name="Teams" type="Button" parent="CityUI/OptionsContainer"]
@@ -9095,7 +10662,7 @@ margin_left = 565.0
 margin_right = 665.0
 margin_bottom = 50.0
 rect_min_size = Vector2( 100, 50 )
-custom_fonts/font = SubResource( 61 )
+custom_fonts/font = SubResource( 105 )
 text = "Teams"
 
 [node name="InformationPanel" type="Panel" parent="CityUI"]
@@ -9111,6 +10678,432 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="TradePanel" type="Panel" parent="CityUI/InformationPanel"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -440.0
+margin_top = -192.5
+margin_right = 440.0
+margin_bottom = 192.5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ErrorPanel" type="Panel" parent="CityUI/InformationPanel/TradePanel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -440.0
+margin_top = -192.5
+margin_right = 440.0
+margin_bottom = 192.5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CityUI/InformationPanel/TradePanel/ErrorPanel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -130.5
+margin_top = -12.5
+margin_right = 130.5
+margin_bottom = 12.5
+custom_fonts/font = SubResource( 106 )
+text = "Build a Market to Trade"
+align = 1
+valign = 1
+
+[node name="TaxPanel" type="Panel" parent="CityUI/InformationPanel"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -440.0
+margin_top = -192.5
+margin_right = 440.0
+margin_bottom = 192.5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ErrorPanel" type="Panel" parent="CityUI/InformationPanel/TaxPanel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -440.0
+margin_top = -192.5
+margin_right = 440.0
+margin_bottom = 192.5
+
+[node name="Label" type="Label" parent="CityUI/InformationPanel/TaxPanel/ErrorPanel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -164.0
+margin_top = -12.5
+margin_right = 164.0
+margin_bottom = 12.5
+custom_fonts/font = SubResource( 107 )
+text = "Build a House to Collect Taxes"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ManagePanel" type="Panel" parent="CityUI/InformationPanel"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -440.0
+margin_top = -192.5
+margin_right = 440.0
+margin_bottom = 192.5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ManageOptions" type="HBoxContainer" parent="CityUI/InformationPanel/ManagePanel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -440.0
+margin_top = -192.5
+margin_right = 440.0
+margin_bottom = 192.5
+custom_constants/separation = 5
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MoveCityPanel" type="Panel" parent="CityUI/InformationPanel/ManagePanel/ManageOptions"]
+margin_left = 120.0
+margin_right = 330.0
+margin_bottom = 385.0
+rect_min_size = Vector2( 210, 385 )
+custom_styles/panel = SubResource( 108 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CityUI/InformationPanel/ManagePanel/ManageOptions/MoveCityPanel"]
+margin_right = 210.0
+margin_bottom = 385.0
+rect_min_size = Vector2( 210, 0 )
+custom_constants/separation = 10
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MoveCityLabel" type="Label" parent="CityUI/InformationPanel/ManagePanel/ManageOptions/MoveCityPanel/VBoxContainer"]
+margin_top = -1.0
+margin_right = 210.0
+margin_bottom = 49.0
+rect_min_size = Vector2( 210, 50 )
+custom_styles/normal = SubResource( 109 )
+custom_fonts/font = SubResource( 110 )
+text = "Move City"
+align = 1
+valign = 1
+
+[node name="Background" type="TextureRect" parent="CityUI/InformationPanel/ManagePanel/ManageOptions/MoveCityPanel/VBoxContainer"]
+margin_top = 60.0
+margin_right = 210.0
+margin_bottom = 310.0
+rect_min_size = Vector2( 210, 250 )
+
+[node name="ChooseSubcity" type="Button" parent="CityUI/InformationPanel/ManagePanel/ManageOptions/MoveCityPanel/VBoxContainer/Background"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -65.0
+margin_top = -50.0
+margin_right = 65.0
+margin_bottom = -25.0
+rect_min_size = Vector2( 130, 25 )
+custom_fonts/font = SubResource( 111 )
+text = "Choose Subcity"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CostPanel" type="Panel" parent="CityUI/InformationPanel/ManagePanel/ManageOptions/MoveCityPanel/VBoxContainer"]
+margin_top = 320.0
+margin_right = 210.0
+margin_bottom = 360.0
+rect_min_size = Vector2( 210, 40 )
+custom_styles/panel = SubResource( 112 )
+
+[node name="CostButton" type="Button" parent="CityUI/InformationPanel/ManagePanel/ManageOptions/MoveCityPanel/VBoxContainer/CostPanel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -95.0
+margin_top = -15.0
+margin_right = 95.0
+margin_bottom = 15.0
+custom_fonts/font = SubResource( 113 )
+text = "500 Move City"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ShieldPanel" type="Panel" parent="CityUI/InformationPanel/ManagePanel/ManageOptions"]
+margin_left = 335.0
+margin_right = 545.0
+margin_bottom = 385.0
+rect_min_size = Vector2( 210, 385 )
+custom_styles/panel = SubResource( 108 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CityUI/InformationPanel/ManagePanel/ManageOptions/ShieldPanel"]
+margin_right = 210.0
+margin_bottom = 385.0
+rect_min_size = Vector2( 210, 0 )
+custom_constants/separation = 10
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ShieldLabel" type="Label" parent="CityUI/InformationPanel/ManagePanel/ManageOptions/ShieldPanel/VBoxContainer"]
+margin_top = -1.0
+margin_right = 210.0
+margin_bottom = 49.0
+rect_min_size = Vector2( 210, 50 )
+custom_styles/normal = SubResource( 114 )
+custom_fonts/font = SubResource( 110 )
+text = "Shield"
+align = 1
+valign = 1
+
+[node name="Background" type="TextureRect" parent="CityUI/InformationPanel/ManagePanel/ManageOptions/ShieldPanel/VBoxContainer"]
+margin_top = 60.0
+margin_right = 210.0
+margin_bottom = 310.0
+rect_min_size = Vector2( 210, 250 )
+
+[node name="PrepareTime" type="Label" parent="CityUI/InformationPanel/ManagePanel/ManageOptions/ShieldPanel/VBoxContainer/Background"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -65.0
+margin_top = -50.0
+margin_right = 65.0
+margin_bottom = -25.0
+rect_min_size = Vector2( 130, 25 )
+custom_styles/normal = SubResource( 115 )
+custom_fonts/font = SubResource( 111 )
+text = "Prepare Time"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CityUI/InformationPanel/ManagePanel/ManageOptions/ShieldPanel/VBoxContainer/Background/PrepareTime"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -75.0
+margin_right = 75.0
+rect_min_size = Vector2( 150, 25 )
+custom_styles/normal = SubResource( 116 )
+custom_fonts/font = SubResource( 117 )
+text = "99 : 99 : 99"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BeginPanel" type="Panel" parent="CityUI/InformationPanel/ManagePanel/ManageOptions/ShieldPanel/VBoxContainer"]
+margin_top = 320.0
+margin_right = 210.0
+margin_bottom = 360.0
+rect_min_size = Vector2( 210, 40 )
+custom_styles/panel = SubResource( 112 )
+
+[node name="BeginShield" type="Button" parent="CityUI/InformationPanel/ManagePanel/ManageOptions/ShieldPanel/VBoxContainer/BeginPanel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -95.0
+margin_top = -15.0
+margin_right = 95.0
+margin_bottom = 15.0
+custom_fonts/font = SubResource( 113 )
+text = "Begin Shielding"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RovePanel" type="Panel" parent="CityUI/InformationPanel/ManagePanel/ManageOptions"]
+margin_left = 550.0
+margin_right = 760.0
+margin_bottom = 385.0
+rect_min_size = Vector2( 210, 385 )
+custom_styles/panel = SubResource( 108 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CityUI/InformationPanel/ManagePanel/ManageOptions/RovePanel"]
+margin_right = 210.0
+margin_bottom = 385.0
+rect_min_size = Vector2( 210, 0 )
+custom_constants/separation = 10
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RoveLabel" type="Label" parent="CityUI/InformationPanel/ManagePanel/ManageOptions/RovePanel/VBoxContainer"]
+margin_top = -1.0
+margin_right = 210.0
+margin_bottom = 49.0
+rect_min_size = Vector2( 210, 50 )
+custom_styles/normal = SubResource( 118 )
+custom_fonts/font = SubResource( 110 )
+text = "Rove"
+align = 1
+valign = 1
+
+[node name="Background" type="TextureRect" parent="CityUI/InformationPanel/ManagePanel/ManageOptions/RovePanel/VBoxContainer"]
+margin_top = 60.0
+margin_right = 210.0
+margin_bottom = 310.0
+rect_min_size = Vector2( 210, 250 )
+
+[node name="Description" type="Button" parent="CityUI/InformationPanel/ManagePanel/ManageOptions/RovePanel/VBoxContainer/Background"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -65.0
+margin_top = -50.0
+margin_right = 65.0
+margin_bottom = -25.0
+rect_min_size = Vector2( 130, 25 )
+custom_fonts/font = SubResource( 111 )
+text = "Description"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RovePanel" type="Panel" parent="CityUI/InformationPanel/ManagePanel/ManageOptions/RovePanel/VBoxContainer"]
+margin_top = 320.0
+margin_right = 210.0
+margin_bottom = 360.0
+rect_min_size = Vector2( 210, 40 )
+custom_styles/panel = SubResource( 112 )
+
+[node name="Rove" type="Button" parent="CityUI/InformationPanel/ManagePanel/ManageOptions/RovePanel/VBoxContainer/RovePanel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -95.0
+margin_top = -15.0
+margin_right = 95.0
+margin_bottom = 15.0
+custom_fonts/font = SubResource( 113 )
+text = "Rove"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="OtherOptions" type="Panel" parent="CityUI/InformationPanel/ManagePanel/ManageOptions"]
+visible = false
+margin_left = 657.0
+margin_right = 867.0
+margin_bottom = 385.0
+rect_min_size = Vector2( 210, 385 )
+custom_styles/panel = SubResource( 108 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CityUI/InformationPanel/ManagePanel/ManageOptions/OtherOptions"]
+margin_right = 210.0
+margin_bottom = 385.0
+rect_min_size = Vector2( 210, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MoveCityLabel" type="Label" parent="CityUI/InformationPanel/ManagePanel/ManageOptions/OtherOptions/VBoxContainer"]
+margin_top = -1.0
+margin_right = 210.0
+margin_bottom = 49.0
+rect_min_size = Vector2( 210, 50 )
+custom_fonts/font = SubResource( 110 )
+text = "Move City"
+align = 1
+valign = 1
+
+[node name="Background" type="TextureRect" parent="CityUI/InformationPanel/ManagePanel/ManageOptions/OtherOptions/VBoxContainer"]
+margin_top = 54.0
+margin_right = 210.0
+margin_bottom = 304.0
+rect_min_size = Vector2( 210, 250 )
+
+[node name="ChooseSubcity" type="Button" parent="CityUI/InformationPanel/ManagePanel/ManageOptions/OtherOptions/VBoxContainer/Background"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -65.0
+margin_top = -50.0
+margin_right = 65.0
+margin_bottom = -25.0
+rect_min_size = Vector2( 130, 25 )
+custom_fonts/font = SubResource( 111 )
+text = "Choose Subcity"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CostPanel" type="Panel" parent="CityUI/InformationPanel/ManagePanel/ManageOptions/OtherOptions/VBoxContainer"]
+margin_top = 308.0
+margin_right = 210.0
+margin_bottom = 348.0
+rect_min_size = Vector2( 210, 40 )
+custom_styles/panel = SubResource( 112 )
+
+[node name="CostButton" type="Button" parent="CityUI/InformationPanel/ManagePanel/ManageOptions/OtherOptions/VBoxContainer/CostPanel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -95.0
+margin_top = -15.0
+margin_right = 95.0
+margin_bottom = 15.0
+custom_fonts/font = SubResource( 113 )
+text = "500 Move City"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TeamsPanel" type="Panel" parent="CityUI/InformationPanel"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -440.0
+margin_top = -192.5
+margin_right = 440.0
+margin_bottom = 192.5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="CloseCity" type="Button" parent="CityUI"]
 anchor_left = 1.0
 anchor_right = 1.0
@@ -9119,13 +11112,13 @@ margin_top = 15.0
 margin_right = -20.0
 margin_bottom = 50.0
 rect_min_size = Vector2( 24, 24 )
-custom_fonts/font = SubResource( 62 )
+custom_fonts/font = SubResource( 119 )
 text = "X"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="AllianceUI" type="Control" parent="."]
+[node name="KingdomUI" type="Control" parent="."]
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -9134,7 +11127,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Background" type="TextureRect" parent="AllianceUI"]
+[node name="Background" type="TextureRect" parent="KingdomUI"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 texture = ExtResource( 15 )
@@ -9143,34 +11136,708 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="AllianceLabel" type="Label" parent="AllianceUI"]
-margin_left = 25.0
-margin_top = 25.0
-custom_fonts/font = SubResource( 63 )
-text = "Alliance"
+[node name="CalendarPanel" type="Panel" parent="KingdomUI"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -375.0
+margin_top = -220.0
+margin_right = 375.0
+margin_bottom = 270.0
+script = ExtResource( 59 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="CloseAlliance" type="Button" parent="AllianceUI"]
+[node name="Month" type="Label" parent="KingdomUI/CalendarPanel"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -48.0
+margin_top = 10.0
+margin_right = 48.0
+margin_bottom = 42.0
+custom_fonts/font = SubResource( 120 )
+text = "Month"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Weekday" type="HBoxContainer" parent="KingdomUI/CalendarPanel"]
+margin_left = 5.0
+margin_top = 55.0
+margin_right = 745.0
+margin_bottom = 105.0
+custom_constants/separation = 5
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sunday" type="Label" parent="KingdomUI/CalendarPanel/Weekday"]
+margin_left = 5.0
+margin_right = 105.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 50 )
+custom_styles/normal = SubResource( 121 )
+custom_fonts/font = SubResource( 122 )
+text = "S"
+align = 1
+valign = 1
+
+[node name="Monday" type="Label" parent="KingdomUI/CalendarPanel/Weekday"]
+margin_left = 110.0
+margin_right = 210.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 50 )
+custom_styles/normal = SubResource( 121 )
+custom_fonts/font = SubResource( 122 )
+text = "M"
+align = 1
+valign = 1
+
+[node name="Tuesday" type="Label" parent="KingdomUI/CalendarPanel/Weekday"]
+margin_left = 215.0
+margin_right = 315.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 50 )
+custom_styles/normal = SubResource( 121 )
+custom_fonts/font = SubResource( 122 )
+text = "T"
+align = 1
+valign = 1
+
+[node name="Wednesday" type="Label" parent="KingdomUI/CalendarPanel/Weekday"]
+margin_left = 320.0
+margin_right = 420.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 50 )
+custom_styles/normal = SubResource( 121 )
+custom_fonts/font = SubResource( 122 )
+text = "W"
+align = 1
+valign = 1
+
+[node name="Thursday" type="Label" parent="KingdomUI/CalendarPanel/Weekday"]
+margin_left = 425.0
+margin_right = 525.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 50 )
+custom_styles/normal = SubResource( 121 )
+custom_fonts/font = SubResource( 122 )
+text = "T"
+align = 1
+valign = 1
+
+[node name="Friday" type="Label" parent="KingdomUI/CalendarPanel/Weekday"]
+margin_left = 530.0
+margin_right = 630.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 50 )
+custom_styles/normal = SubResource( 121 )
+custom_fonts/font = SubResource( 122 )
+text = "F"
+align = 1
+valign = 1
+
+[node name="Saturday" type="Label" parent="KingdomUI/CalendarPanel/Weekday"]
+margin_left = 635.0
+margin_right = 735.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 50 )
+custom_styles/normal = SubResource( 121 )
+custom_fonts/font = SubResource( 122 )
+text = "S"
+align = 1
+valign = 1
+
+[node name="CalendarContainer" type="VBoxContainer" parent="KingdomUI/CalendarPanel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -370.0
+margin_top = -120.0
+margin_right = 370.0
+margin_bottom = 230.0
+custom_constants/separation = 10
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Week1" type="HBoxContainer" parent="KingdomUI/CalendarPanel/CalendarContainer"]
+margin_right = 740.0
+margin_bottom = 50.0
+custom_constants/separation = 5
+alignment = 1
+
+[node name="Day1" type="Label" parent="KingdomUI/CalendarPanel/CalendarContainer/Week1"]
+margin_left = 5.0
+margin_right = 105.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 50 )
+custom_styles/normal = SubResource( 123 )
+custom_fonts/font = SubResource( 124 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "1"
+align = 1
+valign = 1
+
+[node name="Day2" type="Label" parent="KingdomUI/CalendarPanel/CalendarContainer/Week1"]
+margin_left = 110.0
+margin_right = 210.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 50 )
+custom_styles/normal = SubResource( 123 )
+custom_fonts/font = SubResource( 124 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "30"
+align = 1
+valign = 1
+
+[node name="Day3" type="Label" parent="KingdomUI/CalendarPanel/CalendarContainer/Week1"]
+margin_left = 215.0
+margin_right = 315.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 50 )
+custom_styles/normal = SubResource( 123 )
+custom_fonts/font = SubResource( 124 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "1"
+align = 1
+valign = 1
+
+[node name="Day4" type="Label" parent="KingdomUI/CalendarPanel/CalendarContainer/Week1"]
+margin_left = 320.0
+margin_right = 420.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 50 )
+custom_styles/normal = SubResource( 123 )
+custom_fonts/font = SubResource( 124 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "1"
+align = 1
+valign = 1
+
+[node name="Day5" type="Label" parent="KingdomUI/CalendarPanel/CalendarContainer/Week1"]
+margin_left = 425.0
+margin_right = 525.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 50 )
+custom_styles/normal = SubResource( 123 )
+custom_fonts/font = SubResource( 124 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "1"
+align = 1
+valign = 1
+
+[node name="Day6" type="Label" parent="KingdomUI/CalendarPanel/CalendarContainer/Week1"]
+margin_left = 530.0
+margin_right = 630.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 50 )
+custom_styles/normal = SubResource( 123 )
+custom_fonts/font = SubResource( 124 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "1"
+align = 1
+valign = 1
+
+[node name="Day7" type="Label" parent="KingdomUI/CalendarPanel/CalendarContainer/Week1"]
+margin_left = 635.0
+margin_right = 735.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 50 )
+custom_styles/normal = SubResource( 123 )
+custom_fonts/font = SubResource( 124 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "1"
+align = 1
+valign = 1
+
+[node name="Week2" type="HBoxContainer" parent="KingdomUI/CalendarPanel/CalendarContainer"]
+margin_top = 60.0
+margin_right = 740.0
+margin_bottom = 110.0
+custom_constants/separation = 5
+alignment = 1
+
+[node name="Day1" type="Label" parent="KingdomUI/CalendarPanel/CalendarContainer/Week2"]
+margin_left = 5.0
+margin_right = 105.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 50 )
+custom_styles/normal = SubResource( 123 )
+custom_fonts/font = SubResource( 124 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "1"
+align = 1
+valign = 1
+
+[node name="Day2" type="Label" parent="KingdomUI/CalendarPanel/CalendarContainer/Week2"]
+margin_left = 110.0
+margin_right = 210.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 50 )
+custom_styles/normal = SubResource( 123 )
+custom_fonts/font = SubResource( 124 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "30"
+align = 1
+valign = 1
+
+[node name="Day3" type="Label" parent="KingdomUI/CalendarPanel/CalendarContainer/Week2"]
+margin_left = 215.0
+margin_right = 315.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 50 )
+custom_styles/normal = SubResource( 123 )
+custom_fonts/font = SubResource( 124 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "1"
+align = 1
+valign = 1
+
+[node name="Day4" type="Label" parent="KingdomUI/CalendarPanel/CalendarContainer/Week2"]
+margin_left = 320.0
+margin_right = 420.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 50 )
+custom_styles/normal = SubResource( 123 )
+custom_fonts/font = SubResource( 124 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "1"
+align = 1
+valign = 1
+
+[node name="Day5" type="Label" parent="KingdomUI/CalendarPanel/CalendarContainer/Week2"]
+margin_left = 425.0
+margin_right = 525.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 50 )
+custom_styles/normal = SubResource( 123 )
+custom_fonts/font = SubResource( 124 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "1"
+align = 1
+valign = 1
+
+[node name="Day6" type="Label" parent="KingdomUI/CalendarPanel/CalendarContainer/Week2"]
+margin_left = 530.0
+margin_right = 630.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 50 )
+custom_styles/normal = SubResource( 123 )
+custom_fonts/font = SubResource( 124 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "1"
+align = 1
+valign = 1
+
+[node name="Day7" type="Label" parent="KingdomUI/CalendarPanel/CalendarContainer/Week2"]
+margin_left = 635.0
+margin_right = 735.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 50 )
+custom_styles/normal = SubResource( 123 )
+custom_fonts/font = SubResource( 124 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "1"
+align = 1
+valign = 1
+
+[node name="Week3" type="HBoxContainer" parent="KingdomUI/CalendarPanel/CalendarContainer"]
+margin_top = 120.0
+margin_right = 740.0
+margin_bottom = 170.0
+custom_constants/separation = 5
+alignment = 1
+
+[node name="Day1" type="Label" parent="KingdomUI/CalendarPanel/CalendarContainer/Week3"]
+margin_left = 5.0
+margin_right = 105.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 50 )
+custom_styles/normal = SubResource( 123 )
+custom_fonts/font = SubResource( 124 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "1"
+align = 1
+valign = 1
+
+[node name="Day2" type="Label" parent="KingdomUI/CalendarPanel/CalendarContainer/Week3"]
+margin_left = 110.0
+margin_right = 210.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 50 )
+custom_styles/normal = SubResource( 123 )
+custom_fonts/font = SubResource( 124 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "30"
+align = 1
+valign = 1
+
+[node name="Day3" type="Label" parent="KingdomUI/CalendarPanel/CalendarContainer/Week3"]
+margin_left = 215.0
+margin_right = 315.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 50 )
+custom_styles/normal = SubResource( 123 )
+custom_fonts/font = SubResource( 124 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "1"
+align = 1
+valign = 1
+
+[node name="Day4" type="Label" parent="KingdomUI/CalendarPanel/CalendarContainer/Week3"]
+margin_left = 320.0
+margin_right = 420.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 50 )
+custom_styles/normal = SubResource( 123 )
+custom_fonts/font = SubResource( 124 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "1"
+align = 1
+valign = 1
+
+[node name="Day5" type="Label" parent="KingdomUI/CalendarPanel/CalendarContainer/Week3"]
+margin_left = 425.0
+margin_right = 525.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 50 )
+custom_styles/normal = SubResource( 123 )
+custom_fonts/font = SubResource( 124 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "1"
+align = 1
+valign = 1
+
+[node name="Day6" type="Label" parent="KingdomUI/CalendarPanel/CalendarContainer/Week3"]
+margin_left = 530.0
+margin_right = 630.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 50 )
+custom_styles/normal = SubResource( 123 )
+custom_fonts/font = SubResource( 124 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "1"
+align = 1
+valign = 1
+
+[node name="Day7" type="Label" parent="KingdomUI/CalendarPanel/CalendarContainer/Week3"]
+margin_left = 635.0
+margin_right = 735.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 50 )
+custom_styles/normal = SubResource( 123 )
+custom_fonts/font = SubResource( 124 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "1"
+align = 1
+valign = 1
+
+[node name="Week4" type="HBoxContainer" parent="KingdomUI/CalendarPanel/CalendarContainer"]
+margin_top = 180.0
+margin_right = 740.0
+margin_bottom = 230.0
+custom_constants/separation = 5
+alignment = 1
+
+[node name="Day1" type="Label" parent="KingdomUI/CalendarPanel/CalendarContainer/Week4"]
+margin_left = 5.0
+margin_right = 105.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 50 )
+custom_styles/normal = SubResource( 123 )
+custom_fonts/font = SubResource( 124 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "1"
+align = 1
+valign = 1
+
+[node name="Day2" type="Label" parent="KingdomUI/CalendarPanel/CalendarContainer/Week4"]
+margin_left = 110.0
+margin_right = 210.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 50 )
+custom_styles/normal = SubResource( 123 )
+custom_fonts/font = SubResource( 124 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "30"
+align = 1
+valign = 1
+
+[node name="Day3" type="Label" parent="KingdomUI/CalendarPanel/CalendarContainer/Week4"]
+margin_left = 215.0
+margin_right = 315.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 50 )
+custom_styles/normal = SubResource( 123 )
+custom_fonts/font = SubResource( 124 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "1"
+align = 1
+valign = 1
+
+[node name="Day4" type="Label" parent="KingdomUI/CalendarPanel/CalendarContainer/Week4"]
+margin_left = 320.0
+margin_right = 420.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 50 )
+custom_styles/normal = SubResource( 123 )
+custom_fonts/font = SubResource( 124 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "1"
+align = 1
+valign = 1
+
+[node name="Day5" type="Label" parent="KingdomUI/CalendarPanel/CalendarContainer/Week4"]
+margin_left = 425.0
+margin_right = 525.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 50 )
+custom_styles/normal = SubResource( 123 )
+custom_fonts/font = SubResource( 124 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "1"
+align = 1
+valign = 1
+
+[node name="Day6" type="Label" parent="KingdomUI/CalendarPanel/CalendarContainer/Week4"]
+margin_left = 530.0
+margin_right = 630.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 50 )
+custom_styles/normal = SubResource( 123 )
+custom_fonts/font = SubResource( 124 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "1"
+align = 1
+valign = 1
+
+[node name="Day7" type="Label" parent="KingdomUI/CalendarPanel/CalendarContainer/Week4"]
+margin_left = 635.0
+margin_right = 735.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 50 )
+custom_styles/normal = SubResource( 123 )
+custom_fonts/font = SubResource( 124 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "1"
+align = 1
+valign = 1
+
+[node name="Week5" type="HBoxContainer" parent="KingdomUI/CalendarPanel/CalendarContainer"]
+margin_top = 240.0
+margin_right = 740.0
+margin_bottom = 290.0
+custom_constants/separation = 5
+alignment = 1
+
+[node name="Day1" type="Label" parent="KingdomUI/CalendarPanel/CalendarContainer/Week5"]
+margin_left = 5.0
+margin_right = 105.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 50 )
+custom_styles/normal = SubResource( 123 )
+custom_fonts/font = SubResource( 124 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "1"
+align = 1
+valign = 1
+
+[node name="Day2" type="Label" parent="KingdomUI/CalendarPanel/CalendarContainer/Week5"]
+margin_left = 110.0
+margin_right = 210.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 50 )
+custom_styles/normal = SubResource( 123 )
+custom_fonts/font = SubResource( 124 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "30"
+align = 1
+valign = 1
+
+[node name="Day3" type="Label" parent="KingdomUI/CalendarPanel/CalendarContainer/Week5"]
+margin_left = 215.0
+margin_right = 315.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 50 )
+custom_styles/normal = SubResource( 123 )
+custom_fonts/font = SubResource( 124 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "1"
+align = 1
+valign = 1
+
+[node name="Day4" type="Label" parent="KingdomUI/CalendarPanel/CalendarContainer/Week5"]
+margin_left = 320.0
+margin_right = 420.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 50 )
+custom_styles/normal = SubResource( 123 )
+custom_fonts/font = SubResource( 124 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "1"
+align = 1
+valign = 1
+
+[node name="Day5" type="Label" parent="KingdomUI/CalendarPanel/CalendarContainer/Week5"]
+margin_left = 425.0
+margin_right = 525.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 50 )
+custom_styles/normal = SubResource( 123 )
+custom_fonts/font = SubResource( 124 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "1"
+align = 1
+valign = 1
+
+[node name="Day6" type="Label" parent="KingdomUI/CalendarPanel/CalendarContainer/Week5"]
+margin_left = 530.0
+margin_right = 630.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 50 )
+custom_styles/normal = SubResource( 123 )
+custom_fonts/font = SubResource( 124 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "1"
+align = 1
+valign = 1
+
+[node name="Day7" type="Label" parent="KingdomUI/CalendarPanel/CalendarContainer/Week5"]
+margin_left = 635.0
+margin_right = 735.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 50 )
+custom_styles/normal = SubResource( 123 )
+custom_fonts/font = SubResource( 124 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "1"
+align = 1
+valign = 1
+
+[node name="Week6" type="HBoxContainer" parent="KingdomUI/CalendarPanel/CalendarContainer"]
+margin_top = 300.0
+margin_right = 740.0
+margin_bottom = 350.0
+custom_constants/separation = 5
+alignment = 1
+
+[node name="Day1" type="Label" parent="KingdomUI/CalendarPanel/CalendarContainer/Week6"]
+margin_left = 5.0
+margin_right = 105.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 50 )
+custom_styles/normal = SubResource( 123 )
+custom_fonts/font = SubResource( 124 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "1"
+align = 1
+valign = 1
+
+[node name="Day2" type="Label" parent="KingdomUI/CalendarPanel/CalendarContainer/Week6"]
+margin_left = 110.0
+margin_right = 210.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 50 )
+custom_styles/normal = SubResource( 123 )
+custom_fonts/font = SubResource( 124 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "30"
+align = 1
+valign = 1
+
+[node name="Day3" type="Label" parent="KingdomUI/CalendarPanel/CalendarContainer/Week6"]
+margin_left = 215.0
+margin_right = 315.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 50 )
+custom_styles/normal = SubResource( 123 )
+custom_fonts/font = SubResource( 124 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "1"
+align = 1
+valign = 1
+
+[node name="Day4" type="Label" parent="KingdomUI/CalendarPanel/CalendarContainer/Week6"]
+margin_left = 320.0
+margin_right = 420.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 50 )
+custom_styles/normal = SubResource( 123 )
+custom_fonts/font = SubResource( 124 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "1"
+align = 1
+valign = 1
+
+[node name="Day5" type="Label" parent="KingdomUI/CalendarPanel/CalendarContainer/Week6"]
+margin_left = 425.0
+margin_right = 525.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 50 )
+custom_styles/normal = SubResource( 123 )
+custom_fonts/font = SubResource( 124 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "1"
+align = 1
+valign = 1
+
+[node name="Day6" type="Label" parent="KingdomUI/CalendarPanel/CalendarContainer/Week6"]
+margin_left = 530.0
+margin_right = 630.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 50 )
+custom_styles/normal = SubResource( 123 )
+custom_fonts/font = SubResource( 124 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "1"
+align = 1
+valign = 1
+
+[node name="Day7" type="Label" parent="KingdomUI/CalendarPanel/CalendarContainer/Week6"]
+margin_left = 635.0
+margin_right = 735.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 50 )
+custom_styles/normal = SubResource( 123 )
+custom_fonts/font = SubResource( 124 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "1"
+align = 1
+valign = 1
+
+[node name="KingdomLabel" type="Label" parent="KingdomUI"]
+margin_left = 25.0
+margin_top = 25.0
+custom_fonts/font = SubResource( 125 )
+text = "Kingdom"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CloseKingdom" type="Button" parent="KingdomUI"]
 anchor_left = 1.0
 anchor_right = 1.0
-margin_left = -50.0
-margin_top = 25.0
-margin_right = -25.0
+margin_left = -55.0
+margin_top = 15.0
+margin_right = -20.0
 margin_bottom = 50.0
-custom_fonts/font = SubResource( 64 )
+custom_fonts/font = SubResource( 126 )
 text = "X"
 __meta__ = {
 "_edit_use_anchors_": false
 }
-[connection signal="pressed" from="TesterUI/Card/Sprite/Reveal" to="TesterUI" method="_on_Reveal_pressed"]
-[connection signal="pressed" from="TesterUI/Animate" to="TesterUI" method="_on_Animate_pressed"]
 [connection signal="pressed" from="GameScreenUI/ResourcePanel/Quest" to="QuestUI" method="_on_Quest_pressed"]
 [connection signal="toggled" from="GameScreenUI/ResourcePanel/Territory" to="GameScreenUI/ResourcePanel" method="_on_Territory_toggled"]
 [connection signal="toggled" from="GameScreenUI/ResourcePanel/ServerTime" to="GameScreenUI/ResourcePanel" method="_on_ServerTime_toggled"]
 [connection signal="toggled" from="GameScreenUI/ResourcePanel/LocalTime" to="GameScreenUI/ResourcePanel" method="_on_LocalTime_toggled"]
 [connection signal="pressed" from="GameScreenUI/BottomPanel/Chat" to="ChatUI" method="_on_Chat_pressed"]
+[connection signal="pressed" from="GameScreenUI/BottomPanel/Gems" to="MarketUI" method="_on_Gems_pressed"]
 [connection signal="toggled" from="GameScreenUI/BottomPanel/Fame" to="GameScreenUI/ResourcePanel" method="_on_Fame_toggled"]
 [connection signal="pressed" from="GameScreenUI/BottomPanel/Summon" to="SummonUI" method="_on_Summon_pressed"]
 [connection signal="pressed" from="GameScreenUI/CentreButtons/FirstRow/Conquest" to="ConquestUI" method="_on_Conquest_pressed"]
@@ -9184,8 +11851,9 @@ __meta__ = {
 [connection signal="pressed" from="GameScreenUI/CentreButtons/ThirdRow/Cards" to="CardsUI" method="_on_Cards_pressed"]
 [connection signal="pressed" from="GameScreenUI/CentreButtons/ThirdRow/Skills" to="SkillsUI" method="_on_Skills_pressed"]
 [connection signal="pressed" from="GameScreenUI/CentreButtons/ThirdRow/City" to="CityUI" method="_on_City_pressed"]
-[connection signal="pressed" from="GameScreenUI/CentreButtons/ThirdRow/Alliance" to="AllianceUI" method="_on_Alliance_pressed"]
+[connection signal="pressed" from="GameScreenUI/CentreButtons/ThirdRow/Alliance" to="KingdomUI" method="_on_Alliance_pressed"]
 [connection signal="toggled" from="GameScreenUI/CentreButtons/ExtraTabsButton" to="GameScreenUI/CentreButtons" method="_on_ExtraTabsButton_toggled"]
+[connection signal="pressed" from="SummonUI/SpecialResourcePanel/HBoxContainer/Gems" to="MarketUI" method="_on_Gems_pressed"]
 [connection signal="pressed" from="SummonUI/SummonPanel/SummonChoicesPanel/SummonChoicesContainer/1xSummonPanel/1xSummon" to="SummonUI" method="_on_1xSummon_pressed"]
 [connection signal="pressed" from="SummonUI/SummonPanel/SummonChoicesPanel/SummonChoicesContainer/5xSummonPanel/5xSummon" to="SummonUI" method="_on_5xSummon_pressed"]
 [connection signal="timeout" from="SummonUI/ErrorMessagePanel/ErrorMessageTimer" to="SummonUI" method="_on_ErrorMessageTimer_timeout"]
@@ -9205,10 +11873,13 @@ __meta__ = {
 [connection signal="pressed" from="RankingUI/OptionsContainer/Personal" to="RankingUI" method="_on_Personal_pressed"]
 [connection signal="pressed" from="RankingUI/OptionsContainer/Kingdom" to="RankingUI" method="_on_Kingdom_pressed"]
 [connection signal="pressed" from="RankingUI/CloseRanking" to="RankingUI" method="_on_CloseRanking_pressed"]
+[connection signal="focus_entered" from="MailUI/MailTextDisplay/TextInsertContainer/TextInsert" to="MailUI" method="_on_TextInsert_focus_entered"]
+[connection signal="focus_exited" from="MailUI/MailTextDisplay/TextInsertContainer/TextInsert" to="MailUI" method="_on_TextInsert_focus_exited"]
+[connection signal="text_changed" from="MailUI/MailTextDisplay/TextInsertContainer/TextInsert" to="MailUI" method="_on_TextInsert_text_changed"]
 [connection signal="pressed" from="MailUI/CloseMail" to="MailUI" method="_on_CloseMail_pressed"]
 [connection signal="pressed" from="EventsUI/CloseEvents" to="EventsUI" method="_on_CloseEvents_pressed"]
 [connection signal="pressed" from="CardsUI/CloseCards" to="CardsUI" method="_on_CloseCards_pressed"]
 [connection signal="toggled" from="CardsUI/SortButton" to="CardsUI" method="_on_SortButton_toggled"]
 [connection signal="pressed" from="SkillsUI/CloseSkills" to="SkillsUI" method="_on_CloseSkills_pressed"]
 [connection signal="pressed" from="CityUI/CloseCity" to="CityUI" method="_on_CloseCity_pressed"]
-[connection signal="pressed" from="AllianceUI/CloseAlliance" to="AllianceUI" method="_on_CloseAlliance_pressed"]
+[connection signal="pressed" from="KingdomUI/CloseKingdom" to="KingdomUI" method="_on_CloseAlliance_pressed"]
