@@ -63,6 +63,7 @@ func _set_up_calendar():
 	var year = date["year"]
 	var month = date["month"]
 	var day = date["day"]
+	var weekday = date["weekday"]
 	
 	# Sets February's days based on the year
 	if fmod(year, 4) == 0:
@@ -72,12 +73,23 @@ func _set_up_calendar():
 	
 	MonthLabel.text = month_dic[month]
 	
+	# Calculate the first day of the month
 	var days_left = fmod(day, 7)
-	var month_start = 7 - days_left
+	var month_start = weekday - days_left + 1
 	
+	# Tracks the first day and the last day of the month
 	var day_count = 1
+	var first_day = month_start
+	var last_day = days_dic[month_dic[month]] + 1
 	
-	for index in range(month_start, days_dic[month_dic[month]] + month_start + 1):
-		
-		dates[index].text = str(day_count)
-		day_count += 1
+	# Sets up the calendar
+	for index in range(len(dates)):
+		if index >= first_day and index <= last_day:
+			dates[index].text = str(day_count)
+			dates[index].disabled = false
+			dates[index].flat = false
+			
+			day_count += 1
+		else:
+			dates[index].disabled = true
+			dates[index].flat = true

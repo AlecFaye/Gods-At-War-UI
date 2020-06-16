@@ -1,4 +1,4 @@
-[gd_scene load_steps=186 format=2]
+[gd_scene load_steps=215 format=2]
 
 [ext_resource path="res://Sprites/GameUISprites/Gems.png" type="Texture" id=1]
 [ext_resource path="res://Sprites/GameUISprites/Gold.png" type="Texture" id=2]
@@ -27,7 +27,7 @@
 [ext_resource path="res://Scripts/UI/Cards/CardsUI.gd" type="Script" id=25]
 [ext_resource path="res://Scripts/UI/SkillsUI.gd" type="Script" id=26]
 [ext_resource path="res://Scripts/UI/CityUI.gd" type="Script" id=27]
-[ext_resource path="res://Scripts/UI/KingdomUI.gd" type="Script" id=28]
+[ext_resource path="res://Scripts/UI/Kingdom/KingdomUI.gd" type="Script" id=28]
 [ext_resource path="res://Scripts/UI/GameScreen/CentreButtons.gd" type="Script" id=29]
 [ext_resource path="res://Fonts/Timeless-Bold.ttf" type="DynamicFontData" id=30]
 [ext_resource path="res://Scripts/UI/GameScreen/ResourcePanel.gd" type="Script" id=31]
@@ -57,8 +57,12 @@
 [ext_resource path="res://Scripts/UI/QuestUI.gd" type="Script" id=55]
 [ext_resource path="res://Scripts/UI/Summon/DrawRatesPanel.gd" type="Script" id=56]
 [ext_resource path="res://Sprites/CardSprites/Common/AztecWarrior.png" type="Texture" id=57]
-[ext_resource path="res://Scripts/UI/CalendarPanel.gd" type="Script" id=59]
+[ext_resource path="res://Sprites/CardSprites/Legend/Death/Anubis.png" type="Texture" id=58]
+[ext_resource path="res://Scripts/UI/Kingdom/CalendarPanel.gd" type="Script" id=59]
 [ext_resource path="res://Scenes/Buttons/Events/Daily.tscn" type="PackedScene" id=60]
+[ext_resource path="res://Sprites/CardSprites/Legend/Death/Pluto.png" type="Texture" id=61]
+[ext_resource path="res://Sprites/CardSprites/Legend/Death/Freya.png" type="Texture" id=62]
+[ext_resource path="res://Scripts/UI/Kingdom/NoticePanel.gd" type="Script" id=63]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.184314, 0.152941, 0.196078, 1 )
@@ -109,6 +113,113 @@ font_data = ExtResource( 4 )
 [sub_resource type="ImageTexture" id=13]
 
 [sub_resource type="DynamicFont" id=14]
+size = 20
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=123]
+size = 24
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=124]
+font_data = ExtResource( 30 )
+
+[sub_resource type="DynamicFont" id=125]
+font_data = ExtResource( 30 )
+
+[sub_resource type="DynamicFont" id=126]
+size = 20
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=127]
+font_data = ExtResource( 30 )
+
+[sub_resource type="DynamicFont" id=128]
+font_data = ExtResource( 30 )
+
+[sub_resource type="DynamicFont" id=129]
+font_data = ExtResource( 30 )
+
+[sub_resource type="DynamicFont" id=130]
+font_data = ExtResource( 30 )
+
+[sub_resource type="DynamicFont" id=131]
+size = 20
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=133]
+size = 24
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=134]
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=135]
+font_data = ExtResource( 13 )
+
+[sub_resource type="DynamicFont" id=136]
+size = 20
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=147]
+font_data = ExtResource( 13 )
+
+[sub_resource type="DynamicFont" id=138]
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=148]
+size = 14
+font_data = ExtResource( 13 )
+
+[sub_resource type="DynamicFont" id=137]
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=144]
+size = 20
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=132]
+size = 24
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=139]
+size = 40
+font_data = ExtResource( 4 )
+
+[sub_resource type="StyleBoxFlat" id=140]
+bg_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="DynamicFont" id=141]
+size = 28
+font_data = ExtResource( 30 )
+
+[sub_resource type="StyleBoxFlat" id=142]
+bg_color = Color( 0.109804, 0.603922, 0.592157, 1 )
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="DynamicFont" id=143]
+size = 24
+font_data = ExtResource( 30 )
+
+[sub_resource type="DynamicFont" id=149]
+size = 32
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=150]
+size = 32
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=151]
+size = 28
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=145]
+size = 40
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=146]
 size = 20
 font_data = ExtResource( 4 )
 
@@ -542,36 +653,17 @@ font_data = ExtResource( 30 )
 bg_color = Color( 0.14902, 0.133333, 0.25098, 1 )
 
 [sub_resource type="DynamicFont" id=119]
-size = 20
+size = 28
 font_data = ExtResource( 4 )
 
 [sub_resource type="DynamicFont" id=120]
-size = 40
-font_data = ExtResource( 4 )
+font_data = ExtResource( 30 )
 
-[sub_resource type="StyleBoxFlat" id=121]
-bg_color = Color( 0, 0, 0, 1 )
+[sub_resource type="DynamicFont" id=121]
+size = 20
+font_data = ExtResource( 4 )
 
 [sub_resource type="DynamicFont" id=122]
-size = 28
-font_data = ExtResource( 30 )
-
-[sub_resource type="StyleBoxFlat" id=123]
-bg_color = Color( 0.109804, 0.603922, 0.592157, 1 )
-corner_radius_top_left = 3
-corner_radius_top_right = 3
-corner_radius_bottom_right = 3
-corner_radius_bottom_left = 3
-
-[sub_resource type="DynamicFont" id=124]
-size = 24
-font_data = ExtResource( 30 )
-
-[sub_resource type="DynamicFont" id=125]
-size = 40
-font_data = ExtResource( 4 )
-
-[sub_resource type="DynamicFont" id=126]
 size = 20
 font_data = ExtResource( 4 )
 
@@ -1327,13 +1419,13 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Alliance" type="Button" parent="GameScreenUI/CentreButtons/ThirdRow"]
+[node name="Kingdom" type="Button" parent="GameScreenUI/CentreButtons/ThirdRow"]
 margin_left = 252.0
 margin_right = 332.0
 margin_bottom = 60.0
 rect_min_size = Vector2( 80, 60 )
 custom_fonts/font = SubResource( 14 )
-text = "Alliance"
+text = "Kingdom"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1349,6 +1441,1364 @@ margin_right = 210.0
 margin_bottom = -10.0
 toggle_mode = true
 text = "^"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="KingdomUI" type="Control" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 28 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="TextureRect" parent="KingdomUI"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 15 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="KingdomInfoPanel" type="Panel" parent="KingdomUI"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 25.0
+margin_top = -220.0
+margin_right = 400.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="KingdomInfo" type="VBoxContainer" parent="KingdomUI/KingdomInfoPanel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -177.5
+margin_top = -100.0
+margin_right = 177.5
+margin_bottom = 100.0
+custom_constants/separation = 10
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="KingdomName" type="Label" parent="KingdomUI/KingdomInfoPanel/KingdomInfo"]
+margin_right = 355.0
+margin_bottom = 45.0
+rect_min_size = Vector2( 255, 45 )
+custom_fonts/font = SubResource( 123 )
+text = "Kingdom Name"
+align = 1
+valign = 1
+
+[node name="LeaderInfo" type="HBoxContainer" parent="KingdomUI/KingdomInfoPanel/KingdomInfo"]
+margin_top = 55.0
+margin_right = 355.0
+margin_bottom = 85.0
+rect_min_size = Vector2( 355, 30 )
+custom_constants/separation = 8
+
+[node name="LeaderIcon" type="TextureRect" parent="KingdomUI/KingdomInfoPanel/KingdomInfo/LeaderInfo"]
+margin_right = 20.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 20, 20 )
+
+[node name="Sprite" type="Sprite" parent="KingdomUI/KingdomInfoPanel/KingdomInfo/LeaderInfo/LeaderIcon"]
+
+[node name="LeaderName" type="Button" parent="KingdomUI/KingdomInfoPanel/KingdomInfo/LeaderInfo"]
+margin_left = 28.0
+margin_right = 353.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 325, 30 )
+custom_fonts/font = SubResource( 124 )
+text = "King/Queen"
+
+[node name="KingdomLevel" type="HBoxContainer" parent="KingdomUI/KingdomInfoPanel/KingdomInfo"]
+margin_top = 95.0
+margin_right = 355.0
+margin_bottom = 120.0
+custom_constants/separation = 5
+
+[node name="Level" type="Label" parent="KingdomUI/KingdomInfoPanel/KingdomInfo/KingdomLevel"]
+margin_top = 2.0
+margin_right = 48.0
+margin_bottom = 22.0
+rect_min_size = Vector2( 48, 20 )
+custom_fonts/font = SubResource( 125 )
+text = "Lv.100"
+
+[node name="LevelProgress" type="TextureProgress" parent="KingdomUI/KingdomInfoPanel/KingdomInfo/KingdomLevel"]
+margin_left = 53.0
+margin_right = 273.0
+margin_bottom = 25.0
+rect_min_size = Vector2( 220, 20 )
+value = 25.0
+
+[node name="Donate" type="Button" parent="KingdomUI/KingdomInfoPanel/KingdomInfo/KingdomLevel"]
+margin_left = 278.0
+margin_right = 353.0
+margin_bottom = 25.0
+rect_min_size = Vector2( 75, 25 )
+custom_fonts/font = SubResource( 126 )
+text = "Donate"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Misc" type="HBoxContainer" parent="KingdomUI/KingdomInfoPanel/KingdomInfo"]
+margin_top = 130.0
+margin_right = 355.0
+margin_bottom = 194.0
+custom_constants/separation = 10
+
+[node name="MemberAndCity" type="VBoxContainer" parent="KingdomUI/KingdomInfoPanel/KingdomInfo/Misc"]
+margin_right = 161.0
+margin_bottom = 64.0
+
+[node name="Member" type="HBoxContainer" parent="KingdomUI/KingdomInfoPanel/KingdomInfo/Misc/MemberAndCity"]
+margin_right = 161.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 0, 30 )
+
+[node name="SpriteHolder" type="TextureRect" parent="KingdomUI/KingdomInfoPanel/KingdomInfo/Misc/MemberAndCity/Member"]
+margin_right = 30.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 30, 30 )
+
+[node name="Sprite" type="Sprite" parent="KingdomUI/KingdomInfoPanel/KingdomInfo/Misc/MemberAndCity/Member/SpriteHolder"]
+
+[node name="Label" type="Label" parent="KingdomUI/KingdomInfoPanel/KingdomInfo/Misc/MemberAndCity/Member"]
+margin_left = 34.0
+margin_top = 5.0
+margin_right = 97.0
+margin_bottom = 25.0
+custom_fonts/font = SubResource( 127 )
+text = "Member"
+
+[node name="Count" type="Label" parent="KingdomUI/KingdomInfoPanel/KingdomInfo/Misc/MemberAndCity/Member"]
+margin_left = 101.0
+margin_top = 5.0
+margin_right = 161.0
+margin_bottom = 25.0
+custom_fonts/font = SubResource( 127 )
+text = "999/999"
+
+[node name="City" type="HBoxContainer" parent="KingdomUI/KingdomInfoPanel/KingdomInfo/Misc/MemberAndCity"]
+margin_top = 34.0
+margin_right = 161.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 0, 30 )
+
+[node name="SpriteHolder" type="TextureRect" parent="KingdomUI/KingdomInfoPanel/KingdomInfo/Misc/MemberAndCity/City"]
+margin_right = 30.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 30, 30 )
+
+[node name="Sprite" type="Sprite" parent="KingdomUI/KingdomInfoPanel/KingdomInfo/Misc/MemberAndCity/City/SpriteHolder"]
+
+[node name="Label" type="Label" parent="KingdomUI/KingdomInfoPanel/KingdomInfo/Misc/MemberAndCity/City"]
+margin_left = 34.0
+margin_top = 5.0
+margin_right = 64.0
+margin_bottom = 25.0
+custom_fonts/font = SubResource( 128 )
+text = "City"
+
+[node name="Count" type="Label" parent="KingdomUI/KingdomInfoPanel/KingdomInfo/Misc/MemberAndCity/City"]
+margin_left = 68.0
+margin_top = 5.0
+margin_right = 95.0
+margin_bottom = 25.0
+custom_fonts/font = SubResource( 128 )
+text = "999"
+
+[node name="StateAndInfluence" type="VBoxContainer" parent="KingdomUI/KingdomInfoPanel/KingdomInfo/Misc"]
+margin_left = 171.0
+margin_right = 350.0
+margin_bottom = 64.0
+
+[node name="State" type="HBoxContainer" parent="KingdomUI/KingdomInfoPanel/KingdomInfo/Misc/StateAndInfluence"]
+margin_right = 179.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 0, 30 )
+
+[node name="SpriteHolder" type="TextureRect" parent="KingdomUI/KingdomInfoPanel/KingdomInfo/Misc/StateAndInfluence/State"]
+margin_right = 30.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 30, 30 )
+
+[node name="Sprite" type="Sprite" parent="KingdomUI/KingdomInfoPanel/KingdomInfo/Misc/StateAndInfluence/State/SpriteHolder"]
+
+[node name="Label" type="Label" parent="KingdomUI/KingdomInfoPanel/KingdomInfo/Misc/StateAndInfluence/State"]
+margin_left = 34.0
+margin_top = 5.0
+margin_right = 73.0
+margin_bottom = 25.0
+custom_fonts/font = SubResource( 129 )
+text = "State"
+
+[node name="Name" type="Label" parent="KingdomUI/KingdomInfoPanel/KingdomInfo/Misc/StateAndInfluence/State"]
+margin_left = 77.0
+margin_top = 5.0
+margin_right = 160.0
+margin_bottom = 25.0
+custom_fonts/font = SubResource( 129 )
+text = "Macedonia"
+
+[node name="Influence" type="HBoxContainer" parent="KingdomUI/KingdomInfoPanel/KingdomInfo/Misc/StateAndInfluence"]
+margin_top = 34.0
+margin_right = 179.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 0, 30 )
+
+[node name="SpriteHolder" type="TextureRect" parent="KingdomUI/KingdomInfoPanel/KingdomInfo/Misc/StateAndInfluence/Influence"]
+margin_right = 30.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 30, 30 )
+
+[node name="Sprite" type="Sprite" parent="KingdomUI/KingdomInfoPanel/KingdomInfo/Misc/StateAndInfluence/Influence/SpriteHolder"]
+
+[node name="Label" type="Label" parent="KingdomUI/KingdomInfoPanel/KingdomInfo/Misc/StateAndInfluence/Influence"]
+margin_left = 34.0
+margin_top = 5.0
+margin_right = 103.0
+margin_bottom = 25.0
+custom_fonts/font = SubResource( 130 )
+text = "Influence"
+
+[node name="Count" type="Label" parent="KingdomUI/KingdomInfoPanel/KingdomInfo/Misc/StateAndInfluence/Influence"]
+margin_left = 107.0
+margin_top = 5.0
+margin_right = 179.0
+margin_bottom = 25.0
+custom_fonts/font = SubResource( 130 )
+text = "99999999"
+
+[node name="BonusesPanel" type="Panel" parent="KingdomUI"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 25.0
+margin_top = 9.99988
+margin_right = 300.0
+margin_bottom = 185.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScrollContainer" type="ScrollContainer" parent="KingdomUI/BonusesPanel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -132.5
+margin_top = -82.5
+margin_right = 132.5
+margin_bottom = 82.5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BonusContainer" type="VBoxContainer" parent="KingdomUI/BonusesPanel/ScrollContainer"]
+
+[node name="NoBonusLabel" type="Label" parent="KingdomUI/BonusesPanel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -137.5
+margin_top = -87.5
+margin_right = 137.5
+margin_bottom = 87.5
+custom_fonts/font = SubResource( 131 )
+text = "No Bonus"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NoticePanel" type="Panel" parent="KingdomUI"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -225.0
+margin_top = -220.0
+margin_right = -24.9999
+margin_bottom = 39.9999
+script = ExtResource( 63 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="KingdomUI/NoticePanel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -90.0
+margin_top = -115.0
+margin_right = 90.0
+margin_bottom = 115.0
+rect_min_size = Vector2( 180, 175 )
+custom_constants/separation = 10
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="KingdomUI/NoticePanel/VBoxContainer"]
+margin_right = 180.0
+margin_bottom = 25.0
+
+[node name="Notice" type="Label" parent="KingdomUI/NoticePanel/VBoxContainer/HBoxContainer"]
+margin_right = 135.0
+margin_bottom = 25.0
+rect_min_size = Vector2( 135, 25 )
+custom_fonts/font = SubResource( 133 )
+text = "Notice"
+valign = 1
+
+[node name="Edit" type="Button" parent="KingdomUI/NoticePanel/VBoxContainer/HBoxContainer"]
+margin_left = 139.0
+margin_right = 178.0
+margin_bottom = 25.0
+custom_fonts/font = SubResource( 134 )
+text = "Edit"
+
+[node name="NoticeBox" type="Label" parent="KingdomUI/NoticePanel/VBoxContainer"]
+self_modulate = Color( 0.392157, 0.266667, 0.266667, 1 )
+margin_top = 34.0
+margin_right = 180.0
+margin_bottom = 229.0
+rect_min_size = Vector2( 180, 195 )
+custom_fonts/font = SubResource( 135 )
+autowrap = true
+clip_text = true
+
+[node name="NoNoticePanel" type="Panel" parent="KingdomUI/NoticePanel/VBoxContainer/NoticeBox"]
+self_modulate = Color( 0.392157, 0.266667, 0.266667, 1 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="KingdomUI/NoticePanel/VBoxContainer/NoticeBox/NoNoticePanel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -90.0
+margin_top = -97.5
+margin_right = 90.0
+margin_bottom = 97.5
+rect_min_size = Vector2( 180, 195 )
+custom_fonts/font = SubResource( 136 )
+text = "No Notice"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NoticeEditPanel" type="Panel" parent="KingdomUI/NoticePanel"]
+visible = false
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -587.0
+margin_top = -70.0001
+margin_right = -187.0
+margin_bottom = 49.9999
+rect_min_size = Vector2( 400, 135 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextEdit" type="TextEdit" parent="KingdomUI/NoticePanel/NoticeEditPanel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -190.0
+margin_top = -57.5
+margin_right = 190.0
+margin_bottom = 57.5
+rect_min_size = Vector2( 380, 115 )
+custom_fonts/font = SubResource( 147 )
+readonly = true
+selecting_enabled = false
+wrap_enabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CloseNoticeEdit" type="Button" parent="KingdomUI/NoticePanel/NoticeEditPanel"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_right = 25.0
+margin_bottom = 25.0
+custom_fonts/font = SubResource( 138 )
+text = "X"
+
+[node name="Panel" type="Panel" parent="KingdomUI/NoticePanel/NoticeEditPanel"]
+margin_top = 135.0
+margin_right = 400.0
+margin_bottom = 170.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LineEdit" type="LineEdit" parent="KingdomUI/NoticePanel/NoticeEditPanel/Panel"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -189.5
+margin_top = -35.0
+margin_right = 114.5
+margin_bottom = -9.0
+rect_min_size = Vector2( 275, 25 )
+custom_fonts/font = SubResource( 148 )
+max_length = 108
+placeholder_text = "Press here to edit..."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Confirm" type="Button" parent="KingdomUI/NoticePanel/NoticeEditPanel/Panel"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -83.9999
+margin_top = -35.0
+margin_right = -8.99994
+margin_bottom = -9.99997
+rect_min_size = Vector2( 75, 25 )
+custom_fonts/font = SubResource( 137 )
+text = "Confirm"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MiscButtons" type="VBoxContainer" parent="KingdomUI"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -129.0
+margin_top = -250.0
+margin_right = -28.9999
+margin_bottom = -110.0
+custom_constants/separation = 10
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Calendar" type="Button" parent="KingdomUI/MiscButtons"]
+margin_right = 100.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 100, 40 )
+custom_fonts/font = SubResource( 144 )
+text = "Calendar"
+
+[node name="Logs" type="Button" parent="KingdomUI/MiscButtons"]
+margin_top = 50.0
+margin_right = 100.0
+margin_bottom = 90.0
+rect_min_size = Vector2( 100, 40 )
+custom_fonts/font = SubResource( 144 )
+text = "Logs"
+
+[node name="Reports" type="Button" parent="KingdomUI/MiscButtons"]
+margin_top = 100.0
+margin_right = 100.0
+margin_bottom = 140.0
+rect_min_size = Vector2( 100, 40 )
+custom_fonts/font = SubResource( 144 )
+text = "Reports"
+
+[node name="OptionsButtons" type="Panel" parent="KingdomUI"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -512.0
+margin_top = -90.0
+margin_right = 512.0
+margin_bottom = -20.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Options" type="HBoxContainer" parent="KingdomUI/OptionsButtons"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -502.0
+margin_top = -25.0
+margin_right = 502.0
+margin_bottom = 25.0
+custom_constants/separation = 50
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Members" type="Button" parent="KingdomUI/OptionsButtons/Options"]
+margin_left = 177.0
+margin_right = 302.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 125, 50 )
+
+[node name="Label" type="Label" parent="KingdomUI/OptionsButtons/Options/Members"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -62.5
+margin_top = -25.0
+margin_right = 62.5
+margin_bottom = 25.0
+custom_fonts/font = SubResource( 132 )
+text = "Members"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Influence" type="Button" parent="KingdomUI/OptionsButtons/Options"]
+margin_left = 352.0
+margin_right = 477.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 125, 50 )
+
+[node name="Label" type="Label" parent="KingdomUI/OptionsButtons/Options/Influence"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -62.5
+margin_top = -25.0
+margin_right = 62.5
+margin_bottom = 25.0
+custom_fonts/font = SubResource( 132 )
+text = "Influence"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Diplomacy" type="Button" parent="KingdomUI/OptionsButtons/Options"]
+margin_left = 527.0
+margin_right = 652.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 125, 50 )
+
+[node name="Label" type="Label" parent="KingdomUI/OptionsButtons/Options/Diplomacy"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -62.5
+margin_top = -25.0
+margin_right = 62.5
+margin_bottom = 25.0
+custom_fonts/font = SubResource( 132 )
+text = "Diplomacy"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Legion" type="Button" parent="KingdomUI/OptionsButtons/Options"]
+margin_left = 702.0
+margin_right = 827.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 125, 50 )
+
+[node name="Label" type="Label" parent="KingdomUI/OptionsButtons/Options/Legion"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -62.5
+margin_top = -25.0
+margin_right = 62.5
+margin_bottom = 25.0
+custom_fonts/font = SubResource( 132 )
+text = "Legion"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CalendarPanel" type="Panel" parent="KingdomUI"]
+visible = false
+self_modulate = Color( 0.905882, 0.564706, 0.564706, 1 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -375.0
+margin_top = -247.5
+margin_right = 375.0
+margin_bottom = 242.5
+script = ExtResource( 59 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Month" type="Label" parent="KingdomUI/CalendarPanel"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -48.0
+margin_top = 10.0
+margin_right = 48.0
+margin_bottom = 42.0
+custom_fonts/font = SubResource( 139 )
+text = "Month"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Weekday" type="HBoxContainer" parent="KingdomUI/CalendarPanel"]
+margin_left = 5.0
+margin_top = 55.0
+margin_right = 745.0
+margin_bottom = 105.0
+custom_constants/separation = 5
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sunday" type="Label" parent="KingdomUI/CalendarPanel/Weekday"]
+margin_left = 5.0
+margin_right = 105.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 50 )
+custom_styles/normal = SubResource( 140 )
+custom_fonts/font = SubResource( 141 )
+text = "S"
+align = 1
+valign = 1
+
+[node name="Monday" type="Label" parent="KingdomUI/CalendarPanel/Weekday"]
+margin_left = 110.0
+margin_right = 210.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 50 )
+custom_styles/normal = SubResource( 140 )
+custom_fonts/font = SubResource( 141 )
+text = "M"
+align = 1
+valign = 1
+
+[node name="Tuesday" type="Label" parent="KingdomUI/CalendarPanel/Weekday"]
+margin_left = 215.0
+margin_right = 315.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 50 )
+custom_styles/normal = SubResource( 140 )
+custom_fonts/font = SubResource( 141 )
+text = "T"
+align = 1
+valign = 1
+
+[node name="Wednesday" type="Label" parent="KingdomUI/CalendarPanel/Weekday"]
+margin_left = 320.0
+margin_right = 420.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 50 )
+custom_styles/normal = SubResource( 140 )
+custom_fonts/font = SubResource( 141 )
+text = "W"
+align = 1
+valign = 1
+
+[node name="Thursday" type="Label" parent="KingdomUI/CalendarPanel/Weekday"]
+margin_left = 425.0
+margin_right = 525.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 50 )
+custom_styles/normal = SubResource( 140 )
+custom_fonts/font = SubResource( 141 )
+text = "T"
+align = 1
+valign = 1
+
+[node name="Friday" type="Label" parent="KingdomUI/CalendarPanel/Weekday"]
+margin_left = 530.0
+margin_right = 630.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 50 )
+custom_styles/normal = SubResource( 140 )
+custom_fonts/font = SubResource( 141 )
+text = "F"
+align = 1
+valign = 1
+
+[node name="Saturday" type="Label" parent="KingdomUI/CalendarPanel/Weekday"]
+margin_left = 635.0
+margin_right = 735.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 50 )
+custom_styles/normal = SubResource( 140 )
+custom_fonts/font = SubResource( 141 )
+text = "S"
+align = 1
+valign = 1
+
+[node name="CalendarContainer" type="VBoxContainer" parent="KingdomUI/CalendarPanel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -370.0
+margin_top = -120.0
+margin_right = 370.0
+margin_bottom = 230.0
+custom_constants/separation = 10
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Week1" type="HBoxContainer" parent="KingdomUI/CalendarPanel/CalendarContainer"]
+margin_right = 740.0
+margin_bottom = 50.0
+custom_constants/separation = 5
+alignment = 1
+
+[node name="Day1" type="Button" parent="KingdomUI/CalendarPanel/CalendarContainer/Week1"]
+margin_left = 5.0
+margin_right = 105.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 50 )
+custom_styles/normal = SubResource( 142 )
+custom_fonts/font = SubResource( 143 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "1"
+
+[node name="Day2" type="Button" parent="KingdomUI/CalendarPanel/CalendarContainer/Week1"]
+margin_left = 110.0
+margin_right = 210.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 50 )
+custom_styles/normal = SubResource( 142 )
+custom_fonts/font = SubResource( 143 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "30"
+
+[node name="Day3" type="Button" parent="KingdomUI/CalendarPanel/CalendarContainer/Week1"]
+margin_left = 215.0
+margin_right = 315.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 50 )
+custom_styles/normal = SubResource( 142 )
+custom_fonts/font = SubResource( 143 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "1"
+
+[node name="Day4" type="Button" parent="KingdomUI/CalendarPanel/CalendarContainer/Week1"]
+margin_left = 320.0
+margin_right = 420.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 50 )
+custom_styles/normal = SubResource( 142 )
+custom_fonts/font = SubResource( 143 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "1"
+
+[node name="Day5" type="Button" parent="KingdomUI/CalendarPanel/CalendarContainer/Week1"]
+margin_left = 425.0
+margin_right = 525.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 50 )
+custom_styles/normal = SubResource( 142 )
+custom_fonts/font = SubResource( 143 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "1"
+
+[node name="Day6" type="Button" parent="KingdomUI/CalendarPanel/CalendarContainer/Week1"]
+margin_left = 530.0
+margin_right = 630.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 50 )
+custom_styles/normal = SubResource( 142 )
+custom_fonts/font = SubResource( 143 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "1"
+
+[node name="Day7" type="Button" parent="KingdomUI/CalendarPanel/CalendarContainer/Week1"]
+margin_left = 635.0
+margin_right = 735.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 50 )
+custom_styles/normal = SubResource( 142 )
+custom_fonts/font = SubResource( 143 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "1"
+
+[node name="Week2" type="HBoxContainer" parent="KingdomUI/CalendarPanel/CalendarContainer"]
+margin_top = 60.0
+margin_right = 740.0
+margin_bottom = 110.0
+custom_constants/separation = 5
+alignment = 1
+
+[node name="Day1" type="Button" parent="KingdomUI/CalendarPanel/CalendarContainer/Week2"]
+margin_left = 5.0
+margin_right = 105.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 50 )
+custom_styles/normal = SubResource( 142 )
+custom_fonts/font = SubResource( 143 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "1"
+
+[node name="Day2" type="Button" parent="KingdomUI/CalendarPanel/CalendarContainer/Week2"]
+margin_left = 110.0
+margin_right = 210.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 50 )
+custom_styles/normal = SubResource( 142 )
+custom_fonts/font = SubResource( 143 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "30"
+
+[node name="Day3" type="Button" parent="KingdomUI/CalendarPanel/CalendarContainer/Week2"]
+margin_left = 215.0
+margin_right = 315.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 50 )
+custom_styles/normal = SubResource( 142 )
+custom_fonts/font = SubResource( 143 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "1"
+
+[node name="Day4" type="Button" parent="KingdomUI/CalendarPanel/CalendarContainer/Week2"]
+margin_left = 320.0
+margin_right = 420.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 50 )
+custom_styles/normal = SubResource( 142 )
+custom_fonts/font = SubResource( 143 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "1"
+
+[node name="Day5" type="Button" parent="KingdomUI/CalendarPanel/CalendarContainer/Week2"]
+margin_left = 425.0
+margin_right = 525.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 50 )
+custom_styles/normal = SubResource( 142 )
+custom_fonts/font = SubResource( 143 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "1"
+
+[node name="Day6" type="Button" parent="KingdomUI/CalendarPanel/CalendarContainer/Week2"]
+margin_left = 530.0
+margin_right = 630.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 50 )
+custom_styles/normal = SubResource( 142 )
+custom_fonts/font = SubResource( 143 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "1"
+
+[node name="Day7" type="Button" parent="KingdomUI/CalendarPanel/CalendarContainer/Week2"]
+margin_left = 635.0
+margin_right = 735.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 50 )
+custom_styles/normal = SubResource( 142 )
+custom_fonts/font = SubResource( 143 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "1"
+
+[node name="Week3" type="HBoxContainer" parent="KingdomUI/CalendarPanel/CalendarContainer"]
+margin_top = 120.0
+margin_right = 740.0
+margin_bottom = 170.0
+custom_constants/separation = 5
+alignment = 1
+
+[node name="Day1" type="Button" parent="KingdomUI/CalendarPanel/CalendarContainer/Week3"]
+margin_left = 5.0
+margin_right = 105.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 50 )
+custom_styles/normal = SubResource( 142 )
+custom_fonts/font = SubResource( 143 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "1"
+
+[node name="Day2" type="Button" parent="KingdomUI/CalendarPanel/CalendarContainer/Week3"]
+margin_left = 110.0
+margin_right = 210.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 50 )
+custom_styles/normal = SubResource( 142 )
+custom_fonts/font = SubResource( 143 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "30"
+
+[node name="Day3" type="Button" parent="KingdomUI/CalendarPanel/CalendarContainer/Week3"]
+margin_left = 215.0
+margin_right = 315.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 50 )
+custom_styles/normal = SubResource( 142 )
+custom_fonts/font = SubResource( 143 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "1"
+
+[node name="Day4" type="Button" parent="KingdomUI/CalendarPanel/CalendarContainer/Week3"]
+margin_left = 320.0
+margin_right = 420.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 50 )
+custom_styles/normal = SubResource( 142 )
+custom_fonts/font = SubResource( 143 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "1"
+
+[node name="Day5" type="Button" parent="KingdomUI/CalendarPanel/CalendarContainer/Week3"]
+margin_left = 425.0
+margin_right = 525.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 50 )
+custom_styles/normal = SubResource( 142 )
+custom_fonts/font = SubResource( 143 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "1"
+
+[node name="Day6" type="Button" parent="KingdomUI/CalendarPanel/CalendarContainer/Week3"]
+margin_left = 530.0
+margin_right = 630.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 50 )
+custom_styles/normal = SubResource( 142 )
+custom_fonts/font = SubResource( 143 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "1"
+
+[node name="Day7" type="Button" parent="KingdomUI/CalendarPanel/CalendarContainer/Week3"]
+margin_left = 635.0
+margin_right = 735.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 50 )
+custom_styles/normal = SubResource( 142 )
+custom_fonts/font = SubResource( 143 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "1"
+
+[node name="Week4" type="HBoxContainer" parent="KingdomUI/CalendarPanel/CalendarContainer"]
+margin_top = 180.0
+margin_right = 740.0
+margin_bottom = 230.0
+custom_constants/separation = 5
+alignment = 1
+
+[node name="Day1" type="Button" parent="KingdomUI/CalendarPanel/CalendarContainer/Week4"]
+margin_left = 5.0
+margin_right = 105.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 50 )
+custom_styles/normal = SubResource( 142 )
+custom_fonts/font = SubResource( 143 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "1"
+
+[node name="Day2" type="Button" parent="KingdomUI/CalendarPanel/CalendarContainer/Week4"]
+margin_left = 110.0
+margin_right = 210.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 50 )
+custom_styles/normal = SubResource( 142 )
+custom_fonts/font = SubResource( 143 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "30"
+
+[node name="Day3" type="Button" parent="KingdomUI/CalendarPanel/CalendarContainer/Week4"]
+margin_left = 215.0
+margin_right = 315.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 50 )
+custom_styles/normal = SubResource( 142 )
+custom_fonts/font = SubResource( 143 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "1"
+
+[node name="Day4" type="Button" parent="KingdomUI/CalendarPanel/CalendarContainer/Week4"]
+margin_left = 320.0
+margin_right = 420.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 50 )
+custom_styles/normal = SubResource( 142 )
+custom_fonts/font = SubResource( 143 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "1"
+
+[node name="Day5" type="Button" parent="KingdomUI/CalendarPanel/CalendarContainer/Week4"]
+margin_left = 425.0
+margin_right = 525.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 50 )
+custom_styles/normal = SubResource( 142 )
+custom_fonts/font = SubResource( 143 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "1"
+
+[node name="Day6" type="Button" parent="KingdomUI/CalendarPanel/CalendarContainer/Week4"]
+margin_left = 530.0
+margin_right = 630.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 50 )
+custom_styles/normal = SubResource( 142 )
+custom_fonts/font = SubResource( 143 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "1"
+
+[node name="Day7" type="Button" parent="KingdomUI/CalendarPanel/CalendarContainer/Week4"]
+margin_left = 635.0
+margin_right = 735.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 50 )
+custom_styles/normal = SubResource( 142 )
+custom_fonts/font = SubResource( 143 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "1"
+
+[node name="Week5" type="HBoxContainer" parent="KingdomUI/CalendarPanel/CalendarContainer"]
+margin_top = 240.0
+margin_right = 740.0
+margin_bottom = 290.0
+custom_constants/separation = 5
+alignment = 1
+
+[node name="Day1" type="Button" parent="KingdomUI/CalendarPanel/CalendarContainer/Week5"]
+margin_left = 5.0
+margin_right = 105.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 50 )
+custom_styles/normal = SubResource( 142 )
+custom_fonts/font = SubResource( 143 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "1"
+
+[node name="Day2" type="Button" parent="KingdomUI/CalendarPanel/CalendarContainer/Week5"]
+margin_left = 110.0
+margin_right = 210.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 50 )
+custom_styles/normal = SubResource( 142 )
+custom_fonts/font = SubResource( 143 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "30"
+
+[node name="Day3" type="Button" parent="KingdomUI/CalendarPanel/CalendarContainer/Week5"]
+margin_left = 215.0
+margin_right = 315.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 50 )
+custom_styles/normal = SubResource( 142 )
+custom_fonts/font = SubResource( 143 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "1"
+
+[node name="Day4" type="Button" parent="KingdomUI/CalendarPanel/CalendarContainer/Week5"]
+margin_left = 320.0
+margin_right = 420.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 50 )
+custom_styles/normal = SubResource( 142 )
+custom_fonts/font = SubResource( 143 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "1"
+
+[node name="Day5" type="Button" parent="KingdomUI/CalendarPanel/CalendarContainer/Week5"]
+margin_left = 425.0
+margin_right = 525.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 50 )
+custom_styles/normal = SubResource( 142 )
+custom_fonts/font = SubResource( 143 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "1"
+
+[node name="Day6" type="Button" parent="KingdomUI/CalendarPanel/CalendarContainer/Week5"]
+margin_left = 530.0
+margin_right = 630.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 50 )
+custom_styles/normal = SubResource( 142 )
+custom_fonts/font = SubResource( 143 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "1"
+
+[node name="Day7" type="Button" parent="KingdomUI/CalendarPanel/CalendarContainer/Week5"]
+margin_left = 635.0
+margin_right = 735.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 50 )
+custom_styles/normal = SubResource( 142 )
+custom_fonts/font = SubResource( 143 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "1"
+
+[node name="Week6" type="HBoxContainer" parent="KingdomUI/CalendarPanel/CalendarContainer"]
+margin_top = 300.0
+margin_right = 740.0
+margin_bottom = 350.0
+custom_constants/separation = 5
+alignment = 1
+
+[node name="Day1" type="Button" parent="KingdomUI/CalendarPanel/CalendarContainer/Week6"]
+margin_left = 5.0
+margin_right = 105.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 50 )
+custom_styles/normal = SubResource( 142 )
+custom_fonts/font = SubResource( 143 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "1"
+
+[node name="Day2" type="Button" parent="KingdomUI/CalendarPanel/CalendarContainer/Week6"]
+margin_left = 110.0
+margin_right = 210.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 50 )
+custom_styles/normal = SubResource( 142 )
+custom_fonts/font = SubResource( 143 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "30"
+
+[node name="Day3" type="Button" parent="KingdomUI/CalendarPanel/CalendarContainer/Week6"]
+margin_left = 215.0
+margin_right = 315.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 50 )
+custom_styles/normal = SubResource( 142 )
+custom_fonts/font = SubResource( 143 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "1"
+
+[node name="Day4" type="Button" parent="KingdomUI/CalendarPanel/CalendarContainer/Week6"]
+margin_left = 320.0
+margin_right = 420.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 50 )
+custom_styles/normal = SubResource( 142 )
+custom_fonts/font = SubResource( 143 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "1"
+
+[node name="Day5" type="Button" parent="KingdomUI/CalendarPanel/CalendarContainer/Week6"]
+margin_left = 425.0
+margin_right = 525.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 50 )
+custom_styles/normal = SubResource( 142 )
+custom_fonts/font = SubResource( 143 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "1"
+
+[node name="Day6" type="Button" parent="KingdomUI/CalendarPanel/CalendarContainer/Week6"]
+margin_left = 530.0
+margin_right = 630.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 50 )
+custom_styles/normal = SubResource( 142 )
+custom_fonts/font = SubResource( 143 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "1"
+
+[node name="Day7" type="Button" parent="KingdomUI/CalendarPanel/CalendarContainer/Week6"]
+margin_left = 635.0
+margin_right = 735.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 50 )
+custom_styles/normal = SubResource( 142 )
+custom_fonts/font = SubResource( 143 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "1"
+
+[node name="LogsPanel" type="Panel" parent="KingdomUI"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -315.0
+margin_top = -227.5
+margin_right = 315.0
+margin_bottom = 227.5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="Label" parent="KingdomUI/LogsPanel"]
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 14.0
+custom_fonts/font = SubResource( 149 )
+text = "Logs"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ReportsPanel" type="Panel" parent="KingdomUI"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -315.0
+margin_top = -227.5
+margin_right = 315.0
+margin_bottom = 227.5
+
+[node name="Title" type="Label" parent="KingdomUI/ReportsPanel"]
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 14.0
+custom_fonts/font = SubResource( 150 )
+text = "Reports"
+
+[node name="MembersPanel" type="Panel" parent="KingdomUI"]
+visible = false
+self_modulate = Color( 0.752941, 0.666667, 0.666667, 1 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -465.0
+margin_top = -210.0
+margin_right = 465.0
+margin_bottom = 270.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="KingdomUI/MembersPanel"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -46.0
+margin_top = 10.0
+margin_right = 46.0
+margin_bottom = 25.0
+custom_fonts/font = SubResource( 151 )
+text = "Members"
+
+[node name="InfluencePanel" type="Panel" parent="KingdomUI"]
+visible = false
+self_modulate = Color( 0.752941, 0.666667, 0.666667, 1 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -465.0
+margin_top = -210.0
+margin_right = 465.0
+margin_bottom = 270.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="KingdomUI/InfluencePanel"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -47.0
+margin_top = 10.0
+margin_right = 47.0
+margin_bottom = 25.0
+custom_fonts/font = SubResource( 151 )
+text = "Influence"
+
+[node name="DiplomacyPanel" type="Panel" parent="KingdomUI"]
+visible = false
+self_modulate = Color( 0.752941, 0.666667, 0.666667, 1 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -465.0
+margin_top = -210.0
+margin_right = 465.0
+margin_bottom = 270.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="KingdomUI/DiplomacyPanel"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -54.5
+margin_top = 10.0
+margin_right = 54.5
+margin_bottom = 25.0
+custom_fonts/font = SubResource( 151 )
+text = "Diplomacy"
+
+[node name="LegionPanel" type="Panel" parent="KingdomUI"]
+visible = false
+self_modulate = Color( 0.752941, 0.666667, 0.666667, 1 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -465.0
+margin_top = -210.0
+margin_right = 465.0
+margin_bottom = 270.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="KingdomUI/LegionPanel"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -46.0
+margin_top = 10.0
+margin_right = 46.0
+margin_bottom = 35.0
+custom_fonts/font = SubResource( 151 )
+text = "Legion"
+align = 1
+valign = 1
+
+[node name="KingdomLabel" type="Label" parent="KingdomUI"]
+margin_left = 25.0
+margin_top = 25.0
+custom_fonts/font = SubResource( 145 )
+text = "Kingdom"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CloseKingdom" type="Button" parent="KingdomUI"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -55.0
+margin_top = 15.0
+margin_right = -20.0
+margin_bottom = 50.0
+custom_fonts/font = SubResource( 146 )
+text = "X"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1726,6 +3176,7 @@ __meta__ = {
 }
 
 [node name="DrawnCardsDisplay" type="Panel" parent="SummonUI/SummonPanel"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 __meta__ = {
@@ -6027,9 +7478,8 @@ offset = Vector2( 150, 175 )
 
 [node name="Tax" type="Label" parent="StatsUI/BasicPanel/BasicInfoContainer/BottomPanelContainer/InfoPanel/ResourcePanel/ResourceContainer/TaxPanel/TaxContainer"]
 margin_left = 54.0
-margin_top = -1.0
 margin_right = 144.0
-margin_bottom = 59.0
+margin_bottom = 60.0
 rect_min_size = Vector2( 90, 60 )
 custom_fonts/font = SubResource( 58 )
 text = "Tax"
@@ -6037,9 +7487,8 @@ valign = 1
 
 [node name="TaxRate" type="Label" parent="StatsUI/BasicPanel/BasicInfoContainer/BottomPanelContainer/InfoPanel/ResourcePanel/ResourceContainer/TaxPanel/TaxContainer"]
 margin_left = 148.0
-margin_top = -1.0
 margin_right = 273.0
-margin_bottom = 59.0
+margin_bottom = 60.0
 rect_min_size = Vector2( 125, 60 )
 custom_fonts/font = SubResource( 59 )
 text = "99999/time"
@@ -6073,9 +7522,8 @@ offset = Vector2( 50, 125 )
 
 [node name="Wood2" type="Label" parent="StatsUI/BasicPanel/BasicInfoContainer/BottomPanelContainer/InfoPanel/ResourcePanel/ResourceContainer/WoodPanel/WoodContainer"]
 margin_left = 54.0
-margin_top = -1.0
 margin_right = 144.0
-margin_bottom = 59.0
+margin_bottom = 60.0
 rect_min_size = Vector2( 90, 60 )
 custom_fonts/font = SubResource( 58 )
 text = "Wood"
@@ -6083,9 +7531,8 @@ valign = 1
 
 [node name="WoodRate" type="Label" parent="StatsUI/BasicPanel/BasicInfoContainer/BottomPanelContainer/InfoPanel/ResourcePanel/ResourceContainer/WoodPanel/WoodContainer"]
 margin_left = 148.0
-margin_top = -1.0
 margin_right = 273.0
-margin_bottom = 59.0
+margin_bottom = 60.0
 rect_min_size = Vector2( 125, 60 )
 custom_fonts/font = SubResource( 59 )
 text = "99999/hour"
@@ -6119,9 +7566,8 @@ offset = Vector2( 100, 125 )
 
 [node name="Stone2" type="Label" parent="StatsUI/BasicPanel/BasicInfoContainer/BottomPanelContainer/InfoPanel/ResourcePanel/ResourceContainer/StonePanel/StoneContainer"]
 margin_left = 54.0
-margin_top = -1.0
 margin_right = 144.0
-margin_bottom = 59.0
+margin_bottom = 60.0
 rect_min_size = Vector2( 90, 60 )
 custom_fonts/font = SubResource( 58 )
 text = "Stone"
@@ -6129,9 +7575,8 @@ valign = 1
 
 [node name="StoneRate" type="Label" parent="StatsUI/BasicPanel/BasicInfoContainer/BottomPanelContainer/InfoPanel/ResourcePanel/ResourceContainer/StonePanel/StoneContainer"]
 margin_left = 148.0
-margin_top = -1.0
 margin_right = 273.0
-margin_bottom = 59.0
+margin_bottom = 60.0
 rect_min_size = Vector2( 125, 60 )
 custom_fonts/font = SubResource( 59 )
 text = "99999/hour"
@@ -6165,9 +7610,8 @@ offset = Vector2( 100, 175 )
 
 [node name="Food2" type="Label" parent="StatsUI/BasicPanel/BasicInfoContainer/BottomPanelContainer/InfoPanel/ResourcePanel/ResourceContainer/FoodPanel/FoodContainer"]
 margin_left = 54.0
-margin_top = -1.0
 margin_right = 144.0
-margin_bottom = 59.0
+margin_bottom = 60.0
 rect_min_size = Vector2( 90, 60 )
 custom_fonts/font = SubResource( 58 )
 text = "Food"
@@ -6175,9 +7619,8 @@ valign = 1
 
 [node name="FoodRate" type="Label" parent="StatsUI/BasicPanel/BasicInfoContainer/BottomPanelContainer/InfoPanel/ResourcePanel/ResourceContainer/FoodPanel/FoodContainer"]
 margin_left = 148.0
-margin_top = -1.0
 margin_right = 273.0
-margin_bottom = 59.0
+margin_bottom = 60.0
 rect_min_size = Vector2( 125, 60 )
 custom_fonts/font = SubResource( 59 )
 text = "99999/hour"
@@ -6211,9 +7654,8 @@ offset = Vector2( 50, 125 )
 
 [node name="Decree2" type="Label" parent="StatsUI/BasicPanel/BasicInfoContainer/BottomPanelContainer/InfoPanel/ResourcePanel/ResourceContainer/DecreePanel/DecreeContainer"]
 margin_left = 54.0
-margin_top = -1.0
 margin_right = 144.0
-margin_bottom = 59.0
+margin_bottom = 60.0
 rect_min_size = Vector2( 90, 60 )
 custom_fonts/font = SubResource( 58 )
 text = "Decree"
@@ -6221,9 +7663,8 @@ valign = 1
 
 [node name="DecreeRate" type="Label" parent="StatsUI/BasicPanel/BasicInfoContainer/BottomPanelContainer/InfoPanel/ResourcePanel/ResourceContainer/DecreePanel/DecreeContainer"]
 margin_left = 148.0
-margin_top = -1.0
 margin_right = 273.0
-margin_bottom = 59.0
+margin_bottom = 60.0
 rect_min_size = Vector2( 125, 60 )
 custom_fonts/font = SubResource( 59 )
 text = "99999/hour"
@@ -10679,7 +12120,6 @@ __meta__ = {
 }
 
 [node name="TradePanel" type="Panel" parent="CityUI/InformationPanel"]
-visible = false
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -11104,6 +12544,300 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="ScrollContainer" type="ScrollContainer" parent="CityUI/InformationPanel/TeamsPanel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -440.0
+margin_top = -192.5
+margin_right = 440.0
+margin_bottom = 192.5
+scroll_horizontal_enabled = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CityUI/InformationPanel/TeamsPanel/ScrollContainer"]
+margin_right = 880.0
+margin_bottom = 385.0
+rect_min_size = Vector2( 880, 385 )
+
+[node name="Team1" type="HBoxContainer" parent="CityUI/InformationPanel/TeamsPanel/ScrollContainer/VBoxContainer"]
+margin_right = 880.0
+margin_bottom = 150.0
+custom_constants/separation = 15
+
+[node name="TeamInfo" type="VBoxContainer" parent="CityUI/InformationPanel/TeamsPanel/ScrollContainer/VBoxContainer/Team1"]
+margin_right = 150.0
+margin_bottom = 150.0
+rect_min_size = Vector2( 150, 150 )
+custom_constants/separation = 5
+
+[node name="City" type="Label" parent="CityUI/InformationPanel/TeamsPanel/ScrollContainer/VBoxContainer/Team1/TeamInfo"]
+margin_top = -1.0
+margin_right = 150.0
+margin_bottom = 29.0
+rect_min_size = Vector2( 150, 30 )
+custom_fonts/font = SubResource( 119 )
+text = "City Name"
+
+[node name="Team" type="Label" parent="CityUI/InformationPanel/TeamsPanel/ScrollContainer/VBoxContainer/Team1/TeamInfo"]
+margin_top = 34.0
+margin_right = 150.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 150, 30 )
+custom_fonts/font = SubResource( 120 )
+text = "Team 1"
+valign = 2
+
+[node name="Position" type="Label" parent="CityUI/InformationPanel/TeamsPanel/ScrollContainer/VBoxContainer/Team1/TeamInfo"]
+margin_top = 69.0
+margin_right = 150.0
+margin_bottom = 99.0
+rect_min_size = Vector2( 150, 30 )
+custom_fonts/font = SubResource( 120 )
+text = "(999, 999)"
+valign = 1
+
+[node name="Soldiers" type="Label" parent="CityUI/InformationPanel/TeamsPanel/ScrollContainer/VBoxContainer/Team1/TeamInfo"]
+margin_top = 104.0
+margin_right = 150.0
+margin_bottom = 134.0
+rect_min_size = Vector2( 150, 30 )
+custom_fonts/font = SubResource( 120 )
+text = "Soldiers 99999"
+
+[node name="TeamComp" type="HBoxContainer" parent="CityUI/InformationPanel/TeamsPanel/ScrollContainer/VBoxContainer/Team1"]
+margin_left = 165.0
+margin_right = 865.0
+margin_bottom = 150.0
+rect_min_size = Vector2( 700, 150 )
+custom_constants/separation = 75
+alignment = 1
+
+[node name="Rear" type="VBoxContainer" parent="CityUI/InformationPanel/TeamsPanel/ScrollContainer/VBoxContainer/Team1/TeamComp"]
+margin_left = 50.0
+margin_right = 200.0
+margin_bottom = 150.0
+rect_min_size = Vector2( 150, 135 )
+
+[node name="TextureRect" type="TextureRect" parent="CityUI/InformationPanel/TeamsPanel/ScrollContainer/VBoxContainer/Team1/TeamComp/Rear"]
+margin_right = 150.0
+margin_bottom = 125.0
+rect_min_size = Vector2( 150, 125 )
+
+[node name="Sprite" type="Sprite" parent="CityUI/InformationPanel/TeamsPanel/ScrollContainer/VBoxContainer/Team1/TeamComp/Rear/TextureRect"]
+scale = Vector2( 0.2, 0.25 )
+texture = ExtResource( 58 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 30, 75, 750, 500 )
+
+[node name="RearLabel" type="Label" parent="CityUI/InformationPanel/TeamsPanel/ScrollContainer/VBoxContainer/Team1/TeamComp/Rear"]
+margin_top = 129.0
+margin_right = 150.0
+margin_bottom = 147.0
+custom_fonts/font = SubResource( 121 )
+text = "Rear"
+align = 1
+valign = 1
+
+[node name="Center" type="VBoxContainer" parent="CityUI/InformationPanel/TeamsPanel/ScrollContainer/VBoxContainer/Team1/TeamComp"]
+margin_left = 275.0
+margin_right = 425.0
+margin_bottom = 150.0
+rect_min_size = Vector2( 150, 135 )
+
+[node name="TextureRect" type="TextureRect" parent="CityUI/InformationPanel/TeamsPanel/ScrollContainer/VBoxContainer/Team1/TeamComp/Center"]
+margin_right = 150.0
+margin_bottom = 125.0
+rect_min_size = Vector2( 150, 125 )
+
+[node name="Sprite" type="Sprite" parent="CityUI/InformationPanel/TeamsPanel/ScrollContainer/VBoxContainer/Team1/TeamComp/Center/TextureRect"]
+scale = Vector2( 0.2, 0.25 )
+texture = ExtResource( 62 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 30, 75, 750, 500 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="CenterLabel" type="Label" parent="CityUI/InformationPanel/TeamsPanel/ScrollContainer/VBoxContainer/Team1/TeamComp/Center"]
+margin_top = 129.0
+margin_right = 150.0
+margin_bottom = 147.0
+custom_fonts/font = SubResource( 121 )
+text = "Center"
+align = 1
+valign = 1
+
+[node name="Front" type="VBoxContainer" parent="CityUI/InformationPanel/TeamsPanel/ScrollContainer/VBoxContainer/Team1/TeamComp"]
+margin_left = 500.0
+margin_right = 650.0
+margin_bottom = 150.0
+rect_min_size = Vector2( 150, 135 )
+
+[node name="TextureRect" type="TextureRect" parent="CityUI/InformationPanel/TeamsPanel/ScrollContainer/VBoxContainer/Team1/TeamComp/Front"]
+margin_right = 150.0
+margin_bottom = 125.0
+rect_min_size = Vector2( 150, 125 )
+
+[node name="Sprite" type="Sprite" parent="CityUI/InformationPanel/TeamsPanel/ScrollContainer/VBoxContainer/Team1/TeamComp/Front/TextureRect"]
+scale = Vector2( 0.2, 0.25 )
+texture = ExtResource( 61 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 30, 75, 750, 500 )
+
+[node name="FrontLabel" type="Label" parent="CityUI/InformationPanel/TeamsPanel/ScrollContainer/VBoxContainer/Team1/TeamComp/Front"]
+margin_top = 129.0
+margin_right = 150.0
+margin_bottom = 147.0
+custom_fonts/font = SubResource( 121 )
+text = "Front"
+align = 1
+valign = 1
+
+[node name="Team2" type="HBoxContainer" parent="CityUI/InformationPanel/TeamsPanel/ScrollContainer/VBoxContainer"]
+margin_top = 154.0
+margin_right = 880.0
+margin_bottom = 304.0
+custom_constants/separation = 15
+
+[node name="TeamInfo" type="VBoxContainer" parent="CityUI/InformationPanel/TeamsPanel/ScrollContainer/VBoxContainer/Team2"]
+margin_right = 150.0
+margin_bottom = 150.0
+rect_min_size = Vector2( 150, 150 )
+custom_constants/separation = 5
+
+[node name="City" type="Label" parent="CityUI/InformationPanel/TeamsPanel/ScrollContainer/VBoxContainer/Team2/TeamInfo"]
+margin_top = -1.0
+margin_right = 150.0
+margin_bottom = 29.0
+rect_min_size = Vector2( 150, 30 )
+custom_fonts/font = SubResource( 119 )
+text = "City Name"
+
+[node name="Group" type="Label" parent="CityUI/InformationPanel/TeamsPanel/ScrollContainer/VBoxContainer/Team2/TeamInfo"]
+margin_top = 34.0
+margin_right = 150.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 150, 30 )
+custom_fonts/font = SubResource( 120 )
+text = "Team 1"
+valign = 2
+
+[node name="Position" type="Label" parent="CityUI/InformationPanel/TeamsPanel/ScrollContainer/VBoxContainer/Team2/TeamInfo"]
+margin_top = 69.0
+margin_right = 150.0
+margin_bottom = 99.0
+rect_min_size = Vector2( 150, 30 )
+custom_fonts/font = SubResource( 120 )
+text = "(999, 999)"
+valign = 1
+
+[node name="Soldiers" type="Label" parent="CityUI/InformationPanel/TeamsPanel/ScrollContainer/VBoxContainer/Team2/TeamInfo"]
+margin_top = 104.0
+margin_right = 150.0
+margin_bottom = 134.0
+rect_min_size = Vector2( 150, 30 )
+custom_fonts/font = SubResource( 120 )
+text = "Soldiers 99999"
+
+[node name="TeamComp" type="HBoxContainer" parent="CityUI/InformationPanel/TeamsPanel/ScrollContainer/VBoxContainer/Team2"]
+margin_left = 165.0
+margin_right = 865.0
+margin_bottom = 150.0
+rect_min_size = Vector2( 700, 150 )
+custom_constants/separation = 75
+alignment = 1
+
+[node name="Rear" type="VBoxContainer" parent="CityUI/InformationPanel/TeamsPanel/ScrollContainer/VBoxContainer/Team2/TeamComp"]
+margin_left = 50.0
+margin_right = 200.0
+margin_bottom = 150.0
+rect_min_size = Vector2( 150, 135 )
+
+[node name="TextureRect" type="TextureRect" parent="CityUI/InformationPanel/TeamsPanel/ScrollContainer/VBoxContainer/Team2/TeamComp/Rear"]
+margin_right = 150.0
+margin_bottom = 125.0
+rect_min_size = Vector2( 150, 125 )
+
+[node name="Sprite" type="Sprite" parent="CityUI/InformationPanel/TeamsPanel/ScrollContainer/VBoxContainer/Team2/TeamComp/Rear/TextureRect"]
+scale = Vector2( 0.2, 0.25 )
+texture = ExtResource( 58 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 30, 75, 750, 500 )
+
+[node name="RearLabel" type="Label" parent="CityUI/InformationPanel/TeamsPanel/ScrollContainer/VBoxContainer/Team2/TeamComp/Rear"]
+margin_top = 129.0
+margin_right = 150.0
+margin_bottom = 147.0
+custom_fonts/font = SubResource( 121 )
+text = "Rear"
+align = 1
+valign = 1
+
+[node name="Center" type="VBoxContainer" parent="CityUI/InformationPanel/TeamsPanel/ScrollContainer/VBoxContainer/Team2/TeamComp"]
+margin_left = 275.0
+margin_right = 425.0
+margin_bottom = 150.0
+rect_min_size = Vector2( 150, 135 )
+
+[node name="TextureRect" type="TextureRect" parent="CityUI/InformationPanel/TeamsPanel/ScrollContainer/VBoxContainer/Team2/TeamComp/Center"]
+margin_right = 150.0
+margin_bottom = 125.0
+rect_min_size = Vector2( 150, 125 )
+
+[node name="Sprite" type="Sprite" parent="CityUI/InformationPanel/TeamsPanel/ScrollContainer/VBoxContainer/Team2/TeamComp/Center/TextureRect"]
+scale = Vector2( 0.2, 0.25 )
+texture = ExtResource( 62 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 30, 75, 750, 500 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="CenterLabel" type="Label" parent="CityUI/InformationPanel/TeamsPanel/ScrollContainer/VBoxContainer/Team2/TeamComp/Center"]
+margin_top = 129.0
+margin_right = 150.0
+margin_bottom = 147.0
+custom_fonts/font = SubResource( 121 )
+text = "Center"
+align = 1
+valign = 1
+
+[node name="Front" type="VBoxContainer" parent="CityUI/InformationPanel/TeamsPanel/ScrollContainer/VBoxContainer/Team2/TeamComp"]
+margin_left = 500.0
+margin_right = 650.0
+margin_bottom = 150.0
+rect_min_size = Vector2( 150, 135 )
+
+[node name="TextureRect" type="TextureRect" parent="CityUI/InformationPanel/TeamsPanel/ScrollContainer/VBoxContainer/Team2/TeamComp/Front"]
+margin_right = 150.0
+margin_bottom = 125.0
+rect_min_size = Vector2( 150, 125 )
+
+[node name="Sprite" type="Sprite" parent="CityUI/InformationPanel/TeamsPanel/ScrollContainer/VBoxContainer/Team2/TeamComp/Front/TextureRect"]
+scale = Vector2( 0.2, 0.25 )
+texture = ExtResource( 61 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 30, 75, 750, 500 )
+
+[node name="FrontLabel" type="Label" parent="CityUI/InformationPanel/TeamsPanel/ScrollContainer/VBoxContainer/Team2/TeamComp/Front"]
+margin_top = 129.0
+margin_right = 150.0
+margin_bottom = 147.0
+custom_fonts/font = SubResource( 121 )
+text = "Front"
+align = 1
+valign = 1
+
 [node name="CloseCity" type="Button" parent="CityUI"]
 anchor_left = 1.0
 anchor_right = 1.0
@@ -11112,722 +12846,7 @@ margin_top = 15.0
 margin_right = -20.0
 margin_bottom = 50.0
 rect_min_size = Vector2( 24, 24 )
-custom_fonts/font = SubResource( 119 )
-text = "X"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="KingdomUI" type="Control" parent="."]
-visible = false
-anchor_right = 1.0
-anchor_bottom = 1.0
-script = ExtResource( 28 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Background" type="TextureRect" parent="KingdomUI"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-texture = ExtResource( 15 )
-expand = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="CalendarPanel" type="Panel" parent="KingdomUI"]
-visible = false
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -375.0
-margin_top = -220.0
-margin_right = 375.0
-margin_bottom = 270.0
-script = ExtResource( 59 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Month" type="Label" parent="KingdomUI/CalendarPanel"]
-anchor_left = 0.5
-anchor_right = 0.5
-margin_left = -48.0
-margin_top = 10.0
-margin_right = 48.0
-margin_bottom = 42.0
-custom_fonts/font = SubResource( 120 )
-text = "Month"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Weekday" type="HBoxContainer" parent="KingdomUI/CalendarPanel"]
-margin_left = 5.0
-margin_top = 55.0
-margin_right = 745.0
-margin_bottom = 105.0
-custom_constants/separation = 5
-alignment = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Sunday" type="Label" parent="KingdomUI/CalendarPanel/Weekday"]
-margin_left = 5.0
-margin_right = 105.0
-margin_bottom = 50.0
-rect_min_size = Vector2( 100, 50 )
-custom_styles/normal = SubResource( 121 )
 custom_fonts/font = SubResource( 122 )
-text = "S"
-align = 1
-valign = 1
-
-[node name="Monday" type="Label" parent="KingdomUI/CalendarPanel/Weekday"]
-margin_left = 110.0
-margin_right = 210.0
-margin_bottom = 50.0
-rect_min_size = Vector2( 100, 50 )
-custom_styles/normal = SubResource( 121 )
-custom_fonts/font = SubResource( 122 )
-text = "M"
-align = 1
-valign = 1
-
-[node name="Tuesday" type="Label" parent="KingdomUI/CalendarPanel/Weekday"]
-margin_left = 215.0
-margin_right = 315.0
-margin_bottom = 50.0
-rect_min_size = Vector2( 100, 50 )
-custom_styles/normal = SubResource( 121 )
-custom_fonts/font = SubResource( 122 )
-text = "T"
-align = 1
-valign = 1
-
-[node name="Wednesday" type="Label" parent="KingdomUI/CalendarPanel/Weekday"]
-margin_left = 320.0
-margin_right = 420.0
-margin_bottom = 50.0
-rect_min_size = Vector2( 100, 50 )
-custom_styles/normal = SubResource( 121 )
-custom_fonts/font = SubResource( 122 )
-text = "W"
-align = 1
-valign = 1
-
-[node name="Thursday" type="Label" parent="KingdomUI/CalendarPanel/Weekday"]
-margin_left = 425.0
-margin_right = 525.0
-margin_bottom = 50.0
-rect_min_size = Vector2( 100, 50 )
-custom_styles/normal = SubResource( 121 )
-custom_fonts/font = SubResource( 122 )
-text = "T"
-align = 1
-valign = 1
-
-[node name="Friday" type="Label" parent="KingdomUI/CalendarPanel/Weekday"]
-margin_left = 530.0
-margin_right = 630.0
-margin_bottom = 50.0
-rect_min_size = Vector2( 100, 50 )
-custom_styles/normal = SubResource( 121 )
-custom_fonts/font = SubResource( 122 )
-text = "F"
-align = 1
-valign = 1
-
-[node name="Saturday" type="Label" parent="KingdomUI/CalendarPanel/Weekday"]
-margin_left = 635.0
-margin_right = 735.0
-margin_bottom = 50.0
-rect_min_size = Vector2( 100, 50 )
-custom_styles/normal = SubResource( 121 )
-custom_fonts/font = SubResource( 122 )
-text = "S"
-align = 1
-valign = 1
-
-[node name="CalendarContainer" type="VBoxContainer" parent="KingdomUI/CalendarPanel"]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -370.0
-margin_top = -120.0
-margin_right = 370.0
-margin_bottom = 230.0
-custom_constants/separation = 10
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Week1" type="HBoxContainer" parent="KingdomUI/CalendarPanel/CalendarContainer"]
-margin_right = 740.0
-margin_bottom = 50.0
-custom_constants/separation = 5
-alignment = 1
-
-[node name="Day1" type="Label" parent="KingdomUI/CalendarPanel/CalendarContainer/Week1"]
-margin_left = 5.0
-margin_right = 105.0
-margin_bottom = 50.0
-rect_min_size = Vector2( 100, 50 )
-custom_styles/normal = SubResource( 123 )
-custom_fonts/font = SubResource( 124 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "1"
-align = 1
-valign = 1
-
-[node name="Day2" type="Label" parent="KingdomUI/CalendarPanel/CalendarContainer/Week1"]
-margin_left = 110.0
-margin_right = 210.0
-margin_bottom = 50.0
-rect_min_size = Vector2( 100, 50 )
-custom_styles/normal = SubResource( 123 )
-custom_fonts/font = SubResource( 124 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "30"
-align = 1
-valign = 1
-
-[node name="Day3" type="Label" parent="KingdomUI/CalendarPanel/CalendarContainer/Week1"]
-margin_left = 215.0
-margin_right = 315.0
-margin_bottom = 50.0
-rect_min_size = Vector2( 100, 50 )
-custom_styles/normal = SubResource( 123 )
-custom_fonts/font = SubResource( 124 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "1"
-align = 1
-valign = 1
-
-[node name="Day4" type="Label" parent="KingdomUI/CalendarPanel/CalendarContainer/Week1"]
-margin_left = 320.0
-margin_right = 420.0
-margin_bottom = 50.0
-rect_min_size = Vector2( 100, 50 )
-custom_styles/normal = SubResource( 123 )
-custom_fonts/font = SubResource( 124 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "1"
-align = 1
-valign = 1
-
-[node name="Day5" type="Label" parent="KingdomUI/CalendarPanel/CalendarContainer/Week1"]
-margin_left = 425.0
-margin_right = 525.0
-margin_bottom = 50.0
-rect_min_size = Vector2( 100, 50 )
-custom_styles/normal = SubResource( 123 )
-custom_fonts/font = SubResource( 124 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "1"
-align = 1
-valign = 1
-
-[node name="Day6" type="Label" parent="KingdomUI/CalendarPanel/CalendarContainer/Week1"]
-margin_left = 530.0
-margin_right = 630.0
-margin_bottom = 50.0
-rect_min_size = Vector2( 100, 50 )
-custom_styles/normal = SubResource( 123 )
-custom_fonts/font = SubResource( 124 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "1"
-align = 1
-valign = 1
-
-[node name="Day7" type="Label" parent="KingdomUI/CalendarPanel/CalendarContainer/Week1"]
-margin_left = 635.0
-margin_right = 735.0
-margin_bottom = 50.0
-rect_min_size = Vector2( 100, 50 )
-custom_styles/normal = SubResource( 123 )
-custom_fonts/font = SubResource( 124 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "1"
-align = 1
-valign = 1
-
-[node name="Week2" type="HBoxContainer" parent="KingdomUI/CalendarPanel/CalendarContainer"]
-margin_top = 60.0
-margin_right = 740.0
-margin_bottom = 110.0
-custom_constants/separation = 5
-alignment = 1
-
-[node name="Day1" type="Label" parent="KingdomUI/CalendarPanel/CalendarContainer/Week2"]
-margin_left = 5.0
-margin_right = 105.0
-margin_bottom = 50.0
-rect_min_size = Vector2( 100, 50 )
-custom_styles/normal = SubResource( 123 )
-custom_fonts/font = SubResource( 124 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "1"
-align = 1
-valign = 1
-
-[node name="Day2" type="Label" parent="KingdomUI/CalendarPanel/CalendarContainer/Week2"]
-margin_left = 110.0
-margin_right = 210.0
-margin_bottom = 50.0
-rect_min_size = Vector2( 100, 50 )
-custom_styles/normal = SubResource( 123 )
-custom_fonts/font = SubResource( 124 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "30"
-align = 1
-valign = 1
-
-[node name="Day3" type="Label" parent="KingdomUI/CalendarPanel/CalendarContainer/Week2"]
-margin_left = 215.0
-margin_right = 315.0
-margin_bottom = 50.0
-rect_min_size = Vector2( 100, 50 )
-custom_styles/normal = SubResource( 123 )
-custom_fonts/font = SubResource( 124 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "1"
-align = 1
-valign = 1
-
-[node name="Day4" type="Label" parent="KingdomUI/CalendarPanel/CalendarContainer/Week2"]
-margin_left = 320.0
-margin_right = 420.0
-margin_bottom = 50.0
-rect_min_size = Vector2( 100, 50 )
-custom_styles/normal = SubResource( 123 )
-custom_fonts/font = SubResource( 124 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "1"
-align = 1
-valign = 1
-
-[node name="Day5" type="Label" parent="KingdomUI/CalendarPanel/CalendarContainer/Week2"]
-margin_left = 425.0
-margin_right = 525.0
-margin_bottom = 50.0
-rect_min_size = Vector2( 100, 50 )
-custom_styles/normal = SubResource( 123 )
-custom_fonts/font = SubResource( 124 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "1"
-align = 1
-valign = 1
-
-[node name="Day6" type="Label" parent="KingdomUI/CalendarPanel/CalendarContainer/Week2"]
-margin_left = 530.0
-margin_right = 630.0
-margin_bottom = 50.0
-rect_min_size = Vector2( 100, 50 )
-custom_styles/normal = SubResource( 123 )
-custom_fonts/font = SubResource( 124 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "1"
-align = 1
-valign = 1
-
-[node name="Day7" type="Label" parent="KingdomUI/CalendarPanel/CalendarContainer/Week2"]
-margin_left = 635.0
-margin_right = 735.0
-margin_bottom = 50.0
-rect_min_size = Vector2( 100, 50 )
-custom_styles/normal = SubResource( 123 )
-custom_fonts/font = SubResource( 124 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "1"
-align = 1
-valign = 1
-
-[node name="Week3" type="HBoxContainer" parent="KingdomUI/CalendarPanel/CalendarContainer"]
-margin_top = 120.0
-margin_right = 740.0
-margin_bottom = 170.0
-custom_constants/separation = 5
-alignment = 1
-
-[node name="Day1" type="Label" parent="KingdomUI/CalendarPanel/CalendarContainer/Week3"]
-margin_left = 5.0
-margin_right = 105.0
-margin_bottom = 50.0
-rect_min_size = Vector2( 100, 50 )
-custom_styles/normal = SubResource( 123 )
-custom_fonts/font = SubResource( 124 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "1"
-align = 1
-valign = 1
-
-[node name="Day2" type="Label" parent="KingdomUI/CalendarPanel/CalendarContainer/Week3"]
-margin_left = 110.0
-margin_right = 210.0
-margin_bottom = 50.0
-rect_min_size = Vector2( 100, 50 )
-custom_styles/normal = SubResource( 123 )
-custom_fonts/font = SubResource( 124 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "30"
-align = 1
-valign = 1
-
-[node name="Day3" type="Label" parent="KingdomUI/CalendarPanel/CalendarContainer/Week3"]
-margin_left = 215.0
-margin_right = 315.0
-margin_bottom = 50.0
-rect_min_size = Vector2( 100, 50 )
-custom_styles/normal = SubResource( 123 )
-custom_fonts/font = SubResource( 124 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "1"
-align = 1
-valign = 1
-
-[node name="Day4" type="Label" parent="KingdomUI/CalendarPanel/CalendarContainer/Week3"]
-margin_left = 320.0
-margin_right = 420.0
-margin_bottom = 50.0
-rect_min_size = Vector2( 100, 50 )
-custom_styles/normal = SubResource( 123 )
-custom_fonts/font = SubResource( 124 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "1"
-align = 1
-valign = 1
-
-[node name="Day5" type="Label" parent="KingdomUI/CalendarPanel/CalendarContainer/Week3"]
-margin_left = 425.0
-margin_right = 525.0
-margin_bottom = 50.0
-rect_min_size = Vector2( 100, 50 )
-custom_styles/normal = SubResource( 123 )
-custom_fonts/font = SubResource( 124 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "1"
-align = 1
-valign = 1
-
-[node name="Day6" type="Label" parent="KingdomUI/CalendarPanel/CalendarContainer/Week3"]
-margin_left = 530.0
-margin_right = 630.0
-margin_bottom = 50.0
-rect_min_size = Vector2( 100, 50 )
-custom_styles/normal = SubResource( 123 )
-custom_fonts/font = SubResource( 124 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "1"
-align = 1
-valign = 1
-
-[node name="Day7" type="Label" parent="KingdomUI/CalendarPanel/CalendarContainer/Week3"]
-margin_left = 635.0
-margin_right = 735.0
-margin_bottom = 50.0
-rect_min_size = Vector2( 100, 50 )
-custom_styles/normal = SubResource( 123 )
-custom_fonts/font = SubResource( 124 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "1"
-align = 1
-valign = 1
-
-[node name="Week4" type="HBoxContainer" parent="KingdomUI/CalendarPanel/CalendarContainer"]
-margin_top = 180.0
-margin_right = 740.0
-margin_bottom = 230.0
-custom_constants/separation = 5
-alignment = 1
-
-[node name="Day1" type="Label" parent="KingdomUI/CalendarPanel/CalendarContainer/Week4"]
-margin_left = 5.0
-margin_right = 105.0
-margin_bottom = 50.0
-rect_min_size = Vector2( 100, 50 )
-custom_styles/normal = SubResource( 123 )
-custom_fonts/font = SubResource( 124 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "1"
-align = 1
-valign = 1
-
-[node name="Day2" type="Label" parent="KingdomUI/CalendarPanel/CalendarContainer/Week4"]
-margin_left = 110.0
-margin_right = 210.0
-margin_bottom = 50.0
-rect_min_size = Vector2( 100, 50 )
-custom_styles/normal = SubResource( 123 )
-custom_fonts/font = SubResource( 124 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "30"
-align = 1
-valign = 1
-
-[node name="Day3" type="Label" parent="KingdomUI/CalendarPanel/CalendarContainer/Week4"]
-margin_left = 215.0
-margin_right = 315.0
-margin_bottom = 50.0
-rect_min_size = Vector2( 100, 50 )
-custom_styles/normal = SubResource( 123 )
-custom_fonts/font = SubResource( 124 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "1"
-align = 1
-valign = 1
-
-[node name="Day4" type="Label" parent="KingdomUI/CalendarPanel/CalendarContainer/Week4"]
-margin_left = 320.0
-margin_right = 420.0
-margin_bottom = 50.0
-rect_min_size = Vector2( 100, 50 )
-custom_styles/normal = SubResource( 123 )
-custom_fonts/font = SubResource( 124 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "1"
-align = 1
-valign = 1
-
-[node name="Day5" type="Label" parent="KingdomUI/CalendarPanel/CalendarContainer/Week4"]
-margin_left = 425.0
-margin_right = 525.0
-margin_bottom = 50.0
-rect_min_size = Vector2( 100, 50 )
-custom_styles/normal = SubResource( 123 )
-custom_fonts/font = SubResource( 124 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "1"
-align = 1
-valign = 1
-
-[node name="Day6" type="Label" parent="KingdomUI/CalendarPanel/CalendarContainer/Week4"]
-margin_left = 530.0
-margin_right = 630.0
-margin_bottom = 50.0
-rect_min_size = Vector2( 100, 50 )
-custom_styles/normal = SubResource( 123 )
-custom_fonts/font = SubResource( 124 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "1"
-align = 1
-valign = 1
-
-[node name="Day7" type="Label" parent="KingdomUI/CalendarPanel/CalendarContainer/Week4"]
-margin_left = 635.0
-margin_right = 735.0
-margin_bottom = 50.0
-rect_min_size = Vector2( 100, 50 )
-custom_styles/normal = SubResource( 123 )
-custom_fonts/font = SubResource( 124 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "1"
-align = 1
-valign = 1
-
-[node name="Week5" type="HBoxContainer" parent="KingdomUI/CalendarPanel/CalendarContainer"]
-margin_top = 240.0
-margin_right = 740.0
-margin_bottom = 290.0
-custom_constants/separation = 5
-alignment = 1
-
-[node name="Day1" type="Label" parent="KingdomUI/CalendarPanel/CalendarContainer/Week5"]
-margin_left = 5.0
-margin_right = 105.0
-margin_bottom = 50.0
-rect_min_size = Vector2( 100, 50 )
-custom_styles/normal = SubResource( 123 )
-custom_fonts/font = SubResource( 124 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "1"
-align = 1
-valign = 1
-
-[node name="Day2" type="Label" parent="KingdomUI/CalendarPanel/CalendarContainer/Week5"]
-margin_left = 110.0
-margin_right = 210.0
-margin_bottom = 50.0
-rect_min_size = Vector2( 100, 50 )
-custom_styles/normal = SubResource( 123 )
-custom_fonts/font = SubResource( 124 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "30"
-align = 1
-valign = 1
-
-[node name="Day3" type="Label" parent="KingdomUI/CalendarPanel/CalendarContainer/Week5"]
-margin_left = 215.0
-margin_right = 315.0
-margin_bottom = 50.0
-rect_min_size = Vector2( 100, 50 )
-custom_styles/normal = SubResource( 123 )
-custom_fonts/font = SubResource( 124 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "1"
-align = 1
-valign = 1
-
-[node name="Day4" type="Label" parent="KingdomUI/CalendarPanel/CalendarContainer/Week5"]
-margin_left = 320.0
-margin_right = 420.0
-margin_bottom = 50.0
-rect_min_size = Vector2( 100, 50 )
-custom_styles/normal = SubResource( 123 )
-custom_fonts/font = SubResource( 124 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "1"
-align = 1
-valign = 1
-
-[node name="Day5" type="Label" parent="KingdomUI/CalendarPanel/CalendarContainer/Week5"]
-margin_left = 425.0
-margin_right = 525.0
-margin_bottom = 50.0
-rect_min_size = Vector2( 100, 50 )
-custom_styles/normal = SubResource( 123 )
-custom_fonts/font = SubResource( 124 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "1"
-align = 1
-valign = 1
-
-[node name="Day6" type="Label" parent="KingdomUI/CalendarPanel/CalendarContainer/Week5"]
-margin_left = 530.0
-margin_right = 630.0
-margin_bottom = 50.0
-rect_min_size = Vector2( 100, 50 )
-custom_styles/normal = SubResource( 123 )
-custom_fonts/font = SubResource( 124 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "1"
-align = 1
-valign = 1
-
-[node name="Day7" type="Label" parent="KingdomUI/CalendarPanel/CalendarContainer/Week5"]
-margin_left = 635.0
-margin_right = 735.0
-margin_bottom = 50.0
-rect_min_size = Vector2( 100, 50 )
-custom_styles/normal = SubResource( 123 )
-custom_fonts/font = SubResource( 124 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "1"
-align = 1
-valign = 1
-
-[node name="Week6" type="HBoxContainer" parent="KingdomUI/CalendarPanel/CalendarContainer"]
-margin_top = 300.0
-margin_right = 740.0
-margin_bottom = 350.0
-custom_constants/separation = 5
-alignment = 1
-
-[node name="Day1" type="Label" parent="KingdomUI/CalendarPanel/CalendarContainer/Week6"]
-margin_left = 5.0
-margin_right = 105.0
-margin_bottom = 50.0
-rect_min_size = Vector2( 100, 50 )
-custom_styles/normal = SubResource( 123 )
-custom_fonts/font = SubResource( 124 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "1"
-align = 1
-valign = 1
-
-[node name="Day2" type="Label" parent="KingdomUI/CalendarPanel/CalendarContainer/Week6"]
-margin_left = 110.0
-margin_right = 210.0
-margin_bottom = 50.0
-rect_min_size = Vector2( 100, 50 )
-custom_styles/normal = SubResource( 123 )
-custom_fonts/font = SubResource( 124 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "30"
-align = 1
-valign = 1
-
-[node name="Day3" type="Label" parent="KingdomUI/CalendarPanel/CalendarContainer/Week6"]
-margin_left = 215.0
-margin_right = 315.0
-margin_bottom = 50.0
-rect_min_size = Vector2( 100, 50 )
-custom_styles/normal = SubResource( 123 )
-custom_fonts/font = SubResource( 124 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "1"
-align = 1
-valign = 1
-
-[node name="Day4" type="Label" parent="KingdomUI/CalendarPanel/CalendarContainer/Week6"]
-margin_left = 320.0
-margin_right = 420.0
-margin_bottom = 50.0
-rect_min_size = Vector2( 100, 50 )
-custom_styles/normal = SubResource( 123 )
-custom_fonts/font = SubResource( 124 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "1"
-align = 1
-valign = 1
-
-[node name="Day5" type="Label" parent="KingdomUI/CalendarPanel/CalendarContainer/Week6"]
-margin_left = 425.0
-margin_right = 525.0
-margin_bottom = 50.0
-rect_min_size = Vector2( 100, 50 )
-custom_styles/normal = SubResource( 123 )
-custom_fonts/font = SubResource( 124 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "1"
-align = 1
-valign = 1
-
-[node name="Day6" type="Label" parent="KingdomUI/CalendarPanel/CalendarContainer/Week6"]
-margin_left = 530.0
-margin_right = 630.0
-margin_bottom = 50.0
-rect_min_size = Vector2( 100, 50 )
-custom_styles/normal = SubResource( 123 )
-custom_fonts/font = SubResource( 124 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "1"
-align = 1
-valign = 1
-
-[node name="Day7" type="Label" parent="KingdomUI/CalendarPanel/CalendarContainer/Week6"]
-margin_left = 635.0
-margin_right = 735.0
-margin_bottom = 50.0
-rect_min_size = Vector2( 100, 50 )
-custom_styles/normal = SubResource( 123 )
-custom_fonts/font = SubResource( 124 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "1"
-align = 1
-valign = 1
-
-[node name="KingdomLabel" type="Label" parent="KingdomUI"]
-margin_left = 25.0
-margin_top = 25.0
-custom_fonts/font = SubResource( 125 )
-text = "Kingdom"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="CloseKingdom" type="Button" parent="KingdomUI"]
-anchor_left = 1.0
-anchor_right = 1.0
-margin_left = -55.0
-margin_top = 15.0
-margin_right = -20.0
-margin_bottom = 50.0
-custom_fonts/font = SubResource( 126 )
 text = "X"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -11851,8 +12870,13 @@ __meta__ = {
 [connection signal="pressed" from="GameScreenUI/CentreButtons/ThirdRow/Cards" to="CardsUI" method="_on_Cards_pressed"]
 [connection signal="pressed" from="GameScreenUI/CentreButtons/ThirdRow/Skills" to="SkillsUI" method="_on_Skills_pressed"]
 [connection signal="pressed" from="GameScreenUI/CentreButtons/ThirdRow/City" to="CityUI" method="_on_City_pressed"]
-[connection signal="pressed" from="GameScreenUI/CentreButtons/ThirdRow/Alliance" to="KingdomUI" method="_on_Alliance_pressed"]
+[connection signal="pressed" from="GameScreenUI/CentreButtons/ThirdRow/Kingdom" to="KingdomUI" method="_on_Kingdom_pressed"]
 [connection signal="toggled" from="GameScreenUI/CentreButtons/ExtraTabsButton" to="GameScreenUI/CentreButtons" method="_on_ExtraTabsButton_toggled"]
+[connection signal="pressed" from="KingdomUI/NoticePanel/VBoxContainer/HBoxContainer/Edit" to="KingdomUI/NoticePanel" method="_on_Edit_pressed"]
+[connection signal="pressed" from="KingdomUI/NoticePanel/NoticeEditPanel/CloseNoticeEdit" to="KingdomUI/NoticePanel" method="_on_CloseNoticeEdit_pressed"]
+[connection signal="text_changed" from="KingdomUI/NoticePanel/NoticeEditPanel/Panel/LineEdit" to="KingdomUI/NoticePanel" method="_on_LineEdit_text_changed"]
+[connection signal="pressed" from="KingdomUI/NoticePanel/NoticeEditPanel/Panel/Confirm" to="KingdomUI/NoticePanel" method="_on_Confirm_pressed"]
+[connection signal="pressed" from="KingdomUI/CloseKingdom" to="KingdomUI" method="_on_CloseKingdom_pressed"]
 [connection signal="pressed" from="SummonUI/SpecialResourcePanel/HBoxContainer/Gems" to="MarketUI" method="_on_Gems_pressed"]
 [connection signal="pressed" from="SummonUI/SummonPanel/SummonChoicesPanel/SummonChoicesContainer/1xSummonPanel/1xSummon" to="SummonUI" method="_on_1xSummon_pressed"]
 [connection signal="pressed" from="SummonUI/SummonPanel/SummonChoicesPanel/SummonChoicesContainer/5xSummonPanel/5xSummon" to="SummonUI" method="_on_5xSummon_pressed"]
@@ -11882,4 +12906,3 @@ __meta__ = {
 [connection signal="toggled" from="CardsUI/SortButton" to="CardsUI" method="_on_SortButton_toggled"]
 [connection signal="pressed" from="SkillsUI/CloseSkills" to="SkillsUI" method="_on_CloseSkills_pressed"]
 [connection signal="pressed" from="CityUI/CloseCity" to="CityUI" method="_on_CloseCity_pressed"]
-[connection signal="pressed" from="KingdomUI/CloseKingdom" to="KingdomUI" method="_on_CloseAlliance_pressed"]

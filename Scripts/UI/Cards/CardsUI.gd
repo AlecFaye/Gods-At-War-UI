@@ -11,6 +11,9 @@ var player_cards = []  # Array to hold the player cards
 var card_slots = []    # Array to hold the card slots
 var card_limit = 100   # Card slot limit
 
+var legend_offset = Vector2(-30, -40)  # Legend card offset
+var epic_offset = Vector2(-15, -20)    # Epic card offset
+
 # Dictionary for the card's array attributes
 var card_attribute = {
 	"name": 0,
@@ -124,8 +127,19 @@ func _fill_card_slots():
 		"name":
 			player_cards.sort_custom(self, "_name_comparison")
 			for index in range(len(player_cards)):
-				card_slots[index].texture = load(player_cards[index][4])
-				card_slots[index].get_parent().show()
+				var sprite = card_slots[index]
+				var god = player_cards[index]
+				var rarity = god[card_attribute["rarity"]]
+				
+				if rarity == "Legend":
+					sprite.set_offset(legend_offset)
+				elif rarity == "Epic":
+					sprite.set_offset(epic_offset)
+				else:
+					sprite.set_offset(Vector2(0, 0))
+				
+				sprite.texture = load(god[card_attribute["image"]])
+				sprite.get_parent().show()
 		"rarity":
 			_sort_card_slots(rarity_sort)
 		"region":
@@ -139,32 +153,15 @@ func _clear_card_slots():
 	
 	# Clears the card slots and hides them
 	for index in range(len(card_slots)):
-		card_slots[index].texture = null
-		card_slots[index].get_parent().hide()
+		var sprite = card_slots[index]
+		sprite.texture = null
+		sprite.get_parent().hide()
 	
 	# Removes the labels
 	var row_containers = CardContainer.get_children()
 	for row in row_containers:
 		if row is Label:
 			CardContainer.remove_child(row)
-
-
-# Inserts the label at the index
-func _insert_label(index, attribute):
-	
-	# Creates a label based on the attribute
-	var label = Label.new()
-	label.text = attribute
-	
-	# Sets the font to the label
-	var dynamic_font = DynamicFont.new()
-	dynamic_font.font_data = load("res://Fonts/MorrisRomanBlack.ttf")
-	dynamic_font.size = 28
-	label.set("custom_fonts/font", dynamic_font)
-	
-	# Adds the label as a child and moves it to the correct index
-	CardContainer.add_child(label)
-	CardContainer.move_child(label, index)
 
 
 # Sorts the cards and labels
@@ -184,12 +181,41 @@ func _sort_card_slots(attribute_dic):
 			
 			# Sets the image of the god to the card slot and show it
 			for index in range(len(gods)):
-				card_slots[index + card_index].texture = load(gods[index][4])
-				card_slots[index + card_index].get_parent().show()
+				var sprite = card_slots[index + card_index]
+				var god = gods[index]
+				var rarity = god[card_attribute["rarity"]]
+				
+				if rarity == "Legend":
+					sprite.set_offset(legend_offset)
+				elif rarity == "Epic":
+					sprite.set_offset(epic_offset)
+				else:
+					sprite.set_offset(Vector2(0, 0))
+				
+				sprite.texture = load(god[card_attribute["image"]])
+				sprite.get_parent().show()
 			
 			# Calculates the next label index and card index
 			label_index = label_index + ceil(len(gods) / 5.0) + 1
 			card_index = (label_index - label_count) * 5
+
+
+# Inserts the label at the index
+func _insert_label(index, attribute):
+	
+	# Creates a label based on the attribute
+	var label = Label.new()
+	label.text = attribute
+	
+	# Sets the font to the label
+	var dynamic_font = DynamicFont.new()
+	dynamic_font.font_data = load("res://Fonts/MorrisRomanBlack.ttf")
+	dynamic_font.size = 28
+	label.set("custom_fonts/font", dynamic_font)
+	
+	# Adds the label as a child and moves it to the correct index
+	CardContainer.add_child(label)
+	CardContainer.move_child(label, index)
 
 
 # Adds the card to the player cards
@@ -238,15 +264,21 @@ func _sort():
 
 # Name comparator for the player cards
 func _name_comparison(a, b):
-	var first = a[0]
-	var second = b[0]
+	var name_index = card_attribute["name"]
+	
+	var first = a[name_index]
+	var second = b[name_index]
+	
 	return first < second
 
 
 # Rarity comparator for the card groups
 func _rarity_comparison(a, b):
-	var first = a[1]
-	var second = b[1]
+	var rarity_index = card_attribute["rarity"]
+	
+	var first = a[rarity_index]
+	var second = b[rarity_index]
+	
 	return rarity_dic[first] < rarity_dic[second]
 
 
