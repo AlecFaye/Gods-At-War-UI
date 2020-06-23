@@ -10,7 +10,7 @@ onready var ChatScrollContainer = $ChatElements/ChatPanel/ScrollContainer
 onready var TextEditPanel = $TextEditPanel
 
 # Positions for the chat to move towards
-var original_position = Vector2(-375, 0)
+var original_position = Vector2(-450, 0)
 var target_position = Vector2(0, 0)
 
 # Current textbox
@@ -46,13 +46,31 @@ func _on_Button_pressed(chat_box):
 func _clear_chat_box():
 	for message in chat_messages:
 		message.text = " "
+		
+		var time = message.get_node("Time")
+		time.text = "99:99:99"
 
 
 # Updates the current chat box
 func _update_chat_box():
 	var current_chat_messages = current_chat.get_chat_messages()
+	var current_chat_time = current_chat.get_chat_time()
+	
+	# Displays the messages and time stamp
 	for index in range(len(current_chat_messages)):
-		chat_messages[index].text = current_chat_messages[index]
+		var chat = chat_messages[index]
+		var time = chat.get_node("Time")
+		
+		chat.text = current_chat_messages[index]
+		time.text = current_chat_time[index]
+	
+	# Hides any time stamps with 99:99:99
+	for index in range(len(chat_messages)):
+		var time = chat_messages[index].get_node("Time")
+		if time.text == "99:99:99":
+			time.hide()
+		else:
+			time.show()
 
 
 # When the send button is pressed
@@ -61,9 +79,25 @@ func _on_Send_pressed():
 	var message = UserInput.text
 	UserInput.clear()
 	
+	# Gets the time
+	var time_dict = OS.get_time(true)
+	var hour = str(time_dict.hour)
+	var minute = str(time_dict.minute)
+	var second = str(time_dict.second)
+	
+	if len(hour) == 1:
+		hour = "0" + hour
+	if len(minute) == 1:
+		minute = "0" + minute
+	if len(second) == 1:
+		second = "0" + second
+	
+	var time = hour + ":" + minute + ":" + second
+	
 	# Adds the message to the array and update the chat box
 	if len(message) > 0:
 		current_chat.add_message(message)
+		current_chat.add_time(time)
 		_update_chat_box()
 
 

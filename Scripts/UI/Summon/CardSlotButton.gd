@@ -22,6 +22,9 @@ export(float) var common_rate
 
 export(String) var card_pack_path
 
+# Enum to keep track of the panels
+enum {SELF, SUMMON_CHOICES, DRAWN_CARDS, CARD_LIST}
+
 onready var rarity_label = $PositionCardSlotPanel/GairoPictureHolder/CardContainer/RarityLabel
 onready var card_summon_name_label = $PositionCardSlotPanel/GairoPictureHolder/CardContainer/CardSummonNameLabel
 onready var cost_sprite = $PositionCardSlotPanel/GairoPictureHolder/CardContainer/CostContainer/SpriteHolder/CostSprite
@@ -129,8 +132,7 @@ func _reset_scroll():
 
 # Called when the CardsList button is pressed
 func _on_CardList_pressed():
-	SummonUI.set_current_panel(CardListPanel)
-	CardListPanel.show()
+	SummonUI.set_current_panel(CARD_LIST)
 	
 	_display_card_list()
 	_set_draw_rates()

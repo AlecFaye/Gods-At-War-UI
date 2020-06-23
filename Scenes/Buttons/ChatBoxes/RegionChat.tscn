@@ -6,3 +6,4 @@
 text = "Region"
 chat_path = "RegionChat.json"
 chat_name = "Region"
+time_path = "RegionTime.json"

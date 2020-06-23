@@ -6,3 +6,4 @@
 text = "World"
 chat_path = "WorldChat.json"
 chat_name = "World"
+time_path = "WorldTime.json"

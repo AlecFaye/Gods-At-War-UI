@@ -6,3 +6,4 @@
 text = "Kingdom"
 chat_path = "KingdomChat.json"
 chat_name = "Kingdom"
+time_path = "KingdomTime.json"
