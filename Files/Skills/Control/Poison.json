@@ -1,0 +1,16 @@
+{
+  "description": "Prepares for 1 turn before launching freeze on two enemy gods for 1 turn with a %s chance of activating freeze on the rear enemy god for 1 additional turn.",
+  "damage": [40],
+  "upgrade": [3],
+  "percentage": [true],
+
+  "type": "All",
+  "range": "3",
+  "target": ["2 Enemy"],
+
+  "rate": 35,
+  "is_upgrading_rate": false,
+  "rate_upgrade": 0,
+
+  "limit": 1
+}

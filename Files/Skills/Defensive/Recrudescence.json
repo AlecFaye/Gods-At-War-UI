@@ -1,0 +1,16 @@
+{
+  "description": "Guarantees first strike. For the first 6 turns of battle, has a 40%% chance of repeating normal attacks on odd numbered turns and a 40%% chance of repeating special attacks on even numbered turns. Absorbs all damage for all allied gods with a %s chance of activating avoidance from the 7th turn onwards.",
+  "damage": [35],
+  "upgrade": [3.5],
+  "percentage": [true],
+
+  "type": "All",
+  "range": "---",
+  "target": ["---"],
+
+  "rate": -1,
+  "is_upgrading_rate": false,
+  "rate_upgrade": 0,
+
+  "limit": 1
+}

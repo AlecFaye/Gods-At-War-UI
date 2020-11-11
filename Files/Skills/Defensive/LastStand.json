@@ -1,0 +1,16 @@
+{
+  "description": "Absorbs all incoming damage from allied gods with a %s chance of reducing the incoming damage by %s (affected by defense).",
+  "damage": [20, 40],
+  "upgrade": [1, 2],
+  "percentage": [true, true],
+
+  "type": "All",
+  "range": "3",
+  "target": ["2 Ally"],
+
+  "rate": 20,
+  "is_upgrading_rate": false,
+  "rate_upgrade": 0,
+
+  "limit": 1
+}

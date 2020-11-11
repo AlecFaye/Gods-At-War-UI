@@ -1,0 +1,16 @@
+{
+  "description": "Prepares for 1 turn before launching frenzy on two enemy gods for 2 turns.",
+  "damage": [],
+  "upgrade": [],
+  "percentage": [],
+
+  "type": "All",
+  "range": "3",
+  "target": ["2 Enemy"],
+
+  "rate": 25,
+  "is_upgrading_rate": true,
+  "rate_upgrade": 3,
+
+  "limit": 1
+}

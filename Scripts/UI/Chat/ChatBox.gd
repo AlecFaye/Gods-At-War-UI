@@ -31,8 +31,8 @@ func add_message(message):
 
 # Saves the messages to a json file
 func _save_messages(content):
-	
 	var dir = Directory.new()
+	
 	if !dir.dir_exists(CHAT_DIR):
 		dir.make_dir_recursive(CHAT_DIR)
 	

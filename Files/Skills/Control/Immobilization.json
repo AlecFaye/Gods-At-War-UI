@@ -1,0 +1,16 @@
+{
+  "description": "Deactivates all enemy base skills for 1 turn.",
+  "damage": [],
+  "upgrade": [],
+  "percentage": [],
+
+  "type": "All",
+  "range": "4",
+  "target": ["3 Enemy"],
+
+  "rate": 15,
+  "is_upgrading_rate": true,
+  "rate_upgrade": 3.5,
+
+  "limit": 1
+}

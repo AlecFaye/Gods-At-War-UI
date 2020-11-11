@@ -1,0 +1,16 @@
+{
+  "description": "Increases attack stats by %s and increases attack damage output for the entire ally troop by %s.",
+  "damage": [15, 45],
+  "upgrade": [7, 0],
+  "percentage": [false, true],
+  
+  "type": "ALl",
+  "range": "---",
+  "target": ["2 Ally", "1 Self"],
+
+  "rate": -1,
+  "is_upgrading_rate": false,
+  "rate_upgrade": 0,
+
+  "limit": 1
+}

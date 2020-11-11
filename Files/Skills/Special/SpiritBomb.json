@@ -1,0 +1,16 @@
+{
+  "description": "Follows a special attack with another special attack (%s damage rate).",
+  "damage": [30],
+  "upgrade": [2],
+  "percentage": [true],
+
+  "type": "All",
+  "range": "3",
+  "target": ["1 Enemy"],
+
+  "rate": 50,
+  "is_upgrading_rate": false,
+  "rate_upgrade": 0,
+
+  "limit": 1
+}

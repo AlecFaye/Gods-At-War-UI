@@ -1,0 +1,16 @@
+{
+  "description": "Launches two special attacks at the cost of being unable to launch a normal attack.",
+  "damage": [],
+  "upgrade": [],
+  "percentage": [],
+
+  "type": "All",
+  "range": "---",
+  "target": ["1 Enemy"],
+
+  "rate": 15,
+  "is_upgrading_rate": true,
+  "rate_upgrade": 2,
+
+  "limit": 1
+}

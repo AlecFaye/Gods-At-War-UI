@@ -19,7 +19,7 @@ onready var draw_rates_panel = $CardListPanel/DrawRatesPanel
 onready var special_resource_panel = $SpecialResourcePanel
 
 # Tracks the gem count
-onready var player_gems = $"../GameScreenUI/BottomPanel/Gems"
+onready var player_gems = $"../GameScreenUI/SpecialResources/Gems"
 onready var gem_count = $SpecialResourcePanel/ResourceContainer/Gems
 
 

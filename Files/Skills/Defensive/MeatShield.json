@@ -1,0 +1,16 @@
+{
+  "description": "Prepares for 1 turn and reduces all incoming damage for the front allied god (or self, if tanked) by %s for the first 2 turns of battle.",
+  "damage": [20],
+  "upgrade": [1.5],
+  "percentage": [true],
+
+  "type": "All",
+  "range": "---",
+  "target": ["1 SelfAlly"],
+
+  "rate": -1,
+  "is_upgrading_rate": false,
+  "rate_upgrade": 0,
+
+  "limit": 1
+}

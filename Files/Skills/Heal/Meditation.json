@@ -1,0 +1,16 @@
+{
+  "description": "Every time this god experiences damage from central or base skills, activate heal (%s recovery rate, affected by speed).",
+  "damage": [120],
+  "upgrade": [5],
+  "percentage": [true],
+
+  "type": "All",
+  "range": "---",
+  "target": ["1 Self"],
+
+  "rate": -1,
+  "is_upgrading_rate": false,
+  "rate_upgrade": 0,
+
+  "limit": 1
+}

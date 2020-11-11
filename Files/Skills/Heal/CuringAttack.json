@@ -1,0 +1,16 @@
+{
+  "description": "Prepares 1 turn and launches an attack (30%% damage rate) and activates recovery (%s recovery rate, affected by defense) for self for 2 turns.",
+  "damage": [30],
+  "upgrade": [1.5],
+  "percentage": [true],
+
+  "type": "All",
+  "range": "4",
+  "target": ["1 Enemy", "1 Self"],
+
+  "rate": 30,
+  "is_upgrading_rate": false,
+  "rate_upgrade": 0,
+
+  "limit": 1
+}

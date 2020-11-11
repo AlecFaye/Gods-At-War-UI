@@ -1,0 +1,16 @@
+{
+  "description": "Prepares for 1 turn and recovers wounded for allies (%s recovery rate, affected by speed).",
+  "damage": [25],
+  "upgrade": [1],
+  "percentage": [true],
+
+  "type": "All",
+  "range": "3",
+  "target": ["2 Ally"],
+
+  "rate": 30,
+  "is_upgrading_rate": false,
+  "rate_upgrade": 0,
+
+  "limit": 1
+}

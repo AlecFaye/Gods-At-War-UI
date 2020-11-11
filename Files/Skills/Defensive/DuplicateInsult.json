@@ -1,0 +1,16 @@
+{
+  "description": "Launches two normal attacks.",
+  "damage": [],
+  "upgrade": [],
+  "percentage": [],
+
+  "type": "Life, Death, Fire, Metal",
+  "range": "---",
+  "target": ["1 Self"],
+
+  "rate": 20,
+  "is_upgrading_rate": true,
+  "rate_upgrade": 3,
+
+  "limit": 1
+}

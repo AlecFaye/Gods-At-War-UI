@@ -1,0 +1,13 @@
+{
+  "0": ["-0% Recruitment Speed", 50, 100, 150, 5],
+  "1": ["-4% Recruitment Speed", 100, 200, 300, 15],
+  "2": ["-8% Recruitment Speed", 200, 300, 400, 20],
+  "3": ["-12% Recruitment Speed", 300, 400, 500, 25],
+  "4": ["-16% Recruitment Speed", 400, 500, 600, 30],
+  "5": ["-24% Recruitment Speed", 500, 600, 700, 35],
+  "6": ["-32% Recruitment Speed", 100, 200, 300, 15],
+  "7": ["-36% Recruitment Speed", 200, 300, 400, 20],
+  "8": ["-40% Recruitment Speed", 300, 400, 500, 25],
+  "9": ["-44% Recruitment Speed", 400, 500, 600, 30],
+  "10": ["-48% Recruitment Speed", 500, 600, 700, 35]
+}

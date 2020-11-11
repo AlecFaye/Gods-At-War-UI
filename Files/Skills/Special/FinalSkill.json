@@ -1,0 +1,16 @@
+{
+  "description": "Prepares for 1 turn, then launches an attack against the rear 2 enemy gods (%s damage rate, affected by special attack) and has a %s chance of activating guard for 2 turns.",
+  "damage": [110, 50],
+  "upgrade": [5, 5],
+  "percentage": [true, true],
+
+  "type": "All",
+  "range": "5",
+  "target": ["2 Enemy"],
+
+  "rate": 35,
+  "is_upgrading_rate": false,
+  "rate_upgrade": 0,
+
+  "limit": 1
+}

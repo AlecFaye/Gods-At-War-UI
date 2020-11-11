@@ -1,0 +1,16 @@
+{
+  "description": "Follows both normal and special attacks with a self heal (%s, recovery rate, affected by speed) with a 15%% chance of healing allies (%s recovery rate, affected by speed).",
+  "damage": [150, 80],
+  "upgrade": [5, 3],
+  "percentage": [true, true],
+
+  "type": "All",
+  "range": "---",
+  "target": ["1 Self", "2 Ally"],
+
+  "rate": 30,
+  "is_upgrading_rate": false,
+  "rate_upgrade": 0,
+
+  "limit": 1
+}

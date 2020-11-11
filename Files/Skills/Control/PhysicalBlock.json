@@ -1,0 +1,16 @@
+{
+  "description": "Launches shielding for 1 turn.",
+  "damage": [],
+  "upgrade": [],
+  "percentage": [],
+
+  "type": "All",
+  "range": "2",
+  "target": ["1 Enemy"],
+
+  "rate": 15,
+  "is_upgrading_rate": true,
+  "rate_upgrade": 1.5,
+
+  "limit": 1
+}

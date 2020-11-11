@@ -1,0 +1,16 @@
+{
+  "description": "Guarantees first strike and absorbs all incoming damage during the first 4 turns of battle with a 25%% chance of activating avoidance.",
+  "damage": [],
+  "upgrade": [],
+  "percentage": [],
+
+  "type": "All",
+  "range": "4",
+  "target": ["---"],
+
+  "rate": -1,
+  "is_upgrading_rate": false,
+  "rate_upgrade": 0,
+
+  "limit": 1
+}

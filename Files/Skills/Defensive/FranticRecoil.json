@@ -1,0 +1,16 @@
+{
+  "description": "Lowers the main skill prep by 1 turn. If no prep, increases activation rate by %s and has a 50%% chance of returning every normal attack with an attack (damage rate %s, affected by defense) for the first 6 turns of battle. Starting from the 7th turn of battle, absorbs all damage received by the front allied god and reduces all incoming damage for all allied gods and self by %s.",
+  "damage": [5, 80, 65],
+  "upgrade": [0.5, 3.5, 2],
+  "percentage": [true, true, true],
+
+  "type": "All",
+  "range": "---",
+  "target": ["---"],
+
+  "rate": -1,
+  "is_upgrading_rate": false,
+  "rate_upgrade": 0,
+
+  "limit": 1
+}

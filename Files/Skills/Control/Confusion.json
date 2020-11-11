@@ -1,0 +1,16 @@
+{
+  "description": "Activates guard, frenzy, or freeze against one enemy for 1 turn.",
+  "damage": [],
+  "upgrade": [],
+  "percentage": [],
+
+  "type": "All",
+  "range": "4",
+  "target": ["1 Enemy"],
+
+  "rate": 25,
+  "is_upgrading_rate": true,
+  "rate_upgrade": 1.5,
+
+  "limit": 1
+}

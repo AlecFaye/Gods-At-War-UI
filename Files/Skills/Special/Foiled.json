@@ -1,0 +1,16 @@
+{
+  "description": "Prepares for 1 turn, then launches an attack (%s affected by special attack) and steals 20 special attack from all enemy gods and applies it to self.",
+  "damage": [85],
+  "upgrade": [3],
+  "percentage": [true],
+
+  "type": "All",
+  "range": "5",
+  "target": ["3 Enemy", "1 Self"],
+
+  "rate": 25,
+  "is_upgrading_rate": false,
+  "rate_upgrade": 0,
+
+  "limit": 1
+}

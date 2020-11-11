@@ -1,0 +1,16 @@
+{
+  "description": "Prepares for 1 turn and launches an attack (%s damage rate, affected by special attack) and increases the next instance of damage performed by this god by 30%%.",
+  "damage": [40],
+  "upgrade": [2],
+  "percentage": [true],
+
+  "type": "All",
+  "range": "3",
+  "target": ["1 Enemy", "1 Self"],
+
+  "rate": 45,
+  "is_upgrading_rate": false,
+  "rate_upgrade": 0,
+
+  "limit": 1
+}

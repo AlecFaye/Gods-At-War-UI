@@ -1,0 +1,16 @@
+{
+  "description": "Activates impressment (%s affected by speed) on self and applies it to allied gods.",
+  "damage": [30],
+  "upgrade": [1.5],
+  "percentage": [true],
+
+  "type": "All",
+  "range": "3",
+  "target": ["1 Self", "1-2 Ally"],
+
+  "rate": 40,
+  "is_upgrading_rate": false,
+  "rate_upgrade": 0,
+
+  "limit": 1
+}

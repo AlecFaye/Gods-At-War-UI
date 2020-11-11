@@ -1,0 +1,16 @@
+{
+  "description": "Increases self and one allied god's attack damage output by %s for the first 4 turns.",
+  "damage": [30],
+  "upgrade": [4],
+  "percentage": [true],
+
+  "type": "All",
+  "range": "---",
+  "target": ["1 Ally", "1 Self"],
+
+  "rate": 0,
+  "is_upgrading_rate": false,
+  "rate_upgrade": 0,
+
+  "limit": 1
+}

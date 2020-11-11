@@ -1,0 +1,16 @@
+{
+  "description": "Reduces all incoming damage by %s.",
+  "damage": [15],
+  "upgrade": [1],
+  "percentage": [true],
+
+  "type": "All",
+  "range": "1",
+  "target": ["1 Self"],
+
+  "rate": 25,
+  "is_upgrading_rate": false,
+  "rate_upgrade": 0,
+
+  "limit": 1
+}

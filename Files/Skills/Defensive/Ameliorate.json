@@ -1,0 +1,16 @@
+{
+  "description": "Lowers main skill activation by 1 turn and/or increases skill activation by 15%%. Increases defense stats by %s every time this god is damaged. Stacks up to 10 times.",
+  "damage": [5],
+  "upgrade": [3],
+  "percentage": [false],
+
+  "type": "All",
+  "range": "1",
+  "target": ["1 Self"],
+
+  "rate": -1,
+  "is_upgrading_rate": false,
+  "rate_upgrade": 0,
+
+  "limit": 1
+}

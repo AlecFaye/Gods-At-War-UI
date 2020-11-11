@@ -1,0 +1,16 @@
+{
+  "description": "Prepares for 1 turn and attacks two enemy gods (damage rate %s) and increases the next instance of damage performed by this god by %s.",
+  "damage": [40, 30],
+  "upgrade": [0, 2],
+  "percentage": [true, true],
+  
+  "type": "All",
+  "range": "3",
+  "target": ["2 Enemy", "1 Self"],
+
+  "rate": 45,
+  "is_upgrading_rate": false,
+  "rate_upgrade": 0,
+
+  "limit": 1
+}

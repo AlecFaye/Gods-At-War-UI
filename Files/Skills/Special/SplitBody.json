@@ -1,0 +1,16 @@
+{
+  "description": "Launches an attack (70%% damage rate, affected by special attack) and steals 20 special attack from one enemy god for the first 3 turns and reduces all incoming enemy special attack damage (%s reduction, affected by special attack) for allies for 1 turn.",
+  "damage": [40],
+  "upgrade": [2.5],
+  "percentage": [true],
+
+  "type": "All",
+  "range": "4",
+  "target": ["1 Enemy", "1 Self"],
+
+  "rate": -1,
+  "is_upgrading_rate": false,
+  "rate_upgrade": 0,
+
+  "limit": 1
+}

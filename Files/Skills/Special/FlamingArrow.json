@@ -1,0 +1,16 @@
+{
+  "description": "Prepares for 1 turn, then launches an attack (%s damage rate, affected by special attack) on all enemy gods and activates burn status (60%% damage rate, affected by special attack) for 3 turns.",
+  "damage": [115],
+  "upgrade": [5],
+  "percentage": [true],
+
+  "type": "All",
+  "range": "4",
+  "target": ["3 Enemy"],
+
+  "rate": 35,
+  "is_upgrading_rate": false,
+  "rate_upgrade": 0,
+
+  "limit": 1
+}

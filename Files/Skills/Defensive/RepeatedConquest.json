@@ -1,0 +1,16 @@
+{
+  "description": "Launches two special attacks with a 20%% chance of reducing incoming damage by 30%% for self.",
+  "damage": [],
+  "upgrade": [],
+  "percentage": [],
+
+  "type": "Fire, Water, Wood",
+  "range": "---",
+  "target": ["1 Self"],
+
+  "rate": 15,
+  "is_upgrading_rate": true,
+  "rate_upgrade": 3,
+
+  "limit": 1
+}

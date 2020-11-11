@@ -1,0 +1,16 @@
+{
+  "description": "Prepares 1 turn launches an attack against 2 enemy (%s damage rate, affected by special attack) inflicts blockade for 1 turn.",
+  "damage": [40],
+  "upgrade": [2.5],
+  "percentage": [true],
+
+  "type": "All",
+  "range": "3",
+  "target": ["2 Enemy"],
+
+  "rate": 25,
+  "is_upgrading_rate": false,
+  "rate_upgrade": 0,
+
+  "limit": 1
+}

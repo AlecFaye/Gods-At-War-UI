@@ -1,0 +1,16 @@
+{
+  "description": "For the first 4 turns, there is a 35%% chance of launching an attack (%s damage rate) and activating recovery (%s recovery rate) for self and all allies for 1 turn.",
+  "damage": [65, 65],
+  "upgrade": [2.5, 2],
+  "percentage": [true, true],
+
+  "type": "All",
+  "range": "4",
+  "target": ["2 Enemy", "1 Self", "2 Ally"],
+
+  "rate": -1,
+  "is_upgrading_rate": false,
+  "rate_upgrade": 0,
+
+  "limit": 1
+}

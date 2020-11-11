@@ -1,0 +1,16 @@
+{
+  "description": "Prepares for 1 turn before launching shear on two enemy gods for 1 turn with a 50%% chance of decreasing all enemy god's stats by 20.",
+  "damage": [],
+  "upgrade": [],
+  "percentage": [],
+
+  "type": "All",
+  "range": "4",
+  "target": ["2 Enemy"],
+
+  "rate": 25,
+  "is_upgrading_rate": true,
+  "rate_upgrade": 3,
+
+  "limit": 1
+}

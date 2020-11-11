@@ -1,0 +1,16 @@
+{
+  "description": "Follows a normal attack with an attack (damage rate %s) and launches shielding for 1 turn.",
+  "damage": [110],
+  "upgrade": [4.5],
+  "percentage": [true],
+
+  "type": "All",
+  "range": "---",
+  "target": ["1 Enemy"],
+
+  "rate": 40,
+  "is_upgrading_rate": false,
+  "rate_upgrade": 0,
+
+  "limit": 1
+}

@@ -1,0 +1,16 @@
+{
+  "description": "For the first 4 turns, launch an attack against the rear enemy god (%s damage rate, affected by special attack) and has a %s chance of activating guard on the fifth turn.",
+  "damage": [80, 25],
+  "upgrade": [3, 1],
+  "percentage": [true, true],
+
+  "type": "All",
+  "range": "---",
+  "target": ["1 Enemy"],
+
+  "rate": -1,
+  "is_upgrading_rate": false,
+  "rate_upgrade": 0,
+
+  "limit": 1
+}

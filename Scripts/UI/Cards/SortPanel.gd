@@ -33,7 +33,7 @@ var card_groups = {
 	"Fire": [],
 	"Earth": [],
 	"Metal": [],
-	"Water": []
+	"Water": [],
 	}
 
 var sort_attribute = "name"
@@ -49,8 +49,8 @@ func _ready():
 
 # Gets the buttons in the sort panel
 func _get_sort_buttons():
-	for button_selection in choice_container.get_children():
-		button_selection.connect("pressed", self, "_on_SortButton_pressed", [button_selection.text])
+	for button in choice_container.get_children():
+		button.connect("pressed", self, "_on_SortButton_pressed", [button.text])
 
 
 # Determines the sorting attribute
@@ -63,6 +63,9 @@ func _on_SortButton_pressed(attribute):
 func sort():
 	var player_cards = CardsUI.get_player_cards()
 	var rarity_sort = card_panel.get_rarity_sort()
+	
+	for card in card_groups:
+		card_groups[card] = []
 	
 	# For loop to go through the attributes
 	#	1 = rarity

@@ -1,0 +1,16 @@
+{
+  "description": "Follows a normal attack with activating impressment (%s affected by speed) and applying it to self with a 20%% chance of activating recovery (%s recovery rate) for allies and self for 2 turns",
+  "damage": [80, 65],
+  "upgrade": [4, 2],
+  "percentage": [true, true],
+
+  "type": "All",
+  "range": "---",
+  "target": ["1 Self", "2 Ally", "1 Enemy"],
+
+  "rate": 20,
+  "is_upgrading_rate": false,
+  "rate_upgrade": 0,
+
+  "limit": 1
+}

@@ -1,0 +1,16 @@
+{
+  "description": "For the first 3 turns of battle, there is a %s chance that two enemy gods are inflicted with shear status for 1 turn.",
+  "damage": [45],
+  "upgrade": [3],
+  "percentage": [true],
+
+  "type": "All",
+  "range": "4",
+  "target": ["2 Enemy"],
+
+  "rate": -1,
+  "is_upgrading_rate": false,
+  "rate_upgrade": 0,
+
+  "limit": 1
+}

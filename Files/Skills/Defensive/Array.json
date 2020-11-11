@@ -1,0 +1,16 @@
+{
+  "description": "Prepares for 1 turn and splits forces (damage rate %s, affected by defense)",
+  "damage": [20],
+  "upgrade": [0.5],
+  "percentage": [true],
+
+  "type": "All",
+  "range": "3",
+  "target": ["1 Enemy"],
+
+  "rate": 30,
+  "is_upgrading_rate": false,
+  "rate_upgrade": 0,
+
+  "limit": 1
+}

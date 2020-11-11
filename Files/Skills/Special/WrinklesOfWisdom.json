@@ -1,0 +1,16 @@
+{
+  "description": "Follows a special attack with two attacks (40%% damage rate, affected by special attack) against 2 enemy gods.",
+  "damage": [],
+  "upgrade": [],
+  "percentage": [],
+
+  "type": "All",
+  "range": "4",
+  "target": ["2 Enemy"],
+
+  "rate": 20,
+  "is_upgrading_rate": true,
+  "rate_upgrade": 2.5,
+
+  "limit": 1
+}

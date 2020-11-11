@@ -1,0 +1,16 @@
+{
+  "description": "Prepares 1 turn and launches a special attack (25%% damage rate) and activates recovery (20%% recovery rate, affected by special defense) for self for 1 turn.",
+  "damage": [],
+  "upgrade": [],
+  "percentage": [],
+
+  "type": "All",
+  "range": "5",
+  "target": ["2 Enemy", "1 Self"],
+
+  "rate": 10,
+  "is_upgrading_rate": true,
+  "rate_upgrade": 1,
+
+  "limit": 1
+}

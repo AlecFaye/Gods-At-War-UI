@@ -1,0 +1,16 @@
+{
+  "description": "Prepares 1 turn and launches either a special attack %s or an attack %s with a 75%% chance of healing self (%s recovery rate, affected by special defense)",
+  "damage": [55, 60, 60],
+  "upgrade": [2, 2, 1],
+  "percentage": [true, true, true],
+
+  "type": "All",
+  "range": "4",
+  "target": ["2 Enemy", "1 Self"],
+
+  "rate": 25,
+  "is_upgrading_rate": false,
+  "rate_upgrade": 0,
+
+  "limit": 1
+}

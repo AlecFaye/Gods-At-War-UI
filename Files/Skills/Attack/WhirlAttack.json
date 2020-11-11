@@ -1,0 +1,16 @@
+{
+  "description": "Prepares for 1 turn and launches attack (damage rate %s) and inflicts daze status for 1 turn.",
+  "damage": [45],
+  "upgrade": [3],
+  "percentage": [true],
+  
+  "type": "All",
+  "range": "3",
+  "target": ["1 Enemy"],
+
+  "rate": 25,
+  "is_upgrading_rate": false,
+  "rate_upgrade": 0,
+
+  "limit": 1
+}

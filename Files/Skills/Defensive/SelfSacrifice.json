@@ -1,0 +1,16 @@
+{
+  "description": "Absorbs all incoming damage from allied gods on the first turn of battle.",
+  "damage": [],
+  "upgrade": [],
+  "percentage": [],
+
+  "type": "All",
+  "range": "3",
+  "target": ["2 Ally"],
+
+  "rate": -1,
+  "is_upgrading_rate": false,
+  "rate_upgrade": 0,
+
+  "limit": 1
+}

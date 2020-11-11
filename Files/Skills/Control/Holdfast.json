@@ -1,0 +1,16 @@
+{
+  "description": "Prepares for 1 turn and activates shear status against two enemy gods for 1 turn.",
+  "damage": [],
+  "upgrade": [],
+  "percentage": [],
+
+  "type": "All",
+  "range": "4",
+  "target": ["2 Enemy"],
+
+  "rate": 25,
+  "is_upgrading_rate": true,
+  "rate_upgrade": 2.5,
+
+  "limit": 1
+}

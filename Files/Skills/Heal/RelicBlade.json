@@ -1,0 +1,16 @@
+{
+  "description": "For the first 6 turns, there is a 35%% chance of launching an extra special attack (%s damage rate) or attack and activating recovery (%s recovery rate, affected by special attack) for self and all allies for 3 turns.",
+  "damage": [95, 95],
+  "upgrade": [3.5, 2],
+  "percentage": [true, true],
+
+  "type": "All",
+  "range": "5",
+  "target": ["2 Enemy", "2 Ally", "1 Self"],
+
+  "rate": -1,
+  "is_upgrading_rate": false,
+  "rate_upgrade": 0,
+
+  "limit": 1
+}

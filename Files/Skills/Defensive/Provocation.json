@@ -1,0 +1,16 @@
+{
+  "description": "Taunts the front enemy god and has a %s chance of activating avoidance status from all incoming damage for 1 turn.",
+  "damage": [25],
+  "upgrade": [1],
+  "percentage": [true],
+
+  "type": "All",
+  "range": "2",
+  "target": ["1 Enemy", "1 Self"],
+
+  "rate": 20,
+  "is_upgrading_rate": false,
+  "rate_upgrade": 0,
+
+  "limit": 1
+}

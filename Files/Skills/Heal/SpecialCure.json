@@ -1,0 +1,16 @@
+{
+  "description": "Follows a special attack with an attack (%s damage rate) and heals (%s recovery rate, affected by special defense).",
+  "damage": [20, 15],
+  "upgrade": [1, 1],
+  "percentage": [true, true],
+
+  "type": "All",
+  "range": "---",
+  "target": ["1 Enemy", "1 Self"],
+
+  "rate": 15,
+  "is_upgrading_rate": false,
+  "rate_upgrade": 0,
+
+  "limit": 1
+}

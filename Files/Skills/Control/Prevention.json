@@ -1,0 +1,16 @@
+{
+  "description": "Prepares for 1 turn and activates shear status for 2 turns.",
+  "damage": [],
+  "upgrade": [],
+  "percentage": [],
+
+  "type": "All",
+  "range": "3",
+  "target": ["1 Enemy"],
+
+  "rate": 20,
+  "is_upgrading_rate": true,
+  "rate_upgrade": 2,
+
+  "limit": 1
+}

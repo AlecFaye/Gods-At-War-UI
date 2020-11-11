@@ -1,0 +1,16 @@
+{
+  "description": "Activates shear status against the enemy with the highest special attack stats for the first 3 turns and reduces incoming special attack damage (%s affected by special attack) for self.",
+  "damage": [50],
+  "upgrade": [4.5],
+  "percentage": [true],
+
+  "type": "All",
+  "range": "---",
+  "target": ["1 Enemy", "1 Self"],
+
+  "rate": -1,
+  "is_upgrading_rate": false,
+  "rate_upgrade": 0,
+
+  "limit": 1
+}

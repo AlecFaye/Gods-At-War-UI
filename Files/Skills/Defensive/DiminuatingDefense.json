@@ -1,0 +1,16 @@
+{
+  "description": "Prepares for 1 turn and reduces all incoming damage by %s for all allied gods and self. There is a 50%% of increasing defense stats for allied gods and self by %s for 1 turn.",
+  "damage": [85, 20],
+  "upgrade": [4.5, 4],
+  "percentage": [true, false],
+
+  "type": "All",
+  "range": "3",
+  "target": ["2 Ally", "1 Self"],
+
+  "rate": 25,
+  "is_upgrading_rate": false,
+  "rate_upgrade": 0,
+
+  "limit": 1
+}

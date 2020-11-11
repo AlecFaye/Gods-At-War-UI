@@ -1,0 +1,16 @@
+{
+  "description": "Prepares for 2 turns, then launches an attack against all enemy gods (%s damage rate, affected by special attack) has a %s chance of inflicting shear for 1 turn.",
+  "damage": [60, 75],
+  "upgrade": [2, 1],
+  "percentage": [true, true],
+
+  "type": "All",
+  "range": "5",
+  "target": ["3 Enemy"],
+
+  "rate": 25,
+  "is_upgrading_rate": false,
+  "rate_upgrade": 0,
+
+  "limit": 1
+}

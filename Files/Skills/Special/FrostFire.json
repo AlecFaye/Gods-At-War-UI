@@ -1,0 +1,16 @@
+{
+  "description": "Follows a special attack with an attack (%s damage rate, affected by special attack) and either activates freeze or burn status (%s damage rate, affected by special attack) for 1 turn.",
+  "damage": [80, 40],
+  "upgrade": [3.5, 1.5],
+  "percentage": [true, true],
+
+  "type": "All",
+  "range": "---",
+  "target": ["1 Enemy"],
+
+  "rate": 35,
+  "is_upgrading_rate": false,
+  "rate_upgrade": 0,
+
+  "limit": 1
+}

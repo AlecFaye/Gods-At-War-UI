@@ -1,0 +1,16 @@
+{
+  "description": "Follows a special attack with an attack (%s damage rate, affected by special attack) and activates burn status (%s damage rate, affected by special attack) for 1 turn.",
+  "damage": [60, 30],
+  "upgrade": [2.5, 1.5],
+  "percentage": [true, true],
+
+  "type": "",
+  "range": "",
+  "target": [],
+
+  "rate": 0,
+  "is_upgrading_rate": false,
+  "rate_upgrade": 0,
+
+  "limit": 1
+}

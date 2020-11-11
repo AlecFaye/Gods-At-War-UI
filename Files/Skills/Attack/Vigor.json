@@ -1,0 +1,16 @@
+{
+  "description": "Launches an attack (damage rate %s) against the entire enemy group and reduces their attack stat by %s.",
+  "damage": [150, 5],
+  "upgrade": [5, 2],
+  "percentage": [true, false],
+  
+  "type": "All",
+  "range": "5",
+  "target": ["3 Enemy"],
+
+  "rate": 30,
+  "is_upgrading_rate": false,
+  "rate_upgrade": 0,
+
+  "limit": 1
+}

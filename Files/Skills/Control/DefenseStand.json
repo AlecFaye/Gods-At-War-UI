@@ -1,0 +1,16 @@
+{
+  "description": "During the first 2 turns of the battle, there is a %s chance of activating shielding.",
+  "damage": [20],
+  "upgrade": [2],
+  "percentage": [true],
+
+  "type": "All",
+  "range": "3",
+  "target": ["1 Enemy"],
+
+  "rate": -1,
+  "is_upgrading_rate": false,
+  "rate_upgrade": 0,
+
+  "limit": 1
+}

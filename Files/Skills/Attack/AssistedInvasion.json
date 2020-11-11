@@ -1,0 +1,16 @@
+{
+  "description": "Prepares for 2 turns and increases self and allied normal attack damage by %s and launches an attack against the two rear enemy gods (damage rate %s).",
+  "damage": [40, 120],
+  "upgrade": [2.5, 4.5],
+  "percentage": [true, true],
+
+  "type": "All",
+  "range": "5",
+  "target": ["2 Enemy", "1 Self", "2 Ally"],
+
+  "rate": 35,
+  "is_upgrading_rate": false,
+  "rate_upgrade": 0,
+
+  "limit": 1
+}

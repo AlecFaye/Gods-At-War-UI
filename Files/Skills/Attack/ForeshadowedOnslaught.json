@@ -1,0 +1,16 @@
+{
+  "description": "Launches a guaranteed attack (damage rate %s) every 2 turns.",
+  "damage": [150],
+  "upgrade": [5],
+  "percentage": [true],
+  
+  "type": "All",
+  "range": "5",
+  "target": ["1-2 Enemy"],
+
+  "rate": -1,
+  "is_upgrading_rate": false,
+  "rate_upgrade": 0,
+
+  "limit": 1
+}

@@ -1,0 +1,16 @@
+{
+  "description": "Prepares for one turn and launches shielding for 1 turn.",
+  "damage": [],
+  "upgrade": [],
+  "percentage": [],
+
+  "type": "All",
+  "range": "3",
+  "target": ["1 Enemy"],
+
+  "rate": 45,
+  "is_upgrading_rate": true,
+  "rate_upgrade": 0.5,
+
+  "limit": 1
+}

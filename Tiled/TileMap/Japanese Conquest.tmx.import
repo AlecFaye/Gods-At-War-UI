@@ -1,0 +1,22 @@
+[remap]
+
+importer="vnen.tiled_importer"
+type="PackedScene"
+path="res://.import/Japanese Conquest.tmx-a0483a4de75301aeeaba74d917581172.scn"
+
+[deps]
+
+source_file="res://Tiled/TileMap/Japanese Conquest.tmx"
+dest_files=[ "res://.import/Japanese Conquest.tmx-a0483a4de75301aeeaba74d917581172.scn" ]
+
+[params]
+
+custom_properties=true
+tile_metadata=false
+uv_clip=true
+image_flags=7
+collision_layer=1
+embed_internal_images=false
+save_tiled_properties=false
+add_background=true
+post_import_script=""

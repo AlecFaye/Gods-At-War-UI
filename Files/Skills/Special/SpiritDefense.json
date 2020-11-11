@@ -1,0 +1,16 @@
+{
+  "description": "Launches an attack (%s damage rate, affected by special attack) with a 35%% of launching guard for 1 turn.",
+  "damage": [20],
+  "upgrade": [2],
+  "percentage": [true],
+
+  "type": "All",
+  "range": "4",
+  "target": ["1 Enemy"],
+
+  "rate": 25,
+  "is_upgrading_rate": false,
+  "rate_upgrade": 0,
+
+  "limit": 1
+}

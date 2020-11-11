@@ -1,0 +1,16 @@
+{
+  "description": "Every turn there is a %s chance of inflicting daze for 1 turn.",
+  "damage": [5],
+  "upgrade": [0.5],
+  "percentage": [true],
+
+  "type": "All",
+  "range": "1",
+  "target": ["1 Enemy"],
+
+  "rate": -1,
+  "is_upgrading_rate": false,
+  "rate_upgrade": 0,
+
+  "limit": 1
+}

@@ -1,0 +1,16 @@
+{
+  "description": "Prepares for 3 turns before activating guard against two enemy gods for 1 turn.",
+  "damage": [],
+  "upgrade": [],
+  "percentage": [],
+
+  "type": "All",
+  "range": "5",
+  "target": ["2 Enemy"],
+
+  "rate": 35,
+  "is_upgrading_rate": true,
+  "rate_upgrade": 1,
+
+  "limit": 1
+}

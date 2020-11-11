@@ -1,0 +1,16 @@
+{
+  "description": "Returns all normal attacks (damage rate %s, affected by defense) for the first 5 turns.",
+  "damage": [65],
+  "upgrade": [3],
+  "percentage": [true],
+
+  "type": "All",
+  "range": "---",
+  "target": ["---"],
+
+  "rate": -1,
+  "is_upgrading_rate": false,
+  "rate_upgrade": 0,
+
+  "limit": 1
+}

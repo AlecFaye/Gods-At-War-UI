@@ -1,0 +1,16 @@
+{
+  "description": "Prepares 1 turn and activates impressment (%s affected by defense) on all enemy gods and splits soldiers between self and ally for 2 turns.",
+  "damage": [130],
+  "upgrade": [5],
+  "percentage": [true],
+
+  "type": "All",
+  "range": "5",
+  "target": ["3 Enemy", "1 Self", "2 Ally"],
+
+  "rate": 30,
+  "is_upgrading_rate": false,
+  "rate_upgrade": 0,
+
+  "limit": 1
+}

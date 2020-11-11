@@ -1,0 +1,16 @@
+{
+  "description": "Deactivates all enemy base skills for the first 3 turns with a %s chance of disabling all enemy base skills for the remaining amount of turns.",
+  "damage": [5],
+  "upgrade": [4.5],
+  "percentage": [true],
+
+  "type": "All",
+  "range": "5",
+  "target": ["3 Enemy"],
+
+  "rate": -1,
+  "is_upgrading_rate": false,
+  "rate_upgrade": 0,
+
+  "limit": 1
+}

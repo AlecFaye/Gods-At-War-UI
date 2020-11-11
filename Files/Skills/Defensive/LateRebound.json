@@ -1,0 +1,16 @@
+{
+  "description": "Returns all special attacks (damage rate %s, affected by special defense) for the last 5 turns.",
+  "damage": [65],
+  "upgrade": [2.5],
+  "percentage": [true],
+
+  "type": "All",
+  "range": "---",
+  "target": ["---"],
+
+  "rate": -1,
+  "is_upgrading_rate": false,
+  "rate_upgrade": 0,
+
+  "limit": 1
+}

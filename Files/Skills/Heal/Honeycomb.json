@@ -1,0 +1,16 @@
+{
+  "description": "Every time this god experiences fear, love damage, surrender, curse, or burn damage activate heal (%s recovery rate, affected by speed) ",
+  "damage": [100],
+  "upgrade": [4],
+  "percentage": [true],
+
+  "type": "All",
+  "range": "---",
+  "target": ["1 Self"],
+
+  "rate": -1,
+  "is_upgrading_rate": false,
+  "rate_upgrade": 0,
+
+  "limit": 1
+}

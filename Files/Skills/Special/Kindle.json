@@ -1,0 +1,16 @@
+{
+  "description": "Increases special attack damage output by %s.",
+  "damage": [45],
+  "upgrade": [3],
+  "percentage": [true],
+
+  "type": "All",
+  "range": "---",
+  "target": ["1 Self"],
+
+  "rate": -1,
+  "is_upgrading_rate": false,
+  "rate_upgrade": 0,
+
+  "limit": 1
+}

@@ -1,0 +1,16 @@
+{
+  "description": "Heals self (%s affected by speed) with a 30%% chance of activating recovery (%s recovery rate, affected by speed) for self and allies for 1 turn on all even turns.",
+  "damage": [65, 40],
+  "upgrade": [2.5, 1.5],
+  "percentage": [true, true],
+
+  "type": "All",
+  "range": "---",
+  "target": ["1 Self", "2 Ally"],
+
+  "rate": -1,
+  "is_upgrading_rate": false,
+  "rate_upgrade": 0,
+
+  "limit": 1
+}

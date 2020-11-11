@@ -1,0 +1,16 @@
+{
+  "description": "Prepares for 1 turn and steals %s attack from front enemy god and distributes it among self and allied gods, then launches frenzy for 1 turn.",
+  "damage": [30],
+  "upgrade": [3],
+  "percentage": [false],
+
+  "type": "All",
+  "range": "3",
+  "target": ["1 Enemy", "2 Ally", "1 Self"],
+
+  "rate": 25,
+  "is_upgrading_rate": false,
+  "rate_upgrade": 0,
+
+  "limit": 1
+}

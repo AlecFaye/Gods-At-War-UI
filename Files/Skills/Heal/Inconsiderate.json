@@ -1,0 +1,16 @@
+{
+  "description": "Prepares for 1 turn and heals self (%s recovery rate, affected by speed) for 1 turn.",
+  "damage": [30],
+  "upgrade": [1],
+  "percentage": [true],
+
+  "type": "All",
+  "range": "1",
+  "target": ["1 Self"],
+
+  "rate": 45,
+  "is_upgrading_rate": false,
+  "rate_upgrade": 0,
+
+  "limit": 1
+}

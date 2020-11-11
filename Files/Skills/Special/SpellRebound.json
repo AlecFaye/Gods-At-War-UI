@@ -1,0 +1,16 @@
+{
+  "description": "Prepares for 1 turn, then launches an attack (%s damage raet, affected by special attack) against the front 2 enemy gods and activates shear status for 2 turns.",
+  "damage": [120],
+  "upgrade": [5],
+  "percentage": [true],
+
+  "type": "All",
+  "range": "3",
+  "target": ["2 Enemy"],
+
+  "rate": 25,
+  "is_upgrading_rate": false,
+  "rate_upgrade": 0,
+
+  "limit": 1
+}

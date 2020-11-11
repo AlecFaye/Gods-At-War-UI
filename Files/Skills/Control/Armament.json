@@ -1,0 +1,16 @@
+{
+  "description": "For the first 5 turns of battle, tehre is a %s chance to activate freeze against the two rear enemy gods.",
+  "damage": [30],
+  "upgrade": [4.5],
+  "percentage": [true],
+
+  "type": "all",
+  "range": "5",
+  "target": ["2 Enemy"],
+
+  "rate": -1,
+  "is_upgrading_rate": false,
+  "rate_upgrade": 0,
+
+  "limit": 1
+}

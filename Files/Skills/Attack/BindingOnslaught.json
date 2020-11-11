@@ -1,0 +1,16 @@
+{
+  "description": "Launches an attack (damage rate %s) and inflicts shear for 1 turn with a %s chance of launching a second attack (damage rate %s).",
+  "damage": [65, 25, 35],
+  "upgrade": [2, 1, 0],
+  "percentage": [true, true, true],
+
+  "type": "All",
+  "range": "5",
+  "target": ["1 Enemy"],
+
+  "rate": 20,
+  "is_upgrading_rate": false,
+  "rate_upgrade": 0,
+
+  "limit": 1
+}

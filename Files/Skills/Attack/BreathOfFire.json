@@ -1,0 +1,16 @@
+{
+  "description": "Launches an attack on one enemy god (damage rate %s) and inflicts burn (damage rate %s) for 3 turns.",
+  "damage": [70, 30],
+  "upgrade": [2, 0],
+  "percentage": [true, true],
+
+  "type": "All",
+  "range": "2",
+  "target": ["1 Enemy"],
+
+  "rate": 55,
+  "is_upgrading_rate": false,
+  "rate_upgrade": 0,
+
+  "limit": 1
+}

@@ -1,0 +1,16 @@
+{
+  "description": "Launches an attack (damage rate %s) at one enemy god.",
+  "damage": [30],
+  "upgrade": [2],
+  "percentage": [true],
+
+  "type": "All",
+  "range": "3",
+  "target": ["1 Enemy"],
+
+  "rate": 50,
+  "is_upgrading_rate": false,
+  "rate_upgrade": 0,
+
+  "limit": 1
+}

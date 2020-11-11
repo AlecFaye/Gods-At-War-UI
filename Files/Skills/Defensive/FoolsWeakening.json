@@ -1,0 +1,16 @@
+{
+  "description": "Absorbs the next instance of incoming damage and reduces all incoming damage for the entire allied troop by %s.",
+  "damage": [45],
+  "upgrade": [3],
+  "percentage": [true],
+
+  "type": "All",
+  "range": "6",
+  "target": ["---"],
+
+  "rate": 25,
+  "is_upgrading_rate": false,
+  "rate_upgrade": 0,
+
+  "limit": 1
+}

@@ -1,0 +1,16 @@
+{
+  "description": "Prepares for 1 turn and launches either daze or rebellion for 1 turn.",
+  "damage": [],
+  "upgrade": [],
+  "percentage": [],
+
+  "type": "All",
+  "range": "4",
+  "target": ["1 Enemy"],
+
+  "rate": 25,
+  "is_upgrading_rate": true,
+  "rate_upgrade": 2,
+
+  "limit": 1
+}

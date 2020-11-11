@@ -1,0 +1,16 @@
+{
+  "description": "",
+  "damage": [],
+  "upgrade": [],
+  "percentage": [],
+
+  "type": "",
+  "range": "",
+  "target": [],
+
+  "rate": 0,
+  "is_upgrading_rate": false,
+  "rate_upgrade": 0,
+
+  "limit": 1
+}

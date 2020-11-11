@@ -1,0 +1,16 @@
+{
+  "description": "For the first 3 turns, there is a 25%% chance of launching an attack (%s damage rate) and activating recovery (%s recovery rate, affected by attack) for self for 1 turn with a 50%% chance of healing all allied troops (20%% affected by defense) during turn 4.",
+  "damage": [30, 35],
+  "upgrade": [1.5, 1.5],
+  "percentage": [true, true],
+
+  "type": "All",
+  "range": "5",
+  "target": ["2 Enemy", "1 Self", "2 Ally"],
+
+  "rate": -1,
+  "is_upgrading_rate": false,
+  "rate_upgrade": 0,
+
+  "limit": 1
+}

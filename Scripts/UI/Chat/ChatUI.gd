@@ -112,6 +112,7 @@ func _input(event):
 
 # Opens the chat
 func _on_Chat_pressed():
+	show()
 	_move(target_position)
 	_update_chat_box()
 

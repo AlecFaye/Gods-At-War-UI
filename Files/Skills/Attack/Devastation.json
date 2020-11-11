@@ -1,0 +1,16 @@
+{
+  "description": "Prepares for 1 turn and attacks two enemy gods (damage rate %s) and increases all allied god's attack damage by %s for 1 turn.",
+  "damage": [75, 20],
+  "upgrade": [0, 0],
+  "percentage": [true, true],
+
+  "type": "All",
+  "range": "4",
+  "target": ["2 Enemy", "2 Ally"],
+
+  "rate": 15,
+  "is_upgrading_rate": true,
+  "rate_upgrade": 2,
+
+  "limit": 1
+}

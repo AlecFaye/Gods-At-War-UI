@@ -1,0 +1,16 @@
+{
+  "description": "Launches an attack (damage rate %s) and inflicts love (damage rate %s) for 1 turn.",
+  "damage": [40, 20],
+  "upgrade": [0, 0],
+  "percentage": [true, true],
+  
+  "type": "All",
+  "range": "5",
+  "target": ["1 Enemy"],
+
+  "rate": 20,
+  "is_upgrading_rate": true,
+  "rate_upgrade": 2,
+
+  "limit": 1
+}

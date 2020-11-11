@@ -1,0 +1,16 @@
+{
+  "description": "Prepares for 1 turn and launches an attack (damage rate %s) and inflicts love (damage rate %s) on all enemy gods within range for 4 turns.",
+  "damage": [50, 35],
+  "upgrade": [0, 0],
+  "percentage": [true, true],
+  
+  "type": "All",
+  "range": "4",
+  "target": ["3 Enemy"],
+
+  "rate": 10,
+  "is_upgrading_rate": true,
+  "rate_upgrade": 3,
+
+  "limit": 1
+}

@@ -1,0 +1,16 @@
+{
+  "description": "Increases attack damage output by %s for the first 4 turns.",
+  "damage": [25],
+  "upgrade": [2],
+  "percentage": [true],
+  
+  "type": "All",
+  "range": "---",
+  "target": ["1 Self"],
+
+  "rate": -1,
+  "is_upgrading_rate": false,
+  "rate_upgrade": 0,
+
+  "limit": 1
+}

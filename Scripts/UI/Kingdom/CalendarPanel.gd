@@ -2,7 +2,6 @@ extends Panel
 
 
 onready var CalendarContainer = $CalendarContainer
-onready var MonthLabel = $Month
 
 var dates = []
 
@@ -65,22 +64,25 @@ func _set_up_calendar():
 	var day = date["day"]
 	var weekday = date["weekday"]
 	
+	var month_label = $Month
+	var year_label = $Year
+	month_label.text = month_dic[month]
+	year_label.text = str(year)
+	
 	# Sets February's days based on the year
 	if fmod(year, 4) == 0:
 		days_dic[month_dic[month]] = 29
 	else:
 		days_dic[month_dic[month]] = 28
 	
-	MonthLabel.text = month_dic[month]
-	
 	# Calculate the first day of the month
 	var days_left = fmod(day, 7)
-	var month_start = weekday - days_left + 1
+	var month_start = fmod(7 - days_left + weekday + 1, 7)
 	
 	# Tracks the first day and the last day of the month
 	var day_count = 1
 	var first_day = month_start
-	var last_day = days_dic[month_dic[month]] + 1
+	var last_day = days_dic[month_dic[month]] + month_start + 1
 	
 	# Sets up the calendar
 	for index in range(len(dates)):

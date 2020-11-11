@@ -1,0 +1,16 @@
+{
+  "description": "Follows a special attack by increasing special damage output by 40%% and launches an attack (%s damage rate, affected by special attack) and either activates freeze or love damage status (%s damage rate, affected by special attack) for 2 turns.",
+  "damage": [110, 60],
+  "upgrade": [4.5, 2.5],
+  "percentage": [true, true],
+
+  "type": "All",
+  "range": "---",
+  "target": ["1 Self", "1 Enemy"],
+
+  "rate": 35,
+  "is_upgrading_rate": false,
+  "rate_upgrade": 0,
+
+  "limit": 1
+}

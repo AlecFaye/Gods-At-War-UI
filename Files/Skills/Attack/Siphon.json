@@ -1,0 +1,16 @@
+{
+  "description": "Prepares for 1 turn and steals %s attack from all enemy gods and applied it to self for 2 turns and launches shielding against one enemy god for 2 turns.",
+  "damage": [20],
+  "upgrade": [4],
+  "percentage": [false],
+
+  "type": "All",
+  "range": "4",
+  "target": ["3 Enemy", "1 Self"],
+
+  "rate": 35,
+  "is_upgrading_rate": false,
+  "rate_upgrade": 0,
+
+  "limit": 1
+}

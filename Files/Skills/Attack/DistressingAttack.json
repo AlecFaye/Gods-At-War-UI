@@ -1,0 +1,16 @@
+{
+  "description": "Follows a normal attack with an attack (damage rate %s) and activates frenzy for 1 turn.",
+  "damage": [155],
+  "upgrade": [5],
+  "percentage": [true],
+
+  "type": "All",
+  "range": "---",
+  "target": ["1 Enemy"],
+
+  "rate": 90,
+  "is_upgrading_rate": false,
+  "rate_upgrade": 0,
+
+  "limit": 1
+}

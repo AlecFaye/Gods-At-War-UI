@@ -1,0 +1,16 @@
+{
+  "description": "Reduces incoming special attack damage (%s affected by special attack) for self and allies for the first 5 turns and has a 65%% chance of launching an attack (%s damage rate, affected by special attack) against the rear enemy god for the remaining turns of battle.",
+  "damage": [35, 100],
+  "upgrade": [2.5, 5],
+  "percentage": [true, true],
+
+  "type": "All",
+  "range": "---",
+  "target": ["1 Enemy", "2 Ally", "1 Self"],
+
+  "rate": -1,
+  "is_upgrading_rate": false,
+  "rate_upgrade": 0,
+
+  "limit": 1
+}

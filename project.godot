@@ -21,9 +21,13 @@ run/main_scene="res://Scenes/UI.tscn"
 [display]
 
 window/size/resizable=false
-window/stretch/mode="viewport"
+window/stretch/mode="2d"
 window/stretch/aspect="expand"
 
-[rendering]
+[editor_plugins]
 
-environment/default_environment="res://default_env.tres"
+enabled=PoolStringArray( "vnen.tiled_importer" )
+
+[tiled_importer]
+
+enable_json_format=true

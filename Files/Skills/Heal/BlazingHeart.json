@@ -1,0 +1,16 @@
+{
+  "description": "For the first 4 turns, launch either a special attack (%s damage rate) or an attack (%s damage rate). For the remaining turns of battle, there is a 45%% chance of healing allies (%s recovery rate, affected by speed).",
+  "damage": [75, 80, 90],
+  "upgrade": [2, 2, 3.5],
+  "percentage": [true, true, true],
+
+  "type": "All",
+  "range": "5",
+  "target": ["1-2 Enemy", "2 Ally"],
+
+  "rate": -1,
+  "is_upgrading_rate": false,
+  "rate_upgrade": 0,
+
+  "limit": 1
+}

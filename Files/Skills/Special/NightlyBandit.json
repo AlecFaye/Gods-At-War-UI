@@ -1,0 +1,16 @@
+{
+  "description": "Launches an attack (%s damage rate, affected by attack) against 2 enemy gods and steals 10 special attacks stats. After this, there is a 25%% an enemy god's special attack damage is reduced by %s.",
+  "damage": [35, 20],
+  "upgrade": [2, 1],
+  "percentage": [true, true],
+
+  "type": "All",
+  "range": "4",
+  "target": ["2 Enemy", "1 Self"],
+
+  "rate": 35,
+  "is_upgrading_rate": false,
+  "rate_upgrade": 0,
+
+  "limit": 1
+}

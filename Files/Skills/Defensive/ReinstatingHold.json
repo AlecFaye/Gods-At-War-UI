@@ -1,0 +1,16 @@
+{
+  "description": "Starting from the 6th turn, all normal and special attacks are returned within range (damage rate %s, affected by defense).",
+  "damage": [20],
+  "upgrade": [5],
+  "percentage": [true],
+
+  "type": "All",
+  "range": "2",
+  "target": ["---"],
+
+  "rate": -1,
+  "is_upgrading_rate": false,
+  "rate_upgrade": 0,
+
+  "limit": 1
+}

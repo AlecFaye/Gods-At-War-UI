@@ -1,0 +1,16 @@
+{
+  "description": "On every tuen in the battle, there is a %s chance of returning normal attacks (damage rate 50%%, affected by defense).",
+  "damage": [20],
+  "upgrade": [1.5],
+  "percentage": [true],
+
+  "type": "All",
+  "range": "---",
+  "target": ["---"],
+
+  "rate": -1,
+  "is_upgrading_rate": false,
+  "rate_upgrade": 0,
+
+  "limit": 1
+}

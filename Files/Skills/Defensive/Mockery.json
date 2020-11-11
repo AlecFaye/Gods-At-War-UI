@@ -1,0 +1,16 @@
+{
+  "description": "Prepares for 2 turns, then taunts the target with a %s chance of activating avoidance and immunity status for 2 turns and a 50%% chance of splitting forces (damage rate %s, affected by defense).",
+  "damage": [35, 30],
+  "upgrade": [2, 1],
+  "percentage": [true, true],
+
+  "type": "All",
+  "range": "4",
+  "target": ["1 Self"],
+
+  "rate": 20,
+  "is_upgrading_rate": false,
+  "rate_upgrade": 0,
+
+  "limit": 1
+}

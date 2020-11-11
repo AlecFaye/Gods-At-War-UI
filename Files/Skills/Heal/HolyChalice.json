@@ -1,0 +1,16 @@
+{
+  "description": "Follows a normal attack with an attack (%s damage rate) and activates recovery (%s recovery rate, affected by speed) for all allied gods.",
+  "damage": [75, 60],
+  "upgrade": [1, 2],
+  "percentage": [true, true],
+
+  "type": "All",
+  "range": "---",
+  "target": ["1 Enemy", "2 Ally"],
+
+  "rate": 35,
+  "is_upgrading_rate": false,
+  "rate_upgrade": 0,
+
+  "limit": 1
+}

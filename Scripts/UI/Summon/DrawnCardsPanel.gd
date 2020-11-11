@@ -61,6 +61,7 @@ func display_drawn_cards(drawn_cards):
 	
 	SummonUI.set_current_panel(DRAWN_CARDS)
 	
+	# Hides the particle systems and reveal buttons
 	for index in range(len(particle_systems)):
 		particle_systems[index].hide()
 		reveal_buttons[index].hide()
@@ -74,12 +75,15 @@ func display_drawn_cards(drawn_cards):
 	if len(drawn_cards) == 1:
 		var sprite_index = floor(len(card_sprite_holders) / 2.0)
 		var card_sprite = card_sprite_holders[sprite_index].get_node("CardSprite")
-		card_sprite.texture = load(drawn_cards[0][IMAGE])
-		
-		reveal_buttons[sprite_index].show()
 		
 		var card_rarity = drawn_cards[0][RARITY]
 		var card_type = drawn_cards[0][TYPE]
+		var card_image = drawn_cards[0][IMAGE]
+		
+		card_sprite.texture = load(card_image)
+		
+		reveal_buttons[sprite_index].show()
+		
 		var particle = particle_systems[sprite_index]
 		
 		if card_rarity == "Legend":
@@ -90,12 +94,15 @@ func display_drawn_cards(drawn_cards):
 	else:
 		for index in range(len(card_sprite_holders)):
 			var card_sprite = card_sprite_holders[index].get_node("CardSprite")
-			card_sprite.texture = load(drawn_cards[index][4])
-			
-			reveal_buttons[index].show()
 			
 			var card_rarity = drawn_cards[index][RARITY]
 			var card_type = drawn_cards[index][TYPE]
+			var card_image = drawn_cards[index][IMAGE]
+			
+			card_sprite.texture = load(card_image)
+			
+			reveal_buttons[index].show()
+			
 			var particle = particle_systems[index]
 			
 			if card_rarity == "Legend":

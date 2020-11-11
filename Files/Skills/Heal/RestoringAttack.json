@@ -1,0 +1,16 @@
+{
+  "description": "Follows a normal attack with an attack (35%% damage rate) and heals self (%s recovery rate, affected by defense) with a 10%% chance of activating recovery (%s recovery rate, affected by speed) for all allied gods.",
+  "damage": [20, 20],
+  "upgrade": [1.5, 1.5],
+  "percentage": [true, true],
+
+  "type": "All",
+  "range": "---",
+  "target": ["1 Self", "2 Ally"],
+
+  "rate": 25,
+  "is_upgrading_rate": false,
+  "rate_upgrade": 0,
+
+  "limit": 1
+}

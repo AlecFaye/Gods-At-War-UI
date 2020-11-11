@@ -1,0 +1,16 @@
+{
+  "description": "Every turn after turn 5 has a %s chance of activating freeze for 1 turn.",
+  "damage": [15],
+  "upgrade": [0.5],
+  "percentage": [true],
+
+  "type": "All",
+  "range": "2",
+  "target": ["1 Enemy"],
+
+  "rate": -1,
+  "is_upgrading_rate": false,
+  "rate_upgrade": 0,
+
+  "limit": 1
+}

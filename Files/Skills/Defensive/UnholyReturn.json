@@ -1,0 +1,16 @@
+{
+  "description": "On every odd turn in the battle, there is a 30%% chance of returning special attacks (damage rate %s, affected by special defense).",
+  "damage": [30],
+  "upgrade": [2],
+  "percentage": [true],
+
+  "type": "All",
+  "range": "---",
+  "target": ["---"],
+
+  "rate": -1,
+  "is_upgrading_rate": false,
+  "rate_upgrade": 0,
+
+  "limit": 1
+}

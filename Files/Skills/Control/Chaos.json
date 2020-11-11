@@ -1,0 +1,16 @@
+{
+  "description": "Prepares for 2 turns before launches shielding, guard, frenzy, or freeze for 2 turns on two enemy gods.",
+  "damage": [],
+  "upgrade": [],
+  "percentage": [],
+
+  "type": "All",
+  "range": "3",
+  "target": ["2 Enemy"],
+
+  "rate": 20,
+  "is_upgrading_rate": true,
+  "rate_upgrade": 3,
+
+  "limit": 1
+}

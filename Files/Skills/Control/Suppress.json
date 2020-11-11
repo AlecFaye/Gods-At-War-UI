@@ -1,0 +1,16 @@
+{
+  "description": "Activates frenzy for 1 turn.",
+  "damage": [],
+  "upgrade": [],
+  "percentage": [],
+
+  "type": "All",
+  "range": "2",
+  "target": ["1 Enemy"],
+
+  "rate": 25,
+  "is_upgrading_rate": true,
+  "rate_upgrade": 1,
+
+  "limit": 1
+}

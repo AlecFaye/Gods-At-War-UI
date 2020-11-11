@@ -1,0 +1,16 @@
+{
+  "description": "Activates immunity for the first 3 turns. Splits normal attacks for the first 2 turns, then has %s chance of returning all special attacks (damage rate %s, affected by special defense) during turns 3-5. For the remaining turns, there is a 50%% chance of taunting an enemy god with an additional %s chance of activating avoidance.",
+  "damage": [35, 80, 25],
+  "upgrade": [3.5, 2, 1],
+  "percentage": [true, true, true],
+
+  "type": "All",
+  "range": "---",
+  "target": ["---"],
+
+  "rate": -1,
+  "is_upgrading_rate": false,
+  "rate_upgrade": 0,
+
+  "limit": 1
+}

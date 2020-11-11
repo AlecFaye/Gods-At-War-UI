@@ -1,0 +1,16 @@
+{
+  "description": "Launches an attack (damage rate %s) and steals %s attack. After this, there is a 25%% an enemy god's attack damage is reduced by %s for 1 turn.",
+  "damage": [35, 10, 20],
+  "upgrade": [2, 0, 1],
+  "percentage": [true, false, true],
+  
+  "type": "All",
+  "range": "5",
+  "target": ["1 Enemy"],
+
+  "rate": 25,
+  "is_upgrading_rate": false,
+  "rate_upgrade": 0,
+
+  "limit": 1
+}

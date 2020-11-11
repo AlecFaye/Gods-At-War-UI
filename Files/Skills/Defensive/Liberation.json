@@ -1,0 +1,16 @@
+{
+  "description": "Prepares for 1 turn and activates immunity from crowd control effects and cancels any active effects for 1 turn.",
+  "damage": [],
+  "upgrade": [],
+  "percentage": [],
+
+  "type": "All",
+  "range": "2",
+  "target": ["2 Ally"],
+
+  "rate": 25,
+  "is_upgrading_rate": true,
+  "rate_upgrade": 0.5,
+
+  "limit": 1
+}

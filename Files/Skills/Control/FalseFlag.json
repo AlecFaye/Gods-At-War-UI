@@ -1,0 +1,16 @@
+{
+  "description": "Prepares for 3 turns and activates either daze or rebellion on the front two enemy gods for 2 turns.",
+  "damage": [],
+  "upgrade": [],
+  "percentage": [],
+
+  "type": "All",
+  "range": "5",
+  "target": ["2 Enemy"],
+
+  "rate": 35,
+  "is_upgrading_rate": true,
+  "rate_upgrade": 2,
+
+  "limit": 1
+}

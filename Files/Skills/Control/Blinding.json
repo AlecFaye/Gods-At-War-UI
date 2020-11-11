@@ -1,0 +1,16 @@
+{
+  "description": "Starting from the 4th turn, there is a %s chance to inflict rebellion on the rear enemy god.",
+  "damage": [45],
+  "upgrade": [4],
+  "percentage": [true],
+
+  "type": "All",
+  "range": "5",
+  "target": ["1 Enemy"],
+
+  "rate": -1,
+  "is_upgrading_rate": false,
+  "rate_upgrade": 0,
+
+  "limit": 1
+}

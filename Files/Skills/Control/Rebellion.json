@@ -1,0 +1,16 @@
+{
+  "description": "Prepares for 1 turn before launching daze against all enemy gods for 2 turns.",
+  "damage": [],
+  "upgrade": [],
+  "percentage": [],
+
+  "type": "All",
+  "range": "4",
+  "target": ["3 Enemy"],
+
+  "rate": 25,
+  "is_upgrading_rate": true,
+  "rate_upgrade": 4.5,
+
+  "limit": 1
+}

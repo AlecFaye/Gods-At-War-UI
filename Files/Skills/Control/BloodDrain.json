@@ -1,0 +1,16 @@
+{
+  "description": "Prepares for 1 turn and steals 20 of all stats from the front enemy god, then launches shear against all enemy gods with a %s chance of lasting one more turn.",
+  "damage": [25],
+  "upgrade": [5],
+  "percentage": [true],
+
+  "type": "All",
+  "range": "5",
+  "target": ["3 Enemy"],
+
+  "rate": 15,
+  "is_upgrading_rate": false,
+  "rate_upgrade": 0,
+
+  "limit": 1
+}

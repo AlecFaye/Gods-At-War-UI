@@ -1,0 +1,16 @@
+{
+  "description": "Prepares 2 turns and activates impressment (%s affected by speed) and applies soldiers to self.",
+  "damage": [20],
+  "upgrade": [1],
+  "percentage": [true],
+
+  "type": "All",
+  "range": "3",
+  "target": ["1 Ally"],
+
+  "rate": 35,
+  "is_upgrading_rate": false,
+  "rate_upgrade": 0,
+
+  "limit": 1
+}

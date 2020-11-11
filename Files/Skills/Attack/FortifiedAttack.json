@@ -1,0 +1,16 @@
+{
+  "description": "Prepares for 2 turns and launches an attack (damage rate %s) and reduces the target's damage output by %s for 2 turns.",
+  "damage": [25, 10],
+  "upgrade": [0, 2],
+  "percentage": [true, true],
+  
+  "type": "All",
+  "range": "2",
+  "target": ["1 Enemy"],
+
+  "rate": 35,
+  "is_upgrading_rate": false,
+  "rate_upgrade": 0,
+
+  "limit": 1
+}
